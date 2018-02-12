@@ -7,3 +7,4 @@ Aprendendo JavaScript por meio de exemplos
 - [git clone](https://asciinema.org/a/161953)
 - [QUnit](qunit)
 - [Teste](teste)
+- [Promises](promises)
