@@ -12,13 +12,8 @@ function parametro(funcao) {
 }
 
 function corpo(resolve, reject) {
-  function ok(dados) {
-    resolve(JSON.parse(dados).origin);
-  }
-  
-  function falha(erro) {
-    reject("Houve um erro...");
-  }
+  let ok = d => resolve(JSON.parse(d).origin);
+  let falha = e => reject("Houve um erro...");
   
   log("Qual meu IP? (acessando serviço remoto...)");
   https.get(URL, parametro(ok)).on("error", falha);
