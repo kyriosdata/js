@@ -1,35 +1,26 @@
-const ok = console.log;
+const https = require('https');
+const URL = "https://now.httpbin.org";
+const log = console.log;
 
-function falha(msg) {
-  console.log(`ERRO: ${msg}`);
-}
+function parametro(funcao) {
+  return function handler(resp) {
+    let data = '';
 
-// Função executada imediatamente
-// pelo construtor da "promessa".
-function executor(resolve, reject) {
-
-  // faça algo aqui, possivelmente async e 
-  // na sequência chame 'resolve' ou 'reject'
-  // conforme o resultado do que foi feito. 
-
-  // Vamos supor que tudo correu bem...
-  if (false) {
-    // então chame 'resolve' (primeiro parâmetro)
-    resolve("funcionou");
-  } else {
-    // então chame 'reject' (segundo parâmetro)
-    reject("falhou");
+    resp.on("data", chunk => data += chunk);
+    resp.on("end", () => funcao(data));
   }
 }
 
-// Crie instância da promessa, função
-// 'executor' é executada imediatamente.
-let promessa = new Promise(executor);
+function corpo(resolve, reject) {
+  let ok = d => resolve(JSON.parse(d).now.epoch);
+  let falha = e => reject("Houve um erro...");
+  
+  log("Qual meu IP? (acessando serviço remoto...)");
+  https.get(URL, parametro(ok)).on("error", falha);
+}
 
-// Após conclusão do 'executor', ou a função 'ok'
-// ou 'falha' será chamada. Qual delas?
-// Será 'ok' se 'resolve' foi chamada pelo 'executor'. 
-// Será 'falha' caso contrário.
-// E quanto ao parâmetro para 'ok' e 'falha'?
-// Será aquele fornecido para 'resolve' ou 'reject'. 
-promessa.then(ok, falha);
+function httpsGet() {
+  return new Promise(corpo);
+}
+
+httpsGet().then(log, log);
