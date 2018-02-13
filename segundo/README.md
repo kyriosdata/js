@@ -13,5 +13,5 @@ Este processo teria que ser repetido várias vezes, manualmente,
 o que é inviável em muitos cenários. 
 
 Há vários exemplos de como realizar tais testes usando a 
-ferramenta [QUnit](https://qunitjs.com/). Siga o [link](teste)
+ferramenta [QUnit](https://qunitjs.com/). Siga o [link](../teste)
 para detalhes.
