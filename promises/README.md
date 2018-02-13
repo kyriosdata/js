@@ -1,3 +1,8 @@
 # Promises
 
-Há muita informação sobre _promises_. Dentre elas, esta [introdução](https://developers.google.com/web/fundamentals/primers/promises). 
+Há muitas fontes de informação sobre _promises_. 
+Uma [introdução](https://developers.google.com/web/fundamentals/primers/promises)
+sobre o assunto é recomendada. Neste diretório encontra-se vários
+pequenos exemplos. O objetivo é permitir que esse conceito seja
+adequadamente compreendido e dominado, para que o recurso
+correspondente em JavaScript possa ser empregado efetivamente. 
