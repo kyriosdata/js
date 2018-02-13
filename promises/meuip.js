@@ -15,8 +15,8 @@ function corpo(resolve, reject) {
   let ok = d => resolve(JSON.parse(d).origin);
   let falha = e => reject("Houve um erro...");
   
-  log("Qual meu IP? (acessando serviço remoto...)");
   https.get(URL, parametro(ok)).on("error", falha);
 }
 
+log("Qual meu IP? (acessando serviço remoto...)");
 new Promise(corpo).then(log, log);

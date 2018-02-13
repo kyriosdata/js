@@ -1,6 +1,5 @@
-const log = console.log;
-const ok = log;
-const falha = log;
+const ok = console.log;
+const falha = console.log;
 
 // Função executada imediatamente
 // pelo construtor da "promessa".
@@ -8,7 +7,8 @@ function executor(resolve, reject) {
 
   // faça algo aqui, possivelmente async e 
   // na sequência chame 'resolve' ou 'reject'
-  // conforme o resultado do que foi feito. 
+  // para indicar que o que foi feito ocorreu conforme
+  // esperado ou houve alguma falha, respectivamente.
 
   // Vamos supor que tudo correu bem...
   if (true) {
@@ -32,6 +32,11 @@ let promessa = new Promise(executor);
 // Será aquele fornecido para 'resolve' ou 'reject'. 
 promessa.then(ok, falha);
 
+// Outra função (executor). Conforme já comentado,
+// o código dessa função é executado e, em consequência
+// da execução, ou o método 'resolve' ou o 'reject' deve
+// ser chamado com alguma informação a ser passada para
+// a função 'then'.
 function outroExecutor(resolve, reject) {
 
   // Vamos supor que, dessa vez, houve um erro...
