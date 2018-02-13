@@ -9,4 +9,4 @@ Observe que para testar este aplicativo, conforme está, teríamos que
 editar o conteúdo do arquivo **quadrado.js**, executar o arquivo resultante e verificar o resultado.
 Este processo teria que ser repetido várias vezes, manualmente, o que é inviável em muitos cenários. 
 
-Há vários exemplos de como realizar tais testes usando a ferramenta ([QUnit](qunit)).
+Há vários exemplos de como realizar tais testes usando a ferramenta [QUnit](https://qunitjs.com/).
