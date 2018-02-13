@@ -1,26 +1,27 @@
 const https = require('https');
-const URL = "https://now.httpbin.org";
-const log = console.log;
 
-function parametro(funcao) {
-  return function handler(resp) {
-    let data = '';
+function httpsGet(url) {
+  const log = console.log;
 
-    resp.on("data", chunk => data += chunk);
-    resp.on("end", () => funcao(data));
+  function parametro(funcao) {
+    return function handler(resp) {
+      let data = '';
+
+      resp.on("data", chunk => data += chunk);
+      resp.on("end", () => funcao(data));
+    }
   }
+
+  function executor(resolve, reject) {
+    let ok = d => resolve(JSON.parse(d).now.epoch);
+    let falha = e => reject("Houve um erro...");
+
+    log("Qual meu IP? (acessando serviço remoto...)");
+    https.get(url, parametro(ok)).on("error", falha);
+  }
+
+  return new Promise(executor);
 }
 
-function corpo(resolve, reject) {
-  let ok = d => resolve(JSON.parse(d).now.epoch);
-  let falha = e => reject("Houve um erro...");
-  
-  log("Qual meu IP? (acessando serviço remoto...)");
-  https.get(URL, parametro(ok)).on("error", falha);
-}
-
-function httpsGet() {
-  return new Promise(corpo);
-}
-
-httpsGet().then(log, log);
+const URL = "https://now.httpbin.org";
+httpsGet(URL).then(console.log, console.log);
