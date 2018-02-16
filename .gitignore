@@ -67,7 +67,6 @@ app.js
 bin/
 js.iml
 package-lock.json
-package.json
 public/
 routes/
 views/
