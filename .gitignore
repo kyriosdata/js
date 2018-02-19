@@ -65,7 +65,6 @@ typings/
 .idea/
 app.js
 bin/
-js.iml
 public/
 routes/
 views/
