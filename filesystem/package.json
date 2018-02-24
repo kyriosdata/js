@@ -1,0 +1,27 @@
+{
+  "name": "filesystem",
+  "version": "1.0.0",
+  "description": "Manipulação de arquivos (exemplos)",
+  "main": "arquivos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node arquivos.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "server",
+    "http"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme",
+  "dependencies": {
+    "file-system": "^2.2.2"
+  }
+}
