@@ -1,0 +1,27 @@
+{
+  "name": "aprendendo",
+  "version": "1.0.0",
+  "description": "Simples servidor http",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "server",
+    "http"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme",
+  "dependencies": {
+    "moment": "^2.20.1"
+  }
+}
