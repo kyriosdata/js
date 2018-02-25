@@ -1,6 +1,6 @@
-const fs = require('file-system');
+const fs = require('fs');
 
-if (process.argv.length != 3) {
+if (process.argv.length != 4) {
     console.log("Uso: node cria <arquivo> <conteúdo>");
     process.exitCode = 0;
     return;
@@ -31,17 +31,6 @@ fs.exists(path, existe => {
         fs.writeFile(path, conteudo, callback);
     }
 });
-
-// fs.copyFile("conteudo.txt", "copia.txt", erro);
-// fs.exists("copia.txt", existe => {
-//     if (existe) {
-//         console.log("Arquivo já foi copiado...");
-//     }
-// });
-//
-// fs.readFile("copia.txt", "utf-8", function(err, data) {
-//     console.log(data);
-// });
 
 
 

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/seguranca/md5.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/seguranca/server.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/filesystem/cria.js" afterPath="$PROJECT_DIR$/filesystem/cria.js" />
+      <change beforePath="$PROJECT_DIR$/filesystem/package.json" afterPath="$PROJECT_DIR$/filesystem/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="md5.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="md5.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seguranca/md5.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="384">
+              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -62,8 +62,18 @@
       <file leaf-file-name="cria.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filesystem/cria.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="144">
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/filesystem/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -93,15 +103,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/filesystem/package.json" />
         <option value="$PROJECT_DIR$/filesystem/arquivo.js" />
         <option value="$PROJECT_DIR$/filesystem/remove.js" />
-        <option value="$PROJECT_DIR$/filesystem/cria.js" />
         <option value="$PROJECT_DIR$/filesystem/exibe.js" />
         <option value="$PROJECT_DIR$/filesystem/copia.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/seguranca/server.js" />
         <option value="$PROJECT_DIR$/seguranca/md5.js" />
+        <option value="$PROJECT_DIR$/filesystem/cria.js" />
+        <option value="$PROJECT_DIR$/filesystem/package.json" />
       </list>
     </option>
   </component>
@@ -339,12 +349,12 @@
       <workItem from="1519042777254" duration="27000" />
       <workItem from="1519042844225" duration="58000" />
       <workItem from="1519504074211" duration="6135000" />
-      <workItem from="1519580791136" duration="1824000" />
+      <workItem from="1519580791136" duration="2036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8090000" />
+    <option name="totallyTimeSpent" value="8302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="98" y="79" width="1642" height="1093" extended-state="0" />
@@ -487,14 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/filesystem/cria.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -510,14 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filesystem/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -540,8 +534,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seguranca/md5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="384">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filesystem/cria.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filesystem/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>

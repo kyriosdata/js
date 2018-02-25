@@ -21,7 +21,5 @@
     "url": "https://github.com/kyriosdata/js/issues"
   },
   "homepage": "https://github.com/kyriosdata/js#readme",
-  "dependencies": {
-    "file-system": "^2.2.2"
-  }
+  "dependencies": {}
 }
