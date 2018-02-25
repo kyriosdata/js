@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/filesystem/copia.js" afterPath="$PROJECT_DIR$/filesystem/copia.js" />
-      <change beforePath="$PROJECT_DIR$/filesystem/cria.js" afterPath="$PROJECT_DIR$/filesystem/cria.js" />
+      <change beforePath="$PROJECT_DIR$/filesystem/exibe.js" afterPath="$PROJECT_DIR$/filesystem/exibe.js" />
+      <change beforePath="$PROJECT_DIR$/filesystem/remove.js" afterPath="$PROJECT_DIR$/filesystem/remove.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="remove.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="remove.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/filesystem/remove.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="336">
+              <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -68,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cria.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cria.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filesystem/cria.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -81,8 +81,8 @@
       <file leaf-file-name="exibe.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filesystem/exibe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="0">
+              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -103,14 +103,14 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/filesystem/arquivo.js" />
-        <option value="$PROJECT_DIR$/filesystem/remove.js" />
-        <option value="$PROJECT_DIR$/filesystem/exibe.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/seguranca/server.js" />
         <option value="$PROJECT_DIR$/seguranca/md5.js" />
         <option value="$PROJECT_DIR$/filesystem/package.json" />
         <option value="$PROJECT_DIR$/filesystem/copia.js" />
         <option value="$PROJECT_DIR$/filesystem/cria.js" />
+        <option value="$PROJECT_DIR$/filesystem/exibe.js" />
+        <option value="$PROJECT_DIR$/filesystem/remove.js" />
       </list>
     </option>
   </component>
@@ -348,12 +348,12 @@
       <workItem from="1519042777254" duration="27000" />
       <workItem from="1519042844225" duration="58000" />
       <workItem from="1519504074211" duration="6135000" />
-      <workItem from="1519580791136" duration="2439000" />
+      <workItem from="1519580791136" duration="2678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8705000" />
+    <option name="totallyTimeSpent" value="8944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="98" y="79" width="1642" height="1093" extended-state="0" />
@@ -488,14 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/filesystem/exibe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -511,14 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filesystem/remove.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -551,6 +535,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filesystem/exibe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filesystem/remove.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
           <folding />
         </state>
       </provider>
