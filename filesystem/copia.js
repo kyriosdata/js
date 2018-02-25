@@ -1,4 +1,4 @@
-const fs = require('file-system');
+const fs = require('fs');
 
 if (process.argv.length != 4) {
     console.log("Uso: node copia <arquivo> <destino>");
