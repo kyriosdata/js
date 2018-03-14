@@ -2,6 +2,8 @@
 Aplicativo que exibe informações sobre o programa na saída padrão, 
 inclusive o resultado da chamada da função **quadrado**.
 
+![stack Overflow](./asciinema.svg | width=100)
+<img src="./asciinema.svg">
 
 Veja [aqui](https://asciinema.org/a/161533) como executar este 
 aplicativo. 
