@@ -1,4 +1,4 @@
-// Exibe informação sobre a aplicação na saíde padrão
+// Exibe informação sobre a aplicação na saída padrão
 console.log("quadrado (versão 1.0.0)");
 console.log("(meu segundo aplicativo em JavaScript)");
 
