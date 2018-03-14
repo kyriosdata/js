@@ -24,7 +24,7 @@ warn
 error
 ```
 
-irá produzir o arquivo **saidapadrao.txt** contendo apenas o que é gerado por _console.log_ e _console.info_, daí o fato de exibir, na saída de erro, as mensagens produzidas por _console.warn_ e _console.error_. 
+irá produzir o arquivo **saidapadrao.txt** contendo apenas o que é gerado por _console.log_ e _console.info_, daí o fato de exibir, na saída de erro, as mensagens produzidas por _console.warn_ e _console.error_. Neste caso, a saída padrão é redirecionada para **saidapadrao.txt**.
 
 Por outro lado, a execução abaixo
 
@@ -34,4 +34,4 @@ log
 info
 ```
 
-irá produzir no arquivo **erropadrao.txt** a execução de _console.warn_ e _console.error_, daí o fato de exibir, na saída padrão, apenas o que não foi redirecionado para a sada de erro. 
+irá produzir no arquivo **erropadrao.txt** a execução de _console.warn_ e _console.error_, daí o fato de exibir, na saída padrão, apenas o que não foi redirecionado para a sada de erro. Neste caso, a saída de erro é redirecionada para **erropadrao.txt**.
