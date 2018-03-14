@@ -2,6 +2,7 @@
 Aplicativo que exibe informações sobre o programa na saída padrão, 
 inclusive o resultado da chamada da função **quadrado**.
 
+
 Veja [aqui](https://asciinema.org/a/161533) como executar este 
 aplicativo. 
 
@@ -15,3 +16,5 @@ o que é inviável em muitos cenários.
 Há vários exemplos de como realizar tais testes usando a 
 ferramenta [QUnit](https://qunitjs.com/). Siga o [link](../teste)
 para detalhes.
+
+
