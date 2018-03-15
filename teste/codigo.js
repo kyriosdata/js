@@ -4,6 +4,14 @@
 // outros arquivos. Em consequência, exportamos
 // a função (exports) ao criar um módulo.
 
-exports.soma = function (x, y) {
+function soma(x, y) {
   return x + y;
-};
+}
+
+// module.exports é a referência para o objeto retornado
+// por chamadas require(). Em vez da opção abaixo é usada
+// outra forma, considerada mais segura e recomendada.
+// module.exports.soma = soma;
+
+exports.soma = soma;
+
