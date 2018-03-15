@@ -2,7 +2,9 @@
 Aplicativo que exibe informações sobre o programa na saída padrão, 
 inclusive o resultado da chamada da função **quadrado**.
 
-Veja [aqui](https://asciinema.org/a/161533)<img src="./asciinema.svg" width="12" align="center"> como executar este 
+Veja [aqui](https://asciinema.org/a/161533)
+
+<a href="https://asciinema.org/a/161533"> aqui <img src="./asciinema.svg" width="12" align="center"></a> como executar este 
 aplicativo. 
 
 ## Melhoria
