@@ -34,3 +34,15 @@ browserify testa-codigo.js > tests.js
 
 Agora, ao abriar o arquivo **index.html**, você poderá acompanhar 
 o resultado da execução dos testes. 
+
+## Talvez seja um tédio gerar a cada momento o arquivo contendo os testes...
+Nesse caso, você pode fazer uso da ferramenta **watchify**, conforme abaixo.
+
+```
+npm install -g watchify
+watchify testa-codigo.js -o tests.js --debug --verbose
+```
+
+Agora, o _browserify_ será chamado toda vez que o seu código sofrer alguma
+alteração, produzindo uma versão de **tests.js** atualizada, sem necessidade
+de intervenção humana. 
