@@ -1,7 +1,8 @@
 // Obtém referência para o que será testado
 // Observe que o presente código de teste está
-// em diretório específico (tests), enquanto o
+// em diretório específico (test), enquanto o
 // código testado está isolado em outro diretório.
+
 const operacao = require('../codigo');
 
 // Abaixo segue um teste identificado por "soma trivial".
