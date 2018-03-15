@@ -15,3 +15,22 @@ entre arquivos. Para tal precisamos fazer uso de
 **module.exports** ou **exports**. A diferença entre ambos nem sempre
 é adequadamente compreendida. Para uma explanação satisfatória 
 consulte https://medium.freecodecamp.org/node-js-module-exports-vs-exports-ec7e254d63ac. 
+
+## QUnit com resultado exibido via browser (HTML)
+Observe que no diretório **test** encontra-se o arquivo **index.html**, que 
+faz referência ao arquivo de script **tests.js**. Quando o arquivo 
+**index.html** é aberto, o QUnit irá executar os testes contidos em 
+**tests.js**. Contudo, dado que estamos usando código escrito para 
+o Node.js, que faz uso de módulos (função _require_), não disponível 
+em navegadores, precisamos converter nossos testes, neste caso, 
+**testa-codigo.js** em código que pode ser executado em um 
+navegador. Para fazer isso, nada melhor que o pacote de nome 
+sugestivo: _browserify_. 
+
+```
+npm install -g browserify
+browserify testa-codigo.js > tests.js
+```
+
+Agora, ao abriar o arquivo **index.html**, você poderá acompanhar 
+o resultado da execução dos testes. 
