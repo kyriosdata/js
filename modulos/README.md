@@ -72,6 +72,8 @@ testar via Node.js basta executar o comando
 qunit test\tests.js
 ```
 
-Observe que se executar apenas "qunit" este irá procurar por todos os 
+Observe que se executarmos apenas "qunit" este irá procurar por todos os 
 arquivos no diretório **test**, inclusive aquele contendo código em ES6,
-o que não desejamos. 
+o que não desejamos. Por fim, dado que nosso arquivo [index.html](test/index.html) faz referência ao arquivo **tests.js**, basta abrir este
+arquivo em um navegador para que os testes sejam executados pelo 
+próprio navegador. 
