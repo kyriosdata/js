@@ -11,12 +11,12 @@ Agora vamos ver como usar o recurso de ES6, padronizado, para "dividir"
 código em JavaScript, usando as palavras reservadas **import** e **export**.
 Nenhum problema com o uso desse recurso definido e padronizado, exceto que 
 nem o Node.js, versão mais recente no momento que escrevo este texto, 
-oferece recurso, senão por meio de uso de um _flag_ específico e 
+está preparado para tal, senão por meio de uso de um _flag_ específico e 
 alteração da extensão do nome de arquivos, além de ser apenas experimental, 
-ou seja, estou interpretando isso como inconvenientes e vou evitar esse percurso. 
+ou seja, estou interpretando isso como inconvenientes a serem evitados.
 
 Como então fazer uso de import/export (ES6) sendo que nem Node.js nem
-navegadores mais recentes oferecem o recurso para tal?
+navegadores mais recentes são compatíveis com import/export?
 
 Vamos lançar mão da ferramenta [babelify](https://github.com/babel/babelify)
 que combina o uso de [Babel](https://babeljs.io/) e [browserify](http://browserify.org). Já vimos o que o _browserify_ pode fazer no exemplo de [teste](../teste) quando se emprega **require**. Babel é uma opção
@@ -50,9 +50,9 @@ QUnit.test('soma trivial', function (assert) {
 });
 ```
 
-Sem nenhuma outra operação, ao se tentar usar o qunit, por exemplo, 
-a mensagem de era irá esclarecer que "import" é um token inesperado. 
-Como resolver? Primeiro vamos instalar as ferramentas necessárias.
+Nesse instante, se tentarmos usar o qunit, por exemplo, 
+a saída será _unexpected token import_, indicando que "import" não
+é esperado. Como resolver? Primeiro vamos instalar as ferramentas necessárias.
 
 ```
 npm install --save-dev babelify babel-core babel-preset-env babel-preset-react
