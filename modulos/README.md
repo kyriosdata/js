@@ -1,6 +1,6 @@
 ## Ah, precisamos "dividir" o código em partes menores...
 
-Sim, vimos em [teste](../) como fazer isso. 
+Sim, vimos em [teste](../teste) como fazer isso. 
 
 No arquivo [codigo.js](codigo.js) encontra-se uma única função 
 que retorna a soma dos dois argumentos fornecidos.
