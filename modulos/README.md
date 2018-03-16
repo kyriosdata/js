@@ -1,50 +1,77 @@
 ## Ah, precisamos "dividir" o código em partes menores...
 
-Sim, vimos em [teste](../teste) como fazer isso. 
+Sim, vimos em [teste](../teste) como fazer isso. Lá não era exatamente
+a intenção, mas gostaríamos de colocar o código testado em arquivo
+diferente do código de teste, para isso usamos um recurso comum em
+Node.js, mas que não é padrão: **require**. Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. Contudo, 
+foi necessário algum esforço para que o teste pudesse ser executado no
+navegador. Tivemos que usar o [browserify](http://browserify.org/) para viabilizar o uso do **require** no navegador. 
 
-No arquivo [codigo.js](codigo.js) encontra-se uma única função 
-que retorna a soma dos dois argumentos fornecidos.
-Um único teste para esta função encontra-se no diretório **test**, 
-o diretório padrão usado pela ferramenta [QUnit](https://qunitjs.com/), 
-que é o _framework_ selecionado para execução dos nossos testes.
+Agora vamos ver como usar o recurso de ES6, padronizado, para "dividir" 
+código em JavaScript, usando as palavras reservadas **import** e **export**.
+Nenhum problema com o uso desse recurso definido e padronizado, exceto que 
+nem o Node.js, versão mais recente no momento que escrevo este texto, 
+oferece recurso, senão por meio de uso de um _flag_ específico e 
+alteração da extensão do nome de arquivos, além de ser apenas experimental, 
+ou seja, estou interpretando isso como inconvenientes e vou evitar esse percurso. 
 
-No diretório **test** há um único arquivo, **testa-codigo.js**. 
-Veja [aqui](https://asciinema.org/a/161530) como executar tal teste, 
-inclusive como instalar o QUnit.
+Como então fazer uso de import/export (ES6) sendo que nem Node.js nem
+navegadores mais recentes oferecem o recurso para tal?
 
-Esse exemplo faz uso do conceito de "módulo" para dividir nosso código
-entre arquivos. Para tal precisamos fazer uso de 
-**module.exports** ou **exports**. A diferença entre ambos nem sempre
-é adequadamente compreendida. Para uma explanação satisfatória 
-consulte https://medium.freecodecamp.org/node-js-module-exports-vs-exports-ec7e254d63ac. 
+Vamos lançar mão da ferramenta [babelify](https://github.com/babel/babelify)
+que combina o uso de [Babel](https://babeljs.io/) e [browserify](http://browserify.org). Já vimos o que o _browserify_ pode fazer no exemplo de [teste](../teste) quando se emprega **require**. Babel é uma opção
+para "compilar" o código em JavaScript (ES6) para código em JavaScript (ES5). 
+Essa transformação cuja saída produzida também é código fonte, 
+é realizada por uma ferramenta conhecida por _transpiler_. Definições feitas,
+vamos à operação. 
 
-## QUnit com resultado exibido via browser (HTML)
-Observe que no diretório **test** encontra-se o arquivo **index.html**, que 
-faz referência ao arquivo de script **tests.js**. Quando o arquivo 
-**index.html** é aberto, o QUnit irá executar os testes contidos em 
-**tests.js**. Contudo, dado que estamos usando código escrito para 
-o Node.js, que faz uso de módulos (função _require_), não disponível 
-em navegadores, precisamos converter nossos testes, neste caso, 
-**testa-codigo.js** em código que pode ser executado em um 
-navegador. Para fazer isso, nada melhor que o pacote de nome 
-sugestivo: _browserify_. 
+## Usando import/export com qunit (linha de comandos e navegador)
 
-```
-npm install -g browserify
-browserify testa-codigo.js > tests.js
-```
-
-Agora, ao abriar o arquivo **index.html**, você poderá acompanhar 
-o resultado da execução dos testes. 
-
-## Talvez seja um tédio gerar a cada momento o arquivo contendo os testes...
-Nesse caso, você pode fazer uso da ferramenta **watchify**, conforme abaixo.
+Nosso [código](codigo.js) a ser testado contém uma única função que é
+exportada por meio da palavra-chave **export** (ES6), conforme ilustrado abaixo.
 
 ```
-npm install -g watchify
-watchify testa-codigo.js -o tests.js --debug --verbose
+export function soma(x, y) {
+  return x + y;
+}
+```
+O código que testa a nossa função está no arquivo [testa-codigo.js](test/testa-codigo.js), transcrito abaixo, usando ES6 por meio do import.
+
+```
+import { soma } from "../codigo";
+
+QUnit.test('soma trivial', function (assert) {
+
+  // Executa a operação que desejamos testar
+  let resultado = soma(3, -1);
+
+  // Verifica se o resultado produzido é o esperado.
+  assert.equal(resultado, 2, 'soma incorreta');
+});
 ```
 
-Agora, o _browserify_ será chamado toda vez que o seu código sofrer alguma
-alteração, produzindo uma versão de **tests.js** atualizada, sem necessidade
-de intervenção humana. 
+Sem nenhuma outra operação, ao se tentar usar o qunit, por exemplo, 
+a mensagem de era irá esclarecer que "import" é um token inesperado. 
+Como resolver? Primeiro vamos instalar as ferramentas necessárias.
+
+```
+npm install --save-dev babelify babel-core babel-preset-env babel-preset-react
+```
+
+Após a instalação você pode executar o comando que transforma código
+escrito em ES6 para código em ES5, conforme abaixo:
+
+```
+browserify test\testa-codigo.js -o test\tests.js -t [ babelify --presets [ env react ] ]
+```
+Em consequência, o arquivo **tests.js** é gerado contendo código que 
+tanto pode ser compreendido pelo Node.js quanto pelo navegador. Para 
+testar via Node.js basta executar o comando 
+
+```
+qunit test\tests.js
+```
+
+Observe que se executar apenas "qunit" este irá procurar por todos os 
+arquivos no diretório **test**, inclusive aquele contendo código em ES6,
+o que não desejamos. 

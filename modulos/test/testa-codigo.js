@@ -1,13 +1,5 @@
-// Obtém referência para o que será testado
-// Observe que o presente código de teste está
-// em diretório específico (test), enquanto o
-// código testado está isolado em outro diretório.
-
-//const operacao = require('../codigo');
-
+// Importa a função soma (ES6)
 import { soma } from "../codigo";
-
-// Abaixo segue um teste identificado por "soma trivial".
 
 QUnit.test('soma trivial', function (assert) {
 
