@@ -1,5 +1,10 @@
 const fs = require('fs');
 
+
+function x() {
+
+}
+
 if (process.argv.length !== 3) {
     console.log("Uso: node verifica-jpeg <arquivo JPEG>");
     process.exitCode = 0;
@@ -14,8 +19,8 @@ const path = process.argv[2];
  * com os bytes FFD9.
  *
  * @param path O nome do arquivo a ser verificado.
- * @returns {boolean} O valor {true} se os marcadores estão
- * presentes no arquivo ou {false}, caso contrário.
+ * @returns {boolean} O valor true se os marcadores estão
+ * presentes no arquivo ou false, caso contrário.
  */
 function verificaPresencaMarcadoresJpeg(path) {
     function leDoisBytes(arquivo, position = 0) {
@@ -32,6 +37,8 @@ function verificaPresencaMarcadoresJpeg(path) {
         let doisPrimeiros = leDoisBytes(arquivo, 0);
         let doisUltimos = leDoisBytes(arquivo, size - 2);
 
+        // TODO em vez de strings usar valor numerico
+        // TODO usar constantes para os valores FFD8 e FFD9.
         return doisPrimeiros === "ffd8" && doisUltimos === "ffd9";
     } catch (erro) {
         return false;
