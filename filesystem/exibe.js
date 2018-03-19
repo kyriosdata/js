@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-if (process.argv.length != 3) {
+if (process.argv.length !== 3) {
     console.log("Uso: node exibe <arquivo>");
     process.exitCode = 0;
     return;
