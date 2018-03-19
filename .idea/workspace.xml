@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/filesystem/verifica-jpeg.js" afterPath="$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="verifica-jpeg.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="31" column="42" lean-forward="false" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+            <state relative-caret-position="810">
+              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -324,12 +323,12 @@
       <workItem from="1519042844225" duration="58000" />
       <workItem from="1519504074211" duration="6135000" />
       <workItem from="1519580791136" duration="2850000" />
-      <workItem from="1521463717622" duration="5545000" />
+      <workItem from="1521463717622" duration="5943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14661000" />
+    <option name="totallyTimeSpent" value="15059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="98" y="0" width="1842" height="1517" extended-state="0" />
@@ -615,10 +614,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JavaScript-modules-diagram/E:/js/filesystem/verifica-jpeg.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/filesystem/verifica-jpeg.js</OriginalElement>
+          <nodes>
+            <node x="" y="">$APPLICATION_CONFIG_DIR$/javascript/nodejs/9.5.0/core-modules/fs.js</node>
+            <node x="" y="">$PROJECT_DIR$/filesystem/verifica-jpeg.js#fs#6;</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="125.0" y="132.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="31" column="42" lean-forward="false" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        <state relative-caret-position="810">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding />
         </state>
       </provider>
