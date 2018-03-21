@@ -39,7 +39,7 @@ function iguais(a, b) {
     // some retorna true ao primeiro elemento que satisfaz a condição.
     // Se for o caso, retorna true. Caso contrário, retorna false.
     // Só irá retornar true se houver uma propriedade com valores diferentes
-    // O retorno da função, contudo, é negado. 
+    // O retorno da função, contudo, é negado.
     return !propertiesOfA.some(e => a[e] !== b[e]);
 }
 

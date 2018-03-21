@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/objeto/igualdade.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/objeto/README.md" afterPath="$PROJECT_DIR$/objeto/README.md" />
+      <change beforePath="$PROJECT_DIR$/objeto/igualdade.js" afterPath="$PROJECT_DIR$/objeto/igualdade.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,12 +67,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="igualdade.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="igualdade.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objeto/igualdade.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+            <state relative-caret-position="774">
+              <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/objeto/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="90">
+                <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -129,6 +142,7 @@
         <option value="$PROJECT_DIR$/serializacao/serializacao.js" />
         <option value="$PROJECT_DIR$/objeto/definicao.js" />
         <option value="$PROJECT_DIR$/objeto/igualdade.js" />
+        <option value="$PROJECT_DIR$/objeto/README.md" />
       </list>
     </option>
   </component>
@@ -409,12 +423,12 @@
       <workItem from="1519580791136" duration="2850000" />
       <workItem from="1521463717622" duration="9116000" />
       <workItem from="1521648011747" duration="650000" />
-      <workItem from="1521653498687" duration="3215000" />
+      <workItem from="1521653498687" duration="3314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22097000" />
+    <option name="totallyTimeSpent" value="22196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="526" width="1842" height="1517" extended-state="0" />
@@ -817,9 +831,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/objeto/igualdade.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+        <state relative-caret-position="774">
+          <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objeto/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="90">
+            <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
