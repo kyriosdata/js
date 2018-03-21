@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/objeto/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/objeto/definicao.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/objeto/igualdade.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="definicao.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="definicao.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objeto/definicao.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="894">
@@ -64,6 +63,16 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="igualdade.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/objeto/igualdade.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,6 +128,7 @@
         <option value="$PROJECT_DIR$/serializacao/README.md" />
         <option value="$PROJECT_DIR$/serializacao/serializacao.js" />
         <option value="$PROJECT_DIR$/objeto/definicao.js" />
+        <option value="$PROJECT_DIR$/objeto/igualdade.js" />
       </list>
     </option>
   </component>
@@ -276,7 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.definicao.js">
+  <component name="RunManager" selected="Node.js.igualdade.js">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -317,9 +327,9 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="arquivo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="$PROJECT_DIR$/filesystem/remove.js" working-dir="$PROJECT_DIR$/filesystem" />
     <configuration name="definicao.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="definicao.js" working-dir="$PROJECT_DIR$/objeto" />
     <configuration name="exibe-buffer.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" application-parameters="Cid.class" path-to-js-file="exibe-buffer.js" working-dir="$PROJECT_DIR$/filesystem" />
+    <configuration name="igualdade.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="igualdade.js" working-dir="$PROJECT_DIR$/objeto" />
     <configuration name="serializacao.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="serializacao.js" working-dir="$PROJECT_DIR$/serializacao" />
     <configuration name="verifica-jpeg.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" application-parameters="x" path-to-js-file="verifica-jpeg.js" working-dir="$PROJECT_DIR$/filesystem" />
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -363,19 +373,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.arquivo.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.exibe-buffer.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.verifica-jpeg.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.serializacao.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.definicao.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.exibe-buffer.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.verifica-jpeg.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.serializacao.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.definicao.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.igualdade.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.definicao.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.serializacao.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.verifica-jpeg.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.exibe-buffer.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.arquivo.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.igualdade.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.definicao.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.serializacao.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.verifica-jpeg.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.exibe-buffer.js" />
       </list>
     </recent_temporary>
   </component>
@@ -399,12 +409,12 @@
       <workItem from="1519580791136" duration="2850000" />
       <workItem from="1521463717622" duration="9116000" />
       <workItem from="1521648011747" duration="650000" />
-      <workItem from="1521653498687" duration="1437000" />
+      <workItem from="1521653498687" duration="3215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20319000" />
+    <option name="totallyTimeSpent" value="22097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="526" width="1842" height="1517" extended-state="0" />
@@ -424,7 +434,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -451,9 +461,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>a['x'] == a[&quot;y&quot;]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/filesystem/exibe-buffer.js">
@@ -793,6 +812,14 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objeto/igualdade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
