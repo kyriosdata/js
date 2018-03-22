@@ -9,12 +9,12 @@ function exibeInstanteCorrente() {
 
 };
 
-let nome = chalk.inverse("Relógio");
-let versao = chalk.underline("v1.0.0");
+let nome = chalk.blue.bgWhite.bold("Relógio (v1.0.0)");
 let ctrc = chalk.gray("Use CTR-C para interromper");
 
+console.clear();
+console.log();
 console.log(nome);
-console.log(versao);
 console.log(ctrc);
 
 // Execute a função para exibir o instante corrente a cada segundo

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pacote/relogio.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pacote/relogio.js" afterPath="$PROJECT_DIR$/pacote/relogio.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,8 +92,8 @@
       <file leaf-file-name="relogio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pacote/relogio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="462">
+              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -439,12 +438,12 @@
       <workItem from="1521463717622" duration="9116000" />
       <workItem from="1521648011747" duration="650000" />
       <workItem from="1521653498687" duration="3314000" />
-      <workItem from="1521746985805" duration="2664000" />
+      <workItem from="1521746985805" duration="3097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24860000" />
+    <option name="totallyTimeSpent" value="25293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="92" y="0" width="1842" height="2072" extended-state="0" />
@@ -916,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pacote/relogio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="462">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
         </state>
       </provider>
