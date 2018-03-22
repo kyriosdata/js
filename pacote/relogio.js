@@ -1,4 +1,15 @@
-const chalk = require('chalk');
+const chalk = require("chalk");
+const cursor = require("cli-cursor");
+const onDeath = require("death");
+
+// Captura toda exceção ocrrida, inclusive SIGINT (CTRL-C)
+onDeath(function() {
+    console.log();
+    console.log();
+    console.timeEnd("Executado por");
+
+    process.exit();
+});
 
 /**
  * Exibe o instante corrente na linha em questão e retorna o cursor para
@@ -6,16 +17,22 @@ const chalk = require('chalk');
  */
 function exibeInstanteCorrente() {
     process.stdout.write(new Date().toLocaleTimeString() + "\r");
-
 };
 
-let nome = chalk.blue.bgWhite.bold("Relógio (v1.0.0)");
-let ctrc = chalk.gray("Use CTR-C para interromper");
+/**
+ * Limpa a tela.
+ */
+function limparTela() {
+    process.stdout.write('\x1bc');
+}
 
-console.clear();
+console.time("Executado por");
+
+cursor.hide();
+limparTela();
 console.log();
-console.log(nome);
-console.log(ctrc);
+console.log(chalk.blue.bgWhite.bold("Relógio (v1.0.0)"));
+console.log(chalk.gray("Use CTR-C para interromper"));
 
-// Execute a função para exibir o instante corrente a cada segundo
+exibeInstanteCorrente(); // Imediatamente exibe o instante corrente
 setInterval(exibeInstanteCorrente, 1000);
