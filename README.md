@@ -1,7 +1,7 @@
 # js
 Aprendendo JavaScript por meio de exemplos
 
-# Exemplos
+## Pequenos programas...
 - [Primeiro](primeiro)
 - [Segundo](segundo)
 - [Linha de comandos](command-line)
@@ -10,3 +10,7 @@ Aprendendo JavaScript por meio de exemplos
 - [Teste](teste)
 - [Promises](promises)
 - [Manipulação de arquivos](filesystem)
+
+
+## Exemplos disponíveis online...
+- [Exemplos](exemplos)
