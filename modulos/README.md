@@ -1,11 +1,13 @@
 ## Ah, precisamos "dividir" o código em partes menores...
 
-Sim, vimos em [teste](../teste) como fazer isso. Lá não era exatamente
-a intenção, mas gostaríamos de colocar o código testado em arquivo
+Sim, vimos em [teste](../inicio/teste) como fazer isso. Tínhamos que colocar
+o código testado em arquivo
 diferente do código de teste, para isso usamos um recurso comum em
-Node.js, mas que não é padrão: **require**. Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. Contudo, 
+Node.js, mas que não é padrão: **require**. 
+
+Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. Contudo, 
 foi necessário algum esforço para que o teste pudesse ser executado no
-navegador. Tivemos que usar o [browserify](http://browserify.org/) para viabilizar o uso do **require** no navegador. 
+navegador. Foi necessário usar o [browserify](http://browserify.org/) para viabilizar o uso do **require** no navegador. 
 
 Agora vamos ver como usar o recurso de ES6, padronizado, para "dividir" 
 código em JavaScript, usando as palavras reservadas **import** e **export**.
@@ -19,18 +21,20 @@ Como então fazer uso de import/export (ES6) sendo que nem Node.js nem
 navegadores mais recentes são compatíveis com import/export?
 
 Vamos lançar mão da ferramenta [babelify](https://github.com/babel/babelify)
-que combina o uso de [Babel](https://babeljs.io/) e [browserify](http://browserify.org). Já vimos o que o _browserify_ pode fazer no exemplo de [teste](../teste) quando se emprega **require**. Babel é uma opção
+que combina o uso de [Babel](https://babeljs.io/) e [browserify](http://browserify.org). 
+
+Já vimos o que o _browserify_ pode fazer no exemplo de [teste](../inicio/teste) quando se emprega **require**. Babel é uma opção
 para "compilar" o código em JavaScript (ES6) para código em JavaScript (ES5). 
 Essa transformação cuja saída produzida também é código fonte, 
 é realizada por uma ferramenta conhecida por _transpiler_. Definições feitas,
 vamos à operação. 
 
-## Usando import/export com qunit (linha de comandos e navegador)
+## Usando import/export com QUnit (linha de comandos e navegador)
 
 Nosso [código](codigo.js) a ser testado contém uma única função que é
 exportada por meio da palavra-chave **export** (ES6), conforme ilustrado abaixo.
 
-```
+```javascript
 export function soma(x, y) {
   return x + y;
 }
