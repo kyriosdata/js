@@ -1,5 +1,4 @@
-// Exibe o primeiro argumento fornecido usando
-// letras maiúsculas.
+// Exibe o primeiro argumento fornecido em letras maiúsculas.
 // EXEMPLO:
 // node maiuscula casa
 // CASA
