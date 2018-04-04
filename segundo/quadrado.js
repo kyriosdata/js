@@ -7,6 +7,6 @@ function quadrado(x) {
   return x * x;
 }
 
-// Chama a função quadrado e exibe resultado.
+// Chama a função quadrado e exibe resultado (após saltar linha).
 console.log("");
 console.log("O quadrado de 2 é " + quadrado(2));
