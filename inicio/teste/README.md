@@ -31,11 +31,13 @@ npm install -g browserify
 browserify testa-codigo.js > tests.js
 ```
 
-Agora, ao abriar o arquivo [index.html](index.html), você poderá acompanhar 
+Agora, ao abriar o arquivo <a href="index.html">index.html</a>, você poderá acompanhar 
 o resultado da execução do único teste criado.
 
-## Talvez seja um tédio gerar a cada momento o arquivo contendo os testes...
-Nesse caso, você pode fazer uso da ferramenta **watchify**, conforme abaixo.
+## É um tédio gerar a cada momento o arquivo contendo os testes...
+Testes serão editados a todo momento e, nesse caso, você terá que repetir o
+uso do _browserify_ sobre o arquivo de testes atualizado. Ou,
+você pode fazer uso da ferramenta **watchify**, conforme abaixo.
 
 ```
 npm install -g watchify
