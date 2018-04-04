@@ -1,5 +1,4 @@
-# js
-Vamos dominar "Construção de Software", e usaremos JavaScript como ferramenta!
+# JavaScript
 
 ## Pequenos programas...
 - "O [início](inicio) é sempre a parte mais difícil." Platão.
