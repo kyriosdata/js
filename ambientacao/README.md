@@ -9,4 +9,5 @@ Seguem vários pequenos programas para familiarização com os recursos de JavaS
 - [Pacote](pacote)
 - [Relógio](relogio)
 - [Segurança](seguranca)
+- [Serialização](serializacao)
 - [Variáveis de ambiente](environment)
