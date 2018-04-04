@@ -31,8 +31,8 @@ npm install -g browserify
 browserify testa-codigo.js > tests.js
 ```
 
-Agora, ao abriar o arquivo **index.html**, você poderá acompanhar 
-o resultado da execução dos testes. 
+Agora, ao abriar o arquivo [index.html](index.html), você poderá acompanhar 
+o resultado da execução do único teste criado.
 
 ## Talvez seja um tédio gerar a cada momento o arquivo contendo os testes...
 Nesse caso, você pode fazer uso da ferramenta **watchify**, conforme abaixo.
