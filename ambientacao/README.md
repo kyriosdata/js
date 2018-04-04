@@ -3,6 +3,7 @@ Seguem vários pequenos programas para familiarização com os recursos de JavaS
 
 - [Classe](classe)
 - [Linha de comandos](command-line)
+- [Objeto](objeto)
 - [Relógio](relogio)
 - [Manipulação de arquivos](filesystem)
 - [Módulos](modulos)
