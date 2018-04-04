@@ -1,10 +1,10 @@
 # JavaScript
+Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
 
 ## Pequenos programas...
 - "O [início](inicio) é sempre a parte mais difícil." Platão.
 - [Linha de comandos](command-line)
-- [git clone](https://asciinema.org/a/161953)
-- [QUnit](qunit)
+- 
 - [Teste](teste)
 - [Promises](promises)
 - [Manipulação de arquivos](filesystem)
