@@ -6,6 +6,7 @@ Seguem vários pequenos programas para familiarização com os recursos de JavaS
 - [Objeto](objeto)
 - [Manipulação de arquivos](filesystem)
 - [Módulos](modulos)
+- [Pacote](pacote)
 - [Relógio](relogio)
 - [Segurança](seguranca)
 - [Variáveis de ambiente](environment)

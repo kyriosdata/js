@@ -19,10 +19,8 @@
     "url": "https://github.com/kyriosdata/js/issues"
   },
   "homepage": "https://github.com/kyriosdata/js#readme",
-  "devDependencies": {
-    "chalk": "^2.3.2"
-  },
   "dependencies": {
+    "chalk": "^2.3.2",
     "cli-cursor": "^2.1.0",
     "death": "^1.1.0"
   }
