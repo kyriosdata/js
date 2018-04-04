@@ -2,7 +2,7 @@
 Aplicativo que exibe informações sobre o próprio, na saída padrão, 
 inclusive o resultado da chamada de uma função.
 
-Veja <a href="https://asciinema.org/a/161533"> aqui <img src="./asciinema.svg" width="12" align="center"></a> como executar este 
+Veja <a href="https://asciinema.org/a/161533"> aqui <img src="../images/asciinema.svg" width="12" align="center"></a> como executar este 
 aplicativo. 
 
 ## Melhoria
