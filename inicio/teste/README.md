@@ -7,7 +7,7 @@ o diretório padrão usado pela ferramenta [QUnit](https://qunitjs.com/),
 que é o _framework_ selecionado para execução dos nossos testes.
 
 No diretório **test** há um único arquivo, [testa-codigo.js](test/testa-codigo.js). 
-Veja <a href="https://asciinema.org/a/161530"> aqui <img src="../images/asciinema.svg" width="12" align="center"></a> como executar tal teste, inclusive como instalar o QUnit.
+Veja <a href="https://asciinema.org/a/161530"> aqui <img src="../../images/asciinema.svg" width="12" align="center"></a> como executar tal teste, inclusive como instalar o QUnit.
 
 Esse exemplo faz uso do conceito de "módulo" para dividir nosso código
 entre arquivos. Para tal precisamos fazer uso de 
@@ -24,7 +24,7 @@ o Node.js, que faz uso de módulos (função _require_), não disponível
 em navegadores, precisamos converter nossos testes, neste caso, 
 **testa-codigo.js** em código que pode ser executado em um 
 navegador. Para fazer isso, nada melhor que o pacote de nome 
-sugestivo: _browserify_. 
+sugestivo: _[browserify](http://browserify.org/)_. 
 
 ```
 npm install -g browserify
