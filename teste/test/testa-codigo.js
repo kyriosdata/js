@@ -3,15 +3,15 @@
 // em diretório específico (test), enquanto o
 // código testado está isolado em outro diretório.
 
-const operacao = require('../codigo');
+const operacao = require("../codigo");
 
 // Abaixo segue um teste identificado por "soma trivial".
 
-QUnit.test('soma trivial', function (assert) {
+QUnit.test("soma trivial", function (assert) {
 
   // Executa a operação que desejamos testar
   let resultado = operacao.soma(3, -1);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 2, 'soma incorreta');
+  assert.equal(resultado, 2, "soma incorreta");
 });
