@@ -1,7 +1,8 @@
 # js
-Aprendendo JavaScript por meio de exemplos
+Vamos dominar "Construção de Software", e usaremos JavaScript como ferramenta!
 
 ## Pequenos programas...
+- [Primeiro contato](inicio)
 - [Primeiro](primeiro)
 - [Segundo](segundo)
 - [Linha de comandos](command-line)
