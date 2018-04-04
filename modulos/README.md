@@ -41,7 +41,7 @@ export function soma(x, y) {
 ```
 O código que testa a nossa função está no arquivo [testa-codigo.js](test/testa-codigo.js), transcrito abaixo, usando ES6 por meio do import.
 
-```
+```javascript
 import { soma } from "../codigo";
 
 QUnit.test('soma trivial', function (assert) {
@@ -54,7 +54,7 @@ QUnit.test('soma trivial', function (assert) {
 });
 ```
 
-Nesse instante, se tentarmos usar o qunit, por exemplo, 
+Nesse instante,ao usar o QUnit
 a saída será _unexpected token import_, indicando que "import" não
 é esperado. Como resolver? Primeiro vamos instalar as ferramentas necessárias.
 
