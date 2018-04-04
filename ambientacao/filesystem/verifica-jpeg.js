@@ -1,14 +1,9 @@
 const fs = require('fs');
 
-
-function x() {
-
-}
-
 if (process.argv.length !== 3) {
-    console.log("Uso: node verifica-jpeg <arquivo JPEG>");
-    process.exitCode = 0;
-    return;
+  console.log("Uso: node verifica-jpeg <arquivo JPEG>");
+  process.exitCode = 0;
+  return;
 }
 
 const path = process.argv[2];
@@ -23,26 +18,27 @@ const path = process.argv[2];
  * presentes no arquivo ou false, caso contrário.
  */
 function verificaPresencaMarcadoresJpeg(path) {
-    function leDoisBytes(arquivo, position = 0) {
-        let buffer = Buffer.alloc(2);
-        let lidos = fs.readSync(arquivo, buffer, 0, 2, position);
-        return lidos < 2 ? undefined : buffer.readUInt16BE(0, 2).toString(16);
-    }
+  function leDoisBytes(arquivo, position = 0) {
+    let buffer = Buffer.alloc(2);
+    let lidos = fs.readSync(arquivo, buffer, 0, 2, position);
+    return lidos < 2 ? undefined : buffer.readUInt16BE(0, 2);
+  }
 
-    try {
-        // Obtém o tamanho do arquivo
-        let size = fs.statSync(path).size;
+  try {
+    // Obtém o tamanho do arquivo
+    let size = fs.statSync(path).size;
 
-        let arquivo = fs.openSync(path, "r");
-        let doisPrimeiros = leDoisBytes(arquivo, 0);
-        let doisUltimos = leDoisBytes(arquivo, size - 2);
+    let arquivo = fs.openSync(path, "r");
+    let doisPrimeiros = leDoisBytes(arquivo, 0);
+    let doisUltimos = leDoisBytes(arquivo, size - 2);
+    fs.closeSync(arquivo);
 
-        // TODO em vez de strings usar valor numerico
-        // TODO usar constantes para os valores FFD8 e FFD9.
-        return doisPrimeiros === "ffd8" && doisUltimos === "ffd9";
-    } catch (erro) {
-        return false;
-    }
+    return doisPrimeiros === 65496 && doisUltimos === 65497;
+  } catch (erro) {
+    console.error(erro);
+    return false;
+  }
 }
 
+// TODO substituir por "O arquivo <arquivo> [não] possui marcação JPEG"
 console.log(verificaPresencaMarcadoresJpeg(path));
