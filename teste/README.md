@@ -7,8 +7,7 @@ o diretório padrão usado pela ferramenta [QUnit](https://qunitjs.com/),
 que é o _framework_ selecionado para execução dos nossos testes.
 
 No diretório **test** há um único arquivo, **testa-codigo.js**. 
-Veja [aqui](https://asciinema.org/a/161530) como executar tal teste, 
-inclusive como instalar o QUnit.
+Veja <a href="https://asciinema.org/a/161530"> aqui <img src="../images/asciinema.svg" width="12" align="center"></a> como executar tal teste, inclusive como instalar o QUnit.
 
 Esse exemplo faz uso do conceito de "módulo" para dividir nosso código
 entre arquivos. Para tal precisamos fazer uso de 
