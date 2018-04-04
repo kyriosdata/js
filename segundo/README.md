@@ -6,13 +6,12 @@ Veja <a href="https://asciinema.org/a/161533"> aqui <img src="../images/asciinem
 aplicativo. 
 
 ## Melhoria
-Observe que para testar este aplicativo, conforme está, teríamos que 
-editar o conteúdo do arquivo **quadrado.js**, executar o arquivo 
-editado e verificar o resultado.
-Este processo teria que ser repetido várias vezes, manualmente, 
-o que é inviável em muitos cenários. 
+Como você testaria este aplicativo? Bem, este é muito simples, 
+você pode até provar que ele está escrito corretamente. Não é preciso
+executar um teste. Muitos outros aplicativos, contudo, são compostos por 
+funções mais sofisticadas, e possivelmente em grande número. 
 
-Há vários exemplos de como realizar tais testes usando a 
+Há vários exemplos de como realizar testes usando a 
 ferramenta [QUnit](https://qunitjs.com/). Siga o [link](../teste)
 para detalhes.
 
