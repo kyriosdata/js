@@ -6,7 +6,7 @@ Um único teste para esta função encontra-se no diretório **test**,
 o diretório padrão usado pela ferramenta [QUnit](https://qunitjs.com/), 
 que é o _framework_ selecionado para execução dos nossos testes.
 
-No diretório **test** há um único arquivo, **testa-codigo.js**. 
+No diretório **test** há um único arquivo, [testa-codigo.js](test/testa-codigo.js). 
 Veja <a href="https://asciinema.org/a/161530"> aqui <img src="../images/asciinema.svg" width="12" align="center"></a> como executar tal teste, inclusive como instalar o QUnit.
 
 Esse exemplo faz uso do conceito de "módulo" para dividir nosso código
