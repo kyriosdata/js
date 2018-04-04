@@ -31,7 +31,7 @@ npm install -g browserify
 browserify testa-codigo.js > tests.js
 ```
 
-Agora, ao abriar o arquivo <a href="index.html">index.html</a>, você poderá acompanhar 
+Agora, ao abriar o arquivo **index.html**, você poderá acompanhar 
 o resultado da execução do único teste criado.
 
 ## É um tédio gerar a cada momento o arquivo contendo os testes...

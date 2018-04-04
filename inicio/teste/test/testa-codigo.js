@@ -1,11 +1,12 @@
-// Obtém referência para o que será testado
+// Obtém referência para o módulo que contém função a ser testada.
 // Observe que o presente código de teste está
 // em diretório específico (test), enquanto o
 // código testado está isolado em outro diretório.
 
 const operacao = require("../codigo");
 
-// Abaixo segue um teste identificado por "soma trivial".
+// Abaixo segue o nosso primeiro teste
+// identificado por "soma trivial".
 
 QUnit.test("soma trivial", function (assert) {
 
