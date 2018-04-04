@@ -11,8 +11,7 @@ você pode até provar que ele está escrito corretamente. Não é preciso
 executar um teste. Muitos outros aplicativos, contudo, são compostos por 
 funções mais sofisticadas, e possivelmente em grande número. 
 
-Há vários exemplos de como realizar testes usando a 
-ferramenta [QUnit](https://qunitjs.com/). Siga o [link](../teste)
-para detalhes.
+Usaremos a ferramenta [QUnit](https://qunitjs.com/) para os nossos
+testes. É o que faremos no nosso primeiro [teste](../teste).
 
 
