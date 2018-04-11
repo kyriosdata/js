@@ -1,13 +1,10 @@
 # JavaScript
-Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
 
-## Primeiros contatos com JavaScript...
-- [Documentação](https://runkit.com/kyriosdata/documentacao)
-- [Tipos dinâmicos](https://runkit.com/kyriosdata/tipo-dinamico)
-- [Curto circuito](https://runkit.com/kyriosdata/short-circuit)
-- Fatorial [iterativo](https://runkit.com/kyriosdata/fatorial-iterativo); iterativo que [não altera](https://runkit.com/kyriosdata/fatorial-iterativo-sem-alterar-parametro) valor do parâmetro recebido; [recursivo](https://runkit.com/kyriosdata/fatorial-recursivo)
-- Usando [padrão](https://runkit.com/kyriosdata/padrao) (pattern)
-- [Momento](https://runkit.com/kyriosdata/moment-js-exemplo)
+## Vamos nos ambientar com JavaScript?
+
+Comece tendo acesso a cada um dos pequenos trechos de código [aqui](primeiro).
+
+Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
 
 ## Pequenos programas...
 - "O [início](inicio) é sempre a parte mais difícil." Platão.
@@ -18,3 +15,4 @@ Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto 
 
 ## Exemplos disponíveis online...
 - [Exemplos](exemplos)
+
