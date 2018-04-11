@@ -2,6 +2,7 @@
 
 1. Acesse cada um dos pequenos trechos de código [aqui](primeiro). A sugestão é ler, experimentar, esclarecer dúvidas e passar para o próximo. 
 
+<hr>
 
 ## Pequenos programas...
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
