@@ -2,6 +2,7 @@
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
 
 ## Primeiros contatos com JavaScript...
+- [Documentação](https://runkit.com/kyriosdata/documentacao)
 - [Tipos dinâmicos](https://runkit.com/kyriosdata/tipo-dinamico)
 - [Curto circuito](https://runkit.com/kyriosdata/short-circuit)
 - Fatorial [iterativo](https://runkit.com/kyriosdata/fatorial-iterativo), [recursivo](https://runkit.com/kyriosdata/fatorial-recursivo)
