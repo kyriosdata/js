@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ambientacao/pacote/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ambientacao/pacote/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ambientacao/classe/matematica.js" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/classe/matematica.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,19 +18,28 @@
         <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="525">
-                <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <first_editor relative-caret-position="665">
+                <caret line="35" selection-start-line="35" selection-end-line="35" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="209">
               <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matematica.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -79,6 +87,7 @@
         <option value="$PROJECT_DIR$/ambientacao/classe/package.json" />
         <option value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
         <option value="$PROJECT_DIR$/ambientacao/pacote/README.md" />
+        <option value="$PROJECT_DIR$/ambientacao/classe/matematica.js" />
       </list>
     </option>
   </component>
@@ -100,10 +109,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/ambientacao/classe/node_modules" />
-    <handled-path value="$PROJECT_DIR$/ambientacao/pacote/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -168,7 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -205,6 +209,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -267,6 +272,13 @@
     </configuration>
     <configuration name="matematica-test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="matematica-test.js" working-dir="$PROJECT_DIR$/ambientacao/classe/test" />
     <configuration name="matematica.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="matematica.js" working-dir="$PROJECT_DIR$/ambientacao/classe" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -288,13 +300,6 @@
       <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -366,53 +371,54 @@
       <workItem from="1521653498687" duration="3314000" />
       <workItem from="1521746985805" duration="5108000" />
       <workItem from="1525284683166" duration="4491000" />
+      <workItem from="1525298657939" duration="723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31795000" />
+    <option name="totallyTimeSpent" value="32518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="23" width="1842" height="1127" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Tool Output" order="7" />
-      <window_info id="Azure Explorer" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="HDInsight Spark Submission" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22621359" />
-      <window_info id="npm" sideWeight="0.50062734" side_tool="true" visible="true" weight="0.28944445" />
-      <window_info anchor="bottom" id="Azure Activity Log" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22621359" />
+      <window_info id="npm" order="2" sideWeight="0.5018821" side_tool="true" visible="true" weight="0.28944445" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49937266" visible="true" weight="0.28944445" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49811795" visible="true" weight="0.28944445" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="7" />
-      <window_info anchor="bottom" id="Remote Spark Job in Cluster" />
-      <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39902914" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Google Cloud Storage" order="4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="JProfiler" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="8" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="8" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Google Cloud Storage" order="4" />
+      <window_info anchor="bottom" id="Tool Output" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="HDInsight Spark Submission" order="8" />
+      <window_info id="Azure Explorer" order="2" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="7" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="bottom" id="Azure Activity Log" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
     </layout>
   </component>
@@ -437,6 +443,13 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/filesystem/cria.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/exibe.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
@@ -481,9 +494,6 @@
           <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -549,13 +559,6 @@
     <entry file="file://$PROJECT_DIR$/objeto/README.md" />
     <entry file="file://$PROJECT_DIR$/relogio/relogio.js" />
     <entry file="file://$PROJECT_DIR$/pacote/relogio.js" />
-    <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ambientacao/classe/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -581,8 +584,8 @@
     <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="525">
-            <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <first_editor relative-caret-position="665">
+            <caret line="35" selection-start-line="35" selection-end-line="35" />
           </first_editor>
           <second_editor />
         </state>
@@ -590,8 +593,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="209">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
         </state>
       </provider>
     </entry>
