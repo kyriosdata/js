@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+              <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -363,12 +363,12 @@
       <workItem from="1521648011747" duration="650000" />
       <workItem from="1521653498687" duration="3314000" />
       <workItem from="1521746985805" duration="5108000" />
-      <workItem from="1525284683166" duration="1786000" />
+      <workItem from="1525284683166" duration="1912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29090000" />
+    <option name="totallyTimeSpent" value="29216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="23" width="1842" height="1127" extended-state="0" />
@@ -589,7 +589,7 @@
     <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
         </state>
       </provider>
     </entry>

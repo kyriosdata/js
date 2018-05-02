@@ -14,7 +14,7 @@
   "keywords": [
     "relógio"
   ],
-  "author": "Fábio Nogueira de Lucena <fabio@inf.ufg.br>",
+  "author": "Fábio Nogueira de Lucena <fabio@inf.ufg.br> (http://www.inf.ufg.br/~fabio)",
   "license": "LGPL-3.0",
   "bugs": {
     "url": "https://github.com/kyriosdata/js/issues"
