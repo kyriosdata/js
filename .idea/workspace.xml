@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/azureSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ambientacao/classe/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ambientacao/pacote/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ambientacao/pacote/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,48 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="matematica.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" selection-start-column="29" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/classe/README.md">
+        <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor />
+              <first_editor relative-caret-position="585">
+                <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matematica-test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/classe/test/matematica-test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ambientacao/classe/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="105">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -104,6 +76,7 @@
         <option value="$PROJECT_DIR$/relogio/relogio.js" />
         <option value="$PROJECT_DIR$/pacote/relogio.js" />
         <option value="$PROJECT_DIR$/ambientacao/classe/package.json" />
+        <option value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
       </list>
     </option>
   </component>
@@ -217,6 +190,13 @@
               <item name="js" type="b2602c69:ProjectViewProjectNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="ambientacao" type="462c0819:PsiDirectoryNode" />
+              <item name="classe" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ambientacao" type="462c0819:PsiDirectoryNode" />
               <item name="pacote" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -285,7 +265,6 @@
     </configuration>
     <configuration name="matematica-test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="matematica-test.js" working-dir="$PROJECT_DIR$/ambientacao/classe/test" />
     <configuration name="matematica.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="matematica.js" working-dir="$PROJECT_DIR$/ambientacao/classe" />
-    <configuration name="relogio.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="relogio.js" working-dir="$PROJECT_DIR$/pacote" />
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -321,6 +300,15 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <configuration name="run" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="run" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
     <configuration name="test (1)" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/ambientacao/classe/package.json" />
       <command value="run" />
@@ -340,19 +328,19 @@
       <envs />
     </configuration>
     <list>
-      <item itemvalue="Node.js.relogio.js (1)" />
       <item itemvalue="Node.js.matematica.js" />
       <item itemvalue="Node.js.matematica-test.js" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.test (1)" />
+      <item itemvalue="npm.run" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test (1)" />
+        <item itemvalue="npm.run" />
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.test (1)" />
         <item itemvalue="Node.js.matematica-test.js" />
         <item itemvalue="Node.js.matematica.js" />
-        <item itemvalue="Node.js.relogio.js (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -375,12 +363,12 @@
       <workItem from="1521648011747" duration="650000" />
       <workItem from="1521653498687" duration="3314000" />
       <workItem from="1521746985805" duration="5108000" />
-      <workItem from="1525284683166" duration="402000" />
+      <workItem from="1525284683166" duration="812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27706000" />
+    <option name="totallyTimeSpent" value="28116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="23" width="1842" height="1127" extended-state="0" />
@@ -395,12 +383,12 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="HDInsight Spark Submission" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22621359" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22621359" />
       <window_info id="npm" sideWeight="0.50062734" side_tool="true" visible="true" weight="0.28944445" />
       <window_info anchor="bottom" id="Azure Activity Log" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49937266" visible="true" weight="0.28944445" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49937266" visible="true" weight="0.28944445" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="ANTLR Preview" order="7" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" />
@@ -447,7 +435,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/filesystem/exibe-buffer.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/cria.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/exibe.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
@@ -582,17 +569,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
+    <entry file="file://$PROJECT_DIR$/ambientacao/classe/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambientacao/classe/package.json">
+    <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="585">
+            <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="105">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
         </state>
       </provider>
     </entry>

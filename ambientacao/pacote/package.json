@@ -4,7 +4,8 @@
   "description": "Um simples relógio",
   "main": "relogio.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Não há testes...\" && exit 0",
+    "run" : "node relogio.js"
   },
   "repository": {
     "type": "git",
