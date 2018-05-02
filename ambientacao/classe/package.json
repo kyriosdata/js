@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {},
   "scripts": {
-    "test": "qunit"
+    "test": "qunit",
+    "doc" : "jsdoc matematica.js"
   },
   "devDependencies": {
     "qunit": "^2.6.0"
