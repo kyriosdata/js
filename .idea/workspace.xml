@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/ambientacao/pacote/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ambientacao/pacote/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,23 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="255">
-                <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+              <first_editor relative-caret-position="525">
+                <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="165">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -77,6 +78,7 @@
         <option value="$PROJECT_DIR$/pacote/relogio.js" />
         <option value="$PROJECT_DIR$/ambientacao/classe/package.json" />
         <option value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
+        <option value="$PROJECT_DIR$/ambientacao/pacote/README.md" />
       </list>
     </option>
   </component>
@@ -363,12 +365,12 @@
       <workItem from="1521648011747" duration="650000" />
       <workItem from="1521653498687" duration="3314000" />
       <workItem from="1521746985805" duration="5108000" />
-      <workItem from="1525284683166" duration="4265000" />
+      <workItem from="1525284683166" duration="4491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31569000" />
+    <option name="totallyTimeSpent" value="31795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="23" width="1842" height="1127" extended-state="0" />
@@ -576,20 +578,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <first_editor relative-caret-position="525">
+            <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>

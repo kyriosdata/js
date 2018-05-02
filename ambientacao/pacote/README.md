@@ -4,12 +4,13 @@ E dessa forma reutilizar uma infinidade de código disponível?
 Você já sabe que o [npm](https://www.npmjs.com/) é a resposta para
 gerenciar pacotes, ou código que você pode reutilizar, em JavaScript. 
 
-Na aplicação corrente ([relogio.js](relogio.js)) são usados
-três pacotes: (a) [chalk](https://www.npmjs.com/package/chalk);
+Na aplicação corrente ([relogio.js](https://github.com/kyriosdata/js/blob/master/ambientacao/pacote/relogio.js)) 
+são usados três pacotes: (a) [chalk](https://www.npmjs.com/package/chalk);
 (b) [cli-cursor](https://www.npmjs.com/package/cli-cursor) e
 (c) [death](https://www.npmjs.com/package/death). Todos eles foram
 incluídos via *require*. Naturalmente, apenas isso não é suficiente
-para o Node.js executar o programa em [relogio.js](relogio.js). 
+para o Node.js executar o programa em 
+[relogio.js](https://github.com/kyriosdata/js/blob/master/ambientacao/pacote/relogio.js). 
 Tais pacotes precisam estar disponíveis localmente, o que pode
 ser realizado via o comando abaixo
 
@@ -18,7 +19,8 @@ npm install
 ```
 
 Mas como o npm sabe quais os pacotes carregar e quais as versões
-utilizar? A resposta está no arquivo [package.json](package.json). 
+utilizar? A resposta está no arquivo 
+[package.json](https://github.com/kyriosdata/js/blob/master/ambientacao/pacote/package.json). 
 Nesse caso, todos os pacotes são necessários durante a execução do
 aplicativo e portanto, estão descritos na seção **dependencies**.
 Várias outras informações são fornecidas por meio desse arquivo, que

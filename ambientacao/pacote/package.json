@@ -5,7 +5,8 @@
   "main": "relogio.js",
   "scripts": {
     "test": "echo \"Não há testes...\" && exit 0",
-    "start": "node relogio.js"
+    "start": "node relogio.js",
+    "home" : "open https://github.com/kyriosdata/js/tree/master/ambientacao/pacote"
   },
   "repository": {
     "type": "git",
