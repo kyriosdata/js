@@ -1,5 +1,5 @@
 // Exibe as variáveis de ambiente e os respectivos valores
-// (variáveis e valores é o objeto 'process.env')
+// (variáveis e valores é o conteúdo do objeto 'process.env')
 // console.log(process.env);
 
 // Exibe apenas as variáveis de ambiente

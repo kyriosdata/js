@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ambientacao/classe/matematica.js" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/classe/matematica.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ambientacao/classe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/classe/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ambientacao/environment/exibe.js" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/environment/exibe.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +35,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matematica.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matematica.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="551">
+              <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matematica-test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ambientacao/classe/test/matematica-test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exibe.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ambientacao/environment/exibe.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -98,6 +115,7 @@
         <option value="$PROJECT_DIR$/ambientacao/pacote/README.md" />
         <option value="$PROJECT_DIR$/ambientacao/classe/package.json" />
         <option value="$PROJECT_DIR$/ambientacao/classe/matematica.js" />
+        <option value="$PROJECT_DIR$/ambientacao/environment/exibe.js" />
       </list>
     </option>
   </component>
@@ -205,14 +223,7 @@
               <item name="js" type="b2602c69:ProjectViewProjectNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="ambientacao" type="462c0819:PsiDirectoryNode" />
-              <item name="classe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="ambientacao" type="462c0819:PsiDirectoryNode" />
-              <item name="classe" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="environment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="js" type="b2602c69:ProjectViewProjectNode" />
@@ -394,12 +405,12 @@
       <workItem from="1521746985805" duration="5108000" />
       <workItem from="1525284683166" duration="4491000" />
       <workItem from="1525298657939" duration="723000" />
-      <workItem from="1525303264462" duration="1368000" />
+      <workItem from="1525303264462" duration="1501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33886000" />
+    <option name="totallyTimeSpent" value="34019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="23" width="1842" height="1127" extended-state="0" />
@@ -411,11 +422,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22621359" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22621359" />
       <window_info id="npm" order="2" sideWeight="0.50313675" side_tool="true" visible="true" weight="0.28944445" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49686325" visible="true" weight="0.28944445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49686325" visible="true" weight="0.28944445" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -466,13 +477,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/filesystem/cria.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/exibe.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
@@ -590,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambientacao/classe/test/matematica-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -623,8 +620,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="551">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/classe/test/matematica-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/environment/exibe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
         </state>
       </provider>
     </entry>
