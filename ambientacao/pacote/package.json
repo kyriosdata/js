@@ -1,11 +1,11 @@
 {
-  "name": "pacote",
+  "name": "relogio-cli",
   "version": "1.0.0",
-  "description": "Um simples relógio",
+  "description": "Relógio (linha de comandos) para ilustrar uso de packages",
   "main": "relogio.js",
   "scripts": {
     "test": "echo \"Não há testes...\" && exit 0",
-    "run" : "node relogio.js"
+    "run": "node relogio.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "dependencies": {
     "chalk": "^2.3.2",
     "cli-cursor": "^2.1.0",
-    "death": "^1.1.0"
+    "death": "^1.1.0",
+    "npm": "^6.0.0"
   }
 }
