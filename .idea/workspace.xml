@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ambientacao/environment/exibe.js" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/environment/exibe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ambientacao/modulos/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/modulos/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +53,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exibe.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exibe.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ambientacao/environment/exibe.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
               <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codigo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ambientacao/modulos/codigo.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ambientacao/modulos/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="-69">
+                <caret line="48" selection-start-line="48" selection-end-line="48" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -116,6 +133,7 @@
         <option value="$PROJECT_DIR$/ambientacao/classe/package.json" />
         <option value="$PROJECT_DIR$/ambientacao/classe/matematica.js" />
         <option value="$PROJECT_DIR$/ambientacao/environment/exibe.js" />
+        <option value="$PROJECT_DIR$/ambientacao/modulos/README.md" />
       </list>
     </option>
   </component>
@@ -224,6 +242,18 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="ambientacao" type="462c0819:PsiDirectoryNode" />
               <item name="environment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ambientacao" type="462c0819:PsiDirectoryNode" />
+              <item name="filesystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ambientacao" type="462c0819:PsiDirectoryNode" />
+              <item name="modulos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="js" type="b2602c69:ProjectViewProjectNode" />
@@ -405,12 +435,12 @@
       <workItem from="1521746985805" duration="5108000" />
       <workItem from="1525284683166" duration="4491000" />
       <workItem from="1525298657939" duration="723000" />
-      <workItem from="1525303264462" duration="1501000" />
+      <workItem from="1525303264462" duration="1903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34019000" />
+    <option name="totallyTimeSpent" value="34421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="23" width="1842" height="1127" extended-state="0" />
@@ -477,8 +507,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/filesystem/cria.js" />
-    <entry file="file://$PROJECT_DIR$/filesystem/exibe.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/exibe-buffer.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
@@ -636,6 +664,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/modulos/codigo.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/modulos/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-69">
+            <caret line="48" selection-start-line="48" selection-end-line="48" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

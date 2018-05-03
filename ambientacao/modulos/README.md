@@ -5,25 +5,30 @@ o código testado em arquivo
 diferente do código de teste, para isso usamos um recurso comum em
 Node.js, mas que não é padrão: **require**. 
 
-Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. Contudo, 
-foi necessário algum esforço para que o teste pudesse ser executado no
-navegador. Foi necessário usar o [browserify](http://browserify.org/) para viabilizar o uso do **require** no navegador. 
+Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. 
+Contudo, foi necessário algum esforço para que o teste pudesse ser executado no
+navegador. A ferramenta [browserify](http://browserify.org/) viabilizou o uso 
+do **require** no navegador. 
 
 Agora vamos ver como usar o recurso de ES6, padronizado, para "dividir" 
 código em JavaScript, usando as palavras reservadas **import** e **export**.
-Nenhum problema com o uso desse recurso definido e padronizado, exceto que 
-nem o Node.js, versão mais recente no momento que escrevo este texto, 
-está preparado para tal, senão por meio de uso de um _flag_ específico e 
-alteração da extensão do nome de arquivos, além de ser apenas experimental, 
+
+Não há nenhum problema com o uso desse recurso definido e padronizado, exceto 
+que nem o Node.js, versão mais recente no momento que escrevo este texto, 
+está preparado para tal, senão por meio de uso de um _flag_ específico e,
+adicionalmente, exige a alteração da extensão do nome de arquivos, 
 ou seja, estou interpretando isso como inconvenientes a serem evitados.
 
 Como então fazer uso de import/export (ES6) sendo que nem Node.js nem
-navegadores mais recentes são compatíveis com import/export?
+navegadores mais recentes são compatíveis com import/export, e sem fazer uso 
+de mecanismos "inconvenientes" (citados no parágrafo anterior)?
 
-Vamos lançar mão da ferramenta [babelify](https://github.com/babel/babelify)
-que combina o uso de [Babel](https://babeljs.io/) e [browserify](http://browserify.org). 
+Vamos usar a ferramenta [babelify](https://github.com/babel/babelify)
+que combina o uso de [Babel](https://babeljs.io/) e 
+[browserify](http://browserify.org). 
 
-Já vimos o que o _browserify_ pode fazer no exemplo de [teste](../inicio/teste) quando se emprega **require**. Babel é uma opção
+Já vimos o que o _browserify_ pode fazer no exemplo de [teste](../inicio/teste) 
+quando se emprega **require**. Babel é uma opção
 para "compilar" o código em JavaScript (ES6) para código em JavaScript (ES5). 
 Essa transformação cuja saída produzida também é código fonte, 
 é realizada por uma ferramenta conhecida por _transpiler_. Definições feitas,
@@ -39,7 +44,9 @@ export function soma(x, y) {
   return x + y;
 }
 ```
-O código que testa a nossa função está no arquivo [testa-codigo.js](test/testa-codigo.js), transcrito abaixo, usando ES6 por meio do import.
+O código que testa a nossa função está no arquivo 
+[testa-codigo.js](test/testa-codigo.js), transcrito abaixo, usando ES6 por 
+meio do import.
 
 ```javascript
 import { soma } from "../codigo";
