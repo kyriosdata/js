@@ -1,12 +1,13 @@
 {
   "name": "relogio-cli",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Relógio (linha de comandos) para ilustrar uso de packages",
   "main": "relogio.js",
   "scripts": {
     "test": "echo \"Não há testes...\" && exit 0",
     "start": "node relogio.js",
-    "home": "open https://github.com/kyriosdata/js/tree/master/ambientacao/pacote"
+    "home": "open https://github.com/kyriosdata/js/tree/master/ambientacao/pacote",
+    "relogio": "./node node_modules/relogio-cli/relogio.js"
   },
   "repository": {
     "type": "git",
