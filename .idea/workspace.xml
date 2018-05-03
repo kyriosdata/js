@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="" />
+    <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ambientacao/modulos/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/modulos/package.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,76 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="665">
-                <caret line="35" selection-start-line="35" selection-end-line="35" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ambientacao/modulos/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="matematica.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="matematica-test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/classe/test/matematica-test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exibe.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/environment/exibe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="codigo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/modulos/codigo.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ambientacao/modulos/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="273">
-                <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/classe/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            <state relative-caret-position="323">
+              <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -132,6 +70,7 @@
         <option value="$PROJECT_DIR$/ambientacao/classe/matematica.js" />
         <option value="$PROJECT_DIR$/ambientacao/environment/exibe.js" />
         <option value="$PROJECT_DIR$/ambientacao/modulos/README.md" />
+        <option value="$PROJECT_DIR$/ambientacao/modulos/package.json" />
       </list>
     </option>
   </component>
@@ -154,10 +93,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/ambientacao/modulos/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/ambientacao/classe/package.json" />
       <path value="$PROJECT_DIR$/ambientacao/filesystem/package.json" />
+      <path value="$PROJECT_DIR$/ambientacao/modulos/package.json" />
       <path value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
       <path value="$PROJECT_DIR$/ambientacao/seguranca/package.json" />
       <path value="$PROJECT_DIR$/httpserver/package.json" />
@@ -433,12 +376,12 @@
       <workItem from="1521746985805" duration="5108000" />
       <workItem from="1525284683166" duration="4491000" />
       <workItem from="1525298657939" duration="723000" />
-      <workItem from="1525303264462" duration="2052000" />
+      <workItem from="1525303264462" duration="2793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34570000" />
+    <option name="totallyTimeSpent" value="35311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="23" width="1842" height="1127" extended-state="0" />
@@ -505,7 +448,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/exibe-buffer.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/verifica-jpeg.js" />
     <entry file="file://$PROJECT_DIR$/filesystem/cria.js" />
@@ -647,7 +589,7 @@
     <entry file="file://$PROJECT_DIR$/ambientacao/classe/matematica.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -671,10 +613,17 @@
     <entry file="file://$PROJECT_DIR$/ambientacao/modulos/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="273">
-            <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <first_editor relative-caret-position="1330">
+            <caret line="70" selection-start-line="70" selection-end-line="70" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambientacao/modulos/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
         </state>
       </provider>
     </entry>

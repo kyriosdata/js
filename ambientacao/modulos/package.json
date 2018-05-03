@@ -6,13 +6,16 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "babelify": "^8.0.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "qunit"
+    "test": "qunit test/tests.js",
+    "prepara" : "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]"
   },
   "repository": {
     "type": "git",
