@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "qunit test/tests.js",
-    "prepara" : "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]"
+    "prepara": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]"
   },
   "repository": {
     "type": "git",

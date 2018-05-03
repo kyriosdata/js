@@ -73,18 +73,32 @@ Após a instalação você pode executar o comando que transforma código
 escrito em ES6 para código em ES5, conforme abaixo:
 
 ```
-browserify test\testa-codigo.js -o test\tests.js -t [ babelify --presets [ env react ] ]
+browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]
 ```
 Em consequência, o arquivo **tests.js** é gerado contendo código que 
 tanto pode ser compreendido pelo Node.js quanto pelo navegador. Para 
 testar via Node.js basta executar o comando 
 
 ```
-qunit test\tests.js
+qunit test/tests.js
 ```
 
 Observe que se executarmos apenas "qunit" este irá procurar por todos os 
 arquivos no diretório **test**, inclusive aquele contendo código em ES6,
-o que não desejamos. Por fim, dado que nosso arquivo [index.html](test/index.html) faz referência ao arquivo **tests.js**, basta abrir este
+o que não desejamos. Daí o motivo para fornecer explicitamente o que se deseja
+que o QUnit execute. 
+
+Por fim, dado que nosso arquivo [index.html](test/index.html) faz referência 
+ao arquivo **tests.js**, basta abrir este
 arquivo em um navegador para que os testes sejam executados pelo 
 próprio navegador. 
+
+## Como evitar a execução desses comandos "manualmente"?
+A resposta está no arquivo **package.json**. A seguinte sequência de comandos
+é suficiente e equivalente a todos os passos anteriores. 
+
+```
+npm install
+npm run prepara
+npm test
+```
