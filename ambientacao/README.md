@@ -10,4 +10,5 @@ Seguem vários pequenos programas para familiarização com os recursos de JavaS
 - [Relógio](relogio)
 - [Segurança](seguranca)
 - [Serialização](serializacao)
+- [Entrada padrão](stdin)
 - [Variáveis de ambiente](environment)
