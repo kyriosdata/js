@@ -11,5 +11,3 @@ rl.question('Forneça uma data no formato dd/mm/aaaa? ', (data) => {
 
   rl.close();
 });
-
-console.log("Curioso...");
