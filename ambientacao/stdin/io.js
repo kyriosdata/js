@@ -5,9 +5,13 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('Forneça uma data no formato dd/mm/aaaa? ', (data) => {
+rl.question('Forneça uma data: ', (data) => {
   
-  console.log(`Data fornecida: ${data}`);
+  if (data && data.trim().lenght > 0) {
+    console.log(`Data fornecida: ${data}`);
+  } else {
+    console.log("Preciso de uma data para prosseguir...");
+  }
 
   rl.close();
 });
