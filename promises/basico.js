@@ -37,7 +37,7 @@ promessa.then(ok, falha);
 // o código dessa função é executado e, em consequência
 // da execução, ou o método 'resolve' ou o 'reject' deve
 // ser chamado com alguma informação a ser passada para
-// a função 'then'.
+// a correspondente função 'then'.
 function outroExecutor(resolve, reject) {
 
   // Vamos supor que, dessa vez, houve um erro...
