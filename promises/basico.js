@@ -6,9 +6,10 @@ const falha = console.log;
 function executor(resolve, reject) {
 
   // faça algo aqui, possivelmente async e 
-  // na sequência chame 'resolve' ou 'reject'
-  // para indicar que o que foi feito ocorreu conforme
-  // esperado ou houve alguma falha, respectivamente.
+  // na sequência chame a função 'resolve' ou 'reject'.
+  // Chame 'resolve' para indicar que o que foi feito 
+  // ocorreu conforme esperado e, caso alguma falha
+  // tenha ocorrido, chame 'reject'. 
 
   // Vamos supor que tudo correu bem...
   if (true) {
