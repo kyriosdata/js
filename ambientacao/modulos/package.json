@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -15,7 +16,9 @@
   },
   "scripts": {
     "test": "qunit test/tests.js",
-    "prepara": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]"
+    "prepara-testes": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]",
+    "prepara-programa": "browserify programa.js -o programa-out.js -t [ babelify --presets [ env react ] ]",
+    "build": "babel *.js -d lib"
   },
   "repository": {
     "type": "git",
