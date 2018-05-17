@@ -6,22 +6,59 @@ diferente do código de teste, para isso usamos um recurso comum em
 Node.js, mas que não é padrão: **require**. 
 
 Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. 
-Contudo, foi necessário algum esforço para que o teste pudesse ser executado no
-navegador. A ferramenta [browserify](http://browserify.org/) viabilizou o uso 
-do **require** no navegador. 
+Contudo, foi necessário um passo intermediário para que o teste pudesse ser executado no
+navegador. A ferramenta [browserify](http://browserify.org/) converteu o 
+código de teste em código apto a ser utilizado em um navegador, que não
+admite o uso do **require**. 
 
 Agora vamos ver como usar o recurso de ES6, padronizado, para "dividir" 
 código em JavaScript, usando as palavras reservadas **import** e **export**.
 
-Não há nenhum problema com o uso desse recurso definido e padronizado, exceto 
-que nem o Node.js, versão mais recente no momento que escrevo este texto, 
-está preparado para tal, senão por meio de uso de um _flag_ específico e,
+## Qual o problema com import/export?
+
+Não há nenhum problema com o uso de **import** ou **export**, contudo,
+o Node.js, versão mais recente no momento que escrevo este texto, 
+NÃO está preparado para tal, senão por meio de uso de um _flag_ específico e,
 adicionalmente, exige a alteração da extensão do nome de arquivos, 
 ou seja, estou interpretando isso como inconvenientes a serem evitados.
+Em consequência, não vamos usar este _flag_ específico nem alterar a
+extensão dos nossos arquivos em JavaScript.
 
 Como então fazer uso de import/export (ES6) sendo que nem Node.js nem
 navegadores mais recentes são compatíveis com import/export, e sem fazer uso 
 de mecanismos "inconvenientes" (citados no parágrafo anterior)?
+
+## Usando o _transpiler_ Babel
+A transformação de código em JavaScript (ES6) para código também
+em JavaScript, nesse caso para a versão ES5 é conhecida por _transpiler_. 
+Ou seja, _transpiler_ é uma espécie de compilador especial, no qual a
+saída produzida está na mesma linguagem da entrada. No nosso caso, 
+em versões diferentes.
+
+O Babel é um famoso _transpiler_ e vamos utilizá-lo. Para tal você 
+pode fazer uso do comando abaixo para disponibilizá-lo para o presente
+projeto:
+
+```
+npm install --save-dev babel-cli
+npm install --save-dev babel-preset
+```
+
+Os comandos acima irão acrescentar ao arquivo **package.json** as dependências
+necessárias para o Babel. Adicionalmente você terá que acrescentar ao arquivo
+**package.json**, por comodidade, a seguinte entrada para a propriedade
+_scripts_. De forma que o arquivo conterá
+
+```
+  "scripts": {
+    "test": "qunit test/tests.js",
+    "prepara-testes": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]",
+    "prepara-programa": "browserify programa.js -o programa-out.js -t [ babelify --presets [ env react ] ]",
+    "build": "babel *.js -d lib"
+  }
+```  
+
+## Usando o _transpiler_ Babel combinado com _browserify_
 
 Vamos usar a ferramenta [babelify](https://github.com/babel/babelify)
 que combina o uso de [Babel](https://babeljs.io/) e 
