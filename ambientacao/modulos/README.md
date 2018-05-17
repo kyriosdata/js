@@ -32,7 +32,7 @@ de mecanismos "inconvenientes" (citados no parágrafo anterior)?
 A transformação de código em JavaScript (ES6) para código também
 em JavaScript, nesse caso para a versão ES5 é conhecida por _transpiler_. 
 Ou seja, _transpiler_ é uma espécie de compilador especial, no qual a
-saída produzida está na mesma linguagem da entrada. No nosso caso, 
+saída produzida está na mesma linguagem da entrada, no nosso caso, 
 em versões diferentes.
 
 O Babel é um famoso _transpiler_ e vamos utilizá-lo. Para tal você 
@@ -45,18 +45,40 @@ npm install --save-dev babel-preset
 ```
 
 Os comandos acima irão acrescentar ao arquivo **package.json** as dependências
-necessárias para o Babel. Adicionalmente você terá que acrescentar ao arquivo
-**package.json**, por comodidade, a seguinte entrada para a propriedade
-_scripts_. De forma que o arquivo conterá
+necessárias para o Babel. 
+
+
+Antes de usar as dependências para o Babel, contudo, você terá que criar 
+o arquivo _.babelrc_ com o seguinte conteúdo (configuração do Babel):
 
 ```
-  "scripts": {
-    "test": "qunit test/tests.js",
-    "prepara-testes": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]",
-    "prepara-programa": "browserify programa.js -o programa-out.js -t [ babelify --presets [ env react ] ]",
-    "build": "babel *.js -d lib"
-  }
+{
+    "presets" : [ "env" ]
+}
+```
+
+Agora já podemos usar o Babel, contudo, por comodidade, vamos executar uma ação
+adicional: acrescentar ao arquivo **package.json** a seguinte entrada para a propriedade
+_scripts_, de forma que o arquivo **package.json** conterá
+
+```
+"scripts": {
+  "build": "babel *.js -d lib"
+}
 ```  
+
+Finalmente, após o passo anterior podemos simplesmente executar
+
+```  
+npm run build
+```  
+
+o que irá executar o _transpiler_ para todos os arquivos com a extensão
+.js e depositará o resultado correspondente no diretório **lib**. 
+Se tudo for executado de forma satisfatória, então o diretório **lib**
+conterá código em JavaScript usando a versão ES5, o que permitirá a 
+execução usando o Node.js. 
+
 
 ## Usando o _transpiler_ Babel combinado com _browserify_
 
