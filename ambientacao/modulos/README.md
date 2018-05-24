@@ -41,11 +41,12 @@ projeto:
 
 ```
 npm install --save-dev babel-cli
-npm install --save-dev babel-preset
+npm install --save-dev babel-preset-env
 ```
 
 Os comandos acima irão acrescentar ao arquivo **package.json** as dependências
-necessárias para o Babel. 
+necessárias para o Babel. Observe que este arquivo já está preparado para
+tal, ou seja, necessita apenas de requisitar a instalação via **npm install**.
 
 
 Antes de usar as dependências para o Babel, contudo, você terá que criar 
