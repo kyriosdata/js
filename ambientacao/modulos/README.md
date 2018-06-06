@@ -7,9 +7,9 @@ Node.js, mas que não é padrão: **require**.
 
 Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. 
 Contudo, foi necessário um passo intermediário para que o teste pudesse ser executado no
-navegador. A ferramenta [browserify](http://browserify.org/) converteu o 
-código de teste em código apto a ser utilizado em um navegador, que não
-admite o uso do **require**. 
+navegador. A ferramenta [browserify](http://browserify.org/) foi empregada para converter o 
+código de teste em código apto a ser utilizado em um navegador, já que os navegadores não
+admitem o uso do **require**. 
 
 Agora vamos ver como usar o recurso de ES6, padronizado, para "dividir" 
 código em JavaScript, usando as palavras reservadas **import** e **export**.
@@ -154,11 +154,11 @@ arquivo em um navegador para que os testes sejam executados pelo
 próprio navegador. 
 
 ## Como evitar a execução desses comandos "manualmente"?
-A resposta está no arquivo **package.json**. A seguinte sequência de comandos
+A resposta está no arquivo **package.json** (propriedade **scripts**). A seguinte sequência de comandos
 é suficiente e equivalente a todos os passos anteriores. 
 
 ```
 npm install
-npm run prepara
-npm test
+npm run prepara-testes
+npm run test
 ```
