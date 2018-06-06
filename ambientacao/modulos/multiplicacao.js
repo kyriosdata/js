@@ -1,4 +1,4 @@
 
-export function multiplicao(x, y) {
+export function multiplicacao(x, y) {
   return x * y;
 }
