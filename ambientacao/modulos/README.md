@@ -154,11 +154,11 @@ arquivo em um navegador para que os testes sejam executados pelo
 próprio navegador. 
 
 ## Como evitar a execução desses comandos "manualmente"?
-A resposta está no arquivo **package.json**. A seguinte sequência de comandos
+A resposta está no arquivo **package.json** (propriedade **scripts**). A seguinte sequência de comandos
 é suficiente e equivalente a todos os passos anteriores. 
 
 ```
 npm install
-npm run prepara
-npm test
+npm run prepara-testes
+npm run test
 ```
