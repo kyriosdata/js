@@ -9,7 +9,7 @@ Usando JavaScript (Node.js), os argumentos podem ser
 recuperados por meio do vetor **process.argv**. 
 
 Os exemplos aqui fornecidos permitem:
- - [cl](cl.js) exibe os argumentos fornecidos
+ - [cl](cl.js) exibe os argumentos fornecidos. A versão [alternativa](cl-foreach.js) faz uso da função "forEach".  
  - [maiuscula](maiuscula.js) converte o primeiro argumento fornecido para letras maiúsculas. 
  - [soma](soma.js) exibe o resultado da soma dos dois primeiros argumentos
 
