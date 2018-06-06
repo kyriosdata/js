@@ -11,14 +11,14 @@ let o2 = {
 };
 
 // Por que ambas as sentenças abaixo produzem "false"?
-console.log("Usando operador de igualdade...")
+console.log("Usando operador de igualdade (referências distintas)...")
 console.log(o1 == o2);
 console.log(o1 === o2);
 
 // Em JavaScript valores primitivos são comparados pelos valores,
 // enquanto objetos, vetores e outros, pelas referências.
 
-console.log("Usando as mesmas referências com operador...");
+console.log("Comparandos as referências, que agora são iguais...");
 let o3 = o2;
 console.log(o3 == o2);
 console.log(o3 === o2);
@@ -36,10 +36,8 @@ function iguais(a, b) {
         return false;
     }
 
-    // some retorna true ao primeiro elemento que satisfaz a condição.
-    // Se for o caso, retorna true. Caso contrário, retorna false.
-    // Só irá retornar true se houver uma propriedade com valores diferentes
-    // O retorno da função, contudo, é negado.
+    // A função "some" retorna true ao primeiro elemento que satisfaz a condição.
+    // Se nenhum elemento satisfaz, então retorna false.
     return !propertiesOfA.some(e => a[e] !== b[e]);
 }
 
