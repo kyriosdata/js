@@ -1,8 +1,8 @@
 {
-  "name": "aprendendo",
+  "name": "seguranca",
   "version": "1.0.0",
-  "description": "Simples servidor http",
-  "main": "server.js",
+  "description": "Calcula MD5 (similar a md5sum)",
+  "main": "md5.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -12,16 +12,13 @@
     "url": "git+https://github.com/kyriosdata/js.git"
   },
   "keywords": [
-    "server",
-    "http"
+    "md5",
+    "segurança"
   ],
   "author": "Fábio Nogueira de Lucena",
   "license": "LGPL-3.0",
   "bugs": {
     "url": "https://github.com/kyriosdata/js/issues"
   },
-  "homepage": "https://github.com/kyriosdata/js#readme",
-  "dependencies": {
-    "moment": "^2.20.1"
-  }
+  "homepage": "https://github.com/kyriosdata/js#readme"
 }
