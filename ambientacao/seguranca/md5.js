@@ -16,5 +16,5 @@ entrada.on("readable", () => {
 
 entrada.on("end", () => {
     let md5 = hash.digest("hex");
-    console.log(`${md5} ${arquivo}`);
+    console.log(`${md5}  ${arquivo}`);
 });
