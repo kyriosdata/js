@@ -41,7 +41,13 @@ npm install <nome do pacote> --save
 ```
 
 que automaticamente atualiza o arquivo **package.json** contido no diretório
-corrente. 
+corrente. Ou seja, caso queira experimentar esse processo, basta criar um diretório e, no diretório
+criado, executar a seguinte sequência de passos:
+```
+npm init
+npm install relogio-cli --save
+node node_modules/relogio-cli/relogio.js
+```
 
 ## Como disponibilizar meus pacotes publicamente?
 Bem, o presente projeto está publicado no NPM com o nome "relogio-cli". 
