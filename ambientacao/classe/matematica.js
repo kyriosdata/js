@@ -38,6 +38,6 @@ class Matematica {
     subtracao(a, b) {
         return a - b;
     }
-};
+}
 
 module.exports = Matematica;
