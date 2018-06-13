@@ -1,6 +1,10 @@
 {
     "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": 5
+        "ecmaVersion": 6
+    },
+    "rules" : {
+        "quotes" : [ "error", "double" ],
+        "no-console" : "off"
     }
 }

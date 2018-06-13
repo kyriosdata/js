@@ -1,4 +1,7 @@
-const readline = require('readline');
+const readline = require("readline");
+
+// ESLint (define variáveis globais)
+/* global console, require, process */
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -48,7 +51,3 @@ function processaEntrada(entrada) {
 
 // Início da aplicação.
 pergunta();
-
-
-
-
