@@ -1,0 +1,18 @@
+{
+  "name": "stdin",
+  "version": "1.0.0",
+  "description": "Ilustra interação via linha de comandos",
+  "main": "io.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fábio Nogueira de Lucena",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
+  }
+}

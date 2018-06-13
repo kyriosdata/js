@@ -5,6 +5,11 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+/**
+ * Produz uma data para a sequência de caracteres
+ * fornecida ou o valor null, caso a sequência
+ * não contenha uma data no formato dd/mm/aaaa.
+ */
 function dataFromEntrada(entrada) {
   let data = null;
   if (entrada.match(/^(\d{2}\/\d{2}\/\d{4})$/)) {
@@ -19,24 +24,29 @@ function dataFromEntrada(entrada) {
   return data;
 }
 
-function processaData(data) {
+function exibeData(data) {
   console.log(`Data fornecida: ${data}`);
 }
 
 function pergunta() {
-  rl.question("Forneça uma data (dd/mm/aaaa): ", verificaEntrada);
+  rl.question("Forneça uma data (dd/mm/aaaa): ", processaEntrada);
 }
 
-function verificaEntrada(entrada) {  
+/**
+ * Verifica se entrada está no padrão dd/mm/aaaa e, 
+ * enquanto não estiver, requisita nova entrada.
+ */
+function processaEntrada(entrada) {  
   const data = dataFromEntrada(entrada);
   if (data) {
-    processaData(data);
+    exibeData(data);
     rl.close();
   } else {
     pergunta();  
   }
 }
 
+// Início da aplicação.
 pergunta();
 
 
