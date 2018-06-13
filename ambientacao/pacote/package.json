@@ -1,6 +1,6 @@
 {
   "name": "relogio-cli",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Relógio (linha de comandos) para ilustrar uso de packages",
   "main": "relogio.js",
   "scripts": {
