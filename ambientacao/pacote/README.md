@@ -29,7 +29,7 @@ Várias outras informações são fornecidas por meio desse arquivo. O comando
 **npm init** pode ser empregado para auxiliar a confecção do arquivo 
 **package.json**.
 
-Enfim, quando você localizar código em [npm](https://www.npmjs.com/) 
+Enfim, quando você localizar código no repositório [npm](https://www.npmjs.com/) 
 relevante para a sua aplicação, você pode inseri-lo no arquivo 
 **package.json** e executar o comando **npm install**. 
 
@@ -54,8 +54,10 @@ Bem, o presente projeto está publicado no NPM com o nome "relogio-cli".
 Faça a busca em https://www.npmjs.com/ para conferir. A publicação é realizada
 para todo usuário que possui uma conta (cadastrada) no NPM. Consulte detalhes
 em https://docs.npmjs.com/getting-started/publishing-npm-packages. Para quem
-já possui uma conta, basta executar o comando abaixo
+já possui uma conta, basta se autenticar, se ainda não o fez, 
+e requisitar a publicação, conforme os comandos abaixo:
 
 ```
+npm login (se ainda não autenticado)
 npm publish
 ```
