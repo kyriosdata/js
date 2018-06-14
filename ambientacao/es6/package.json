@@ -1,0 +1,38 @@
+{
+  "name": "modulos",
+  "version": "1.0.0",
+  "description": "Exemplo de uso de import/export",
+  "main": "codigo.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "g": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0"
+  },
+  "scripts": {
+    "test": "qunit test/tests.js",
+    "prepara-testes": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]",
+    "prepara-programa": "browserify programa.js -o programa-out.js -t [ babelify --presets [ env react ] ]",
+    "build": "babel *.js -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "módulos"
+  ],
+  "author": "Fábio Nogueira de Lucena <fabio@inf.ufg.br> (http://www.inf.ufg.br/~fabio)",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme"
+}
