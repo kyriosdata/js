@@ -1,8 +1,8 @@
 {
   "name": "modulos",
   "version": "1.0.0",
-  "description": "Exemplo de uso de import/export",
-  "main": "codigo.js",
+  "description": "Mais um exemplo de uso de import/export (ES6)",
+  "main": "soma.js",
   "directories": {
     "test": "test"
   },
