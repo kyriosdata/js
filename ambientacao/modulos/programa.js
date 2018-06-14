@@ -1,3 +1,5 @@
+// ES6
+
 import { soma } from "./codigo";
 import { multiplicacao } from "./multiplicacao";
 

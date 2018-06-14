@@ -1,4 +1,4 @@
-// Exporta a função soma.
+// ES6
 
 /**
  * Retorna a soma dos argumentos.

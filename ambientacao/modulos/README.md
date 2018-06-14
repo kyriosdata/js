@@ -1,18 +1,20 @@
 ## Ah, precisamos "dividir" o código em partes menores...
 
-Sim, vimos em [teste](../inicio/teste) como fazer isso. Tínhamos que colocar
-o código testado em arquivo
+Sim, vimos em [teste](../../inicio/teste) como fazer isso. 
+Tínhamos que colocar o código testado em arquivo
 diferente do código de teste, para isso usamos um recurso comum em
 Node.js, mas que não é padrão: **require**. 
 
-Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem dificuldades. 
-Contudo, foi necessário um passo intermediário para que o teste pudesse ser executado no
-navegador. A ferramenta [browserify](http://browserify.org/) foi empregada para converter o 
-código de teste em código apto a ser utilizado em um navegador, já que os navegadores não
-admitem o uso do **require**. 
+Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem 
+dificuldades. Contudo, foi necessário um passo intermediário para que 
+o teste pudesse ser executado em um navegador. Neste caso, a ferramenta 
+[browserify](http://browserify.org/) foi empregada para converter o 
+código de teste em código apto a ser utilizado em um navegador, 
+já que os navegadores não admitem o uso do **require**. 
 
 Agora vamos ver como usar o recurso de ES6, padronizado, para "dividir" 
-código em JavaScript, usando as palavras reservadas **import** e **export**.
+código em JavaScript e que faz uso das palavras reservadas **import** 
+e **export**.
 
 ## Qual o problema com import/export?
 
@@ -21,22 +23,22 @@ o Node.js, versão mais recente no momento que escrevo este texto,
 NÃO está preparado para tal, senão por meio de uso de um _flag_ específico e,
 adicionalmente, exige a alteração da extensão do nome de arquivos, 
 ou seja, estou interpretando isso como inconvenientes a serem evitados.
-Em consequência, não vamos usar este _flag_ específico nem alterar a
-extensão dos nossos arquivos em JavaScript.
+Ou seja, os exemplos não usam este _flag_ específico nem usam uma extensão
+diferente de .js para armazenar código em JavaScript.
 
-Como então fazer uso de import/export (ES6) sendo que nem Node.js nem
-navegadores mais recentes são compatíveis com import/export, e sem fazer uso 
-de mecanismos "inconvenientes" (citados no parágrafo anterior)?
+Se não vamos empregar a alternativa indicada pelo Node.js, como então 
+fazer uso de import/export (ES6), sendo que nem Node.js nem
+navegadores mais recentes são compatíveis com import/export?
 
 ## Usando o _transpiler_ Babel
 A transformação de código em JavaScript (ES6) para código também
-em JavaScript, nesse caso para a versão ES5 é conhecida por _transpiler_. 
-Ou seja, _transpiler_ é uma espécie de compilador especial, no qual a
-saída produzida está na mesma linguagem da entrada, no nosso caso, 
-em versões diferentes.
+em JavaScript, nesse caso para a versão ES5 pode ser realizada 
+por um _transpiler_. Um _transpiler_ é uma espécie de compilador 
+no qual a saída produzida está na mesma linguagem da entrada, no nosso caso, 
+apenas em versões diferentes.
 
-O Babel é um famoso _transpiler_ e vamos utilizá-lo. Para tal você 
-pode fazer uso do comando abaixo para disponibilizá-lo para o presente
+O [Babel](https://babeljs.io/) é um famoso _transpiler_ e vamos utilizá-lo. 
+Para tal você pode fazer uso do comando abaixo para disponibilizá-lo para o presente
 projeto:
 
 ```
@@ -45,12 +47,14 @@ npm install --save-dev babel-preset-env
 ```
 
 Os comandos acima irão acrescentar ao arquivo **package.json** as dependências
-necessárias para o Babel. Observe que este arquivo já está preparado para
-tal, ou seja, necessita apenas de requisitar a instalação via **npm install**.
+necessárias para o Babel. Observe que este arquivo do corrente projeto 
+já está preparado para tal, ou seja, os comandos acima são desnecessários.
 
+Se o arquivo **package.json** já faz referência ao Babel, então apenas é
+necessário requisitar que o mesmo seja obtido por meio de **npm install**.
 
-Antes de usar as dependências para o Babel, contudo, você terá que criar 
-o arquivo _.babelrc_ com o seguinte conteúdo (configuração do Babel):
+Antes de usar o Babel é preciso configurá-lo por meio do arquivo
+_.babelrc_ que é ilustrado abaixo:
 
 ```
 {
@@ -77,7 +81,8 @@ npm run build
 o que irá executar o _transpiler_ para todos os arquivos com a extensão
 .js e depositará o resultado correspondente no diretório **lib**. 
 Se tudo for executado de forma satisfatória, então o diretório **lib**
-conterá código em JavaScript usando a versão ES5, o que permitirá a 
+conterá código em JavaScript usando a versão ES5, compatível com o código
+fornecido na entrada, o que permitirá a 
 execução usando o Node.js. 
 
 
@@ -135,6 +140,7 @@ escrito em ES6 para código em ES5, conforme abaixo:
 ```
 browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]
 ```
+
 Em consequência, o arquivo **tests.js** é gerado contendo código que 
 tanto pode ser compreendido pelo Node.js quanto pelo navegador. Para 
 testar via Node.js basta executar o comando 
