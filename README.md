@@ -13,11 +13,11 @@ Siga o link correspondente a cada uma delas para obter detalhes de como instalá
 # O que farei com este ambiente?
 Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade e tanto reutilizar código em JavaScript já disponível quanto contribuir com algum código. 
 
-## Vamos nos ambientar com JavaScript?
+# Vamos nos ambientar com JavaScript?
 
 - Primeiro contato com JavaScript ([aqui](primeiro)). A sugestão é ler, experimentar, esclarecer dúvidas e passar para o próximo. 
-- [início](inicio). Já dizia Platão que "O início é sempre a parte mais difícil."
-- [Ambientação](ambientacao) com JavaScript. Você deve se sentir confortável com a linguagem, e tal fluência vem com prática.
+- Agora que já foi apresentado a JavaScript, podemos ter um [início](inicio). Já dizia Platão que "O início é sempre a parte mais difícil."
+- Finalmente a nossa [ambientação](ambientacao) atinge o seu ponto máximo aqui. Após passar pelos programas você deve se sentir confortável com a linguagem. Não acredito que isso é possível apenas "lendo" o código, entendo que é indispensável a prática.
 
 <hr>
 
