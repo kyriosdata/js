@@ -2,11 +2,13 @@
 Assumo que você já possui familiaridade com alguma linguagem de programação (não é preciso ser JavaScript). Se não for o caso, então sugiro adquirir esta ambientação primeiro, antes de prosseguir. 
 
 # Ambiente necessário
-Verifique se você possui as ferramentas necessárias. Veja [aqui](https://asciinema.org/a/162065) como fazer esta verificação. As ferramentas são:
+As ferramentas empregadas são:
 - [Git](https://git-scm.com/) combinado com [Github](https://github.com).
 - [Node.js](https://nodejs.org/)
 - [NPM](https://www.npmjs.com/) e
 - [QUnit](http://qunitjs.com/).
+
+Siga o link correspondente a cada uma delas para obter detalhes de como instalá-las. É possível que já estejam instaladas em seu ambiente (computador). Veja [aqui](https://asciinema.org/a/162065) como fazer esta verificação. 
 
 # O que farei com este ambiente?
 Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade e tanto reutilizar código em JavaScript já disponível quanto contribuir com algum código. 
