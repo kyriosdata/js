@@ -1,4 +1,7 @@
 ## Primeiros contatos com JavaScript...
+
+Observe que abaixo seguem links para pequenos trechos de código em JavaScript. Siga cada um deles e leia as informações pertinentes. 
+
 - [Documentação](https://runkit.com/kyriosdata/documentacao)
 - [Tipos dinâmicos](https://runkit.com/kyriosdata/tipo-dinamico)
 - [Curto circuito](https://runkit.com/kyriosdata/short-circuit)
