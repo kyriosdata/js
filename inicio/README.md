@@ -2,4 +2,4 @@
 
 - Meu [primeiro](primeiro) aplicativo.
 - [Segundo](segundo) aplicativo (uma função).
-- Reorganizando para [teste](teste) (uma função em módulo com teste de unidade m QUnit)
+- Reorganizando para [teste](teste) (uma função acompanhada do teste de unidade usando QUnit)
