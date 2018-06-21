@@ -4,7 +4,7 @@
   "description": "Um conjunto de pequenos exemplos em JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "cd classe && qunit"
+    "test": "qunit"
   },
   "repository": {
     "type": "git",
