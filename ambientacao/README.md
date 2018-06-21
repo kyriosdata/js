@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kyriosdata/js.svg?branch=master)](https://travis-ci.org/kyriosdata/js)
+
 # Fluência em JavaScript
 Seguem vários pequenos programas para familiarização com os recursos de JavaScript e do Node.js. Bom proveito!
 
