@@ -1,0 +1,22 @@
+{
+  "name": "ambientacao",
+  "version": "1.0.0",
+  "description": "Um conjunto de pequenos exemplos em JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd classe && qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Fabio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme"
+}
