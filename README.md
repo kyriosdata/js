@@ -15,8 +15,8 @@ Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade,
 
 # Vamos nos ambientar com JavaScript?
 
-- Primeiro contato com JavaScript ([aqui](primeiro)). A sugestão é ler, experimentar, esclarecer dúvidas e passar para o próximo. 
-- Agora que já foi apresentado a JavaScript, podemos ter um [início](inicio). Já dizia Platão que "O início é sempre a parte mais difícil."
+- Primeiro contato com JavaScript ([aqui](primeiro)). 
+- Agora que já teve um contato com JavaScript, podemos ir para o [início](inicio). Já dizia Platão que "O início é sempre a parte mais difícil."
 - Finalmente a nossa [ambientação](ambientacao) atinge o seu ponto máximo aqui. Após passar pelos programas você deve se sentir confortável com a linguagem. Não acredito que isso é possível apenas "lendo" o código, entendo que é indispensável a prática.
 
 <hr>
