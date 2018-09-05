@@ -24,7 +24,7 @@ Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade,
 ## Outros programas...
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
 
-- [Promises](promises)
+- [Promises](outros/promises)
 
 
 ## Exemplos disponíveis online...
