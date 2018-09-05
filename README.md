@@ -1,5 +1,5 @@
 # Vamos aprender JavaScript?
-Assumo que você já possui familiaridade com alguma linguagem de programação (não é preciso ser JavaScript). Se não for o caso, então sugiro adquirir esta ambientação primeiro, antes de prosseguir. 
+Assumo que você já possui familiaridade com alguma linguagem de programação (não é preciso ser JavaScript). 
 
 # Ambiente necessário
 As ferramentas empregadas são:
