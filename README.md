@@ -11,7 +11,7 @@ As ferramentas empregadas são:
 Siga o link correspondente a cada uma delas para obter detalhes de como instalá-las. É possível que já estejam instaladas em seu ambiente (computador). Veja [aqui](https://asciinema.org/a/162065) como fazer esta verificação. 
 
 # O que farei com este ambiente?
-Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade e tanto reutilizar código em JavaScript já disponível quanto contribuir com algum código. 
+Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade, além de reutilizar código disponível (_open source_) e,  criar algo que possa ser empregado por outros. 
 
 # Vamos nos ambientar com JavaScript?
 
