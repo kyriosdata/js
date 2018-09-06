@@ -17,7 +17,7 @@
     "babelify": "^8.0.0"
   },
   "scripts": {
-    "test": "qunit test/tests.js",
+    "test": "qunit",
     "prepara-testes": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]",
     "prepara-programa": "browserify programa.js -o programa-out.js -t [ babelify --presets [ env react ] ]",
     "build": "babel *.js -d lib"

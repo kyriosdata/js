@@ -1,4 +1,6 @@
 language: node_js
 node_js:
   - "7"
-before_script: cd ambientacao/classe && npm install && npm run test
+script: 
+  - cd ambientacao/classe && npm install && npm run test
+  - cd ambientacao/modulos && npm install && npm run test
