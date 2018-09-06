@@ -65,8 +65,11 @@ typings/
 # next.js build output
 .next
 
-app.js
 bin/
 public/
 routes/
 views/
+
+# Documentação gerada pelo jsdoc
+out/
+
