@@ -26,12 +26,8 @@ Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto 
 
 - [Promises](outros/promises)
 
-
-## Exemplos disponíveis online...
-- [Exemplos](exemplos)
-
 <hr>
 
-# Tópicos avançados
+# Tópicos "quentes"...
 - Disponibilizar aplicação de linha de comandos como executável ([aqui](https://www.google.com.br/amp/s/x-team.com/blog/a-guide-to-creating-a-nodejs-command/amp/))
 
