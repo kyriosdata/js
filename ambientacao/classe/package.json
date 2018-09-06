@@ -4,7 +4,7 @@
   "dependencies": {},
   "scripts": {
     "test": "qunit",
-    "doc" : "jsdoc matematica.js"
+    "doc": "jsdoc matematica.js"
   },
   "devDependencies": {
     "qunit": "^2.6.0"
