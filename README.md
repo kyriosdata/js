@@ -1,7 +1,7 @@
 ## Vamos aprender JavaScript?
 Assumo que você já possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
-## Primeiro, o ambiente sugerido
+# Primeiro, o ambiente sugerido
 As ferramentas empregadas são:
 - [Git](https://git-scm.com/) combinado com [Github](https://github.com).
 - [Node.js](https://nodejs.org/)
@@ -13,7 +13,7 @@ Siga o link correspondente a cada uma delas para obter detalhes de como instalá
 ### O que farei com este ambiente?
 Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade, além de reutilizar código disponível (_open source_) e,  criar algo que possa ser empregado por outros. 
 
-## (segundo) Vamos nos ambientar com JavaScript?
+# Segundo, amos nos ambientar com JavaScript?
 
 - Primeiro contato com JavaScript ([aqui](primeiro)). 
 - Agora que já teve um contato com JavaScript, podemos ir para o [início](inicio). Já dizia Platão que "O início é sempre a parte mais difícil."
