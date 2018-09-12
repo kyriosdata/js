@@ -1,7 +1,7 @@
 ## Vamos aprender JavaScript?
 Assumo que você já possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
-## (primeiro) Ambiente necessário
+## Primeiro, o ambiente sugerido
 As ferramentas empregadas são:
 - [Git](https://git-scm.com/) combinado com [Github](https://github.com).
 - [Node.js](https://nodejs.org/)
