@@ -3,7 +3,8 @@
 Sim, vimos em [teste](../../inicio/teste) como fazer isso. 
 Tínhamos que colocar o código testado em arquivo
 diferente do código de teste, para isso usamos um recurso comum em
-Node.js, mas que não é padrão: **require**. 
+Node.js, mas que não é padrão: **require**. Se você quiser mais
+sobre **require** sugiro seguir este [link](https://medium.freecodecamp.org/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8).
 
 Usamos o [qunit](https://qunitjs.com/) via linha de comandos sem 
 dificuldades. Contudo, foi necessário um passo intermediário para que 
