@@ -8,5 +8,8 @@ Há muitas fontes de informação sobre _promises_.
 Uma [introdução](https://developers.google.com/web/fundamentals/primers/promises)
 sobre o assunto é recomendada. Neste diretório encontram-se vários
 pequenos exemplos. O objetivo é permitir que esse conceito seja
-adequadamente compreendido e dominado, para que o recurso
-correspondente em JavaScript possa ser empregado efetivamente. 
+adequadamente compreendido e dominado, o que é necessário para um emprego efetivo. 
+
+## O que é _promise_?
+
+_Promise_ é uma operação assíncrona, que deve ser concluída em algum instante no futuro, e que produz um valor. Quando o valor é produzido, interessados podem ser avisados da conclusão. 
