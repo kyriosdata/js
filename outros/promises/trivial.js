@@ -1,7 +1,12 @@
 let promise = new Promise(function(resolve, reject) {
+
+  // Evidência de que função é chamada imediatamente
+  console.log("Função para construtor chamada!");
+
   // Indica sucesso e o valor resultante: 1
-  // Em caso real, antes dessa chamada, primeiro
-  // código que produz um valor seria executado.
+  // Em caso real, antes dessa chamada, teríamos 
+  // código que produz um valor, possivelmente após "longa"
+  // operação.
   resolve(1);
 });
 
