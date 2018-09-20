@@ -1,7 +1,7 @@
 ## Precisamos de um pouco de fluência com ES6...
 
-Vimos uma "extensa" documentação sobre **import** e **export** 
-conforme ES6. Vamos aqui fazer mais um uso para que tudo fique
+Apresentamos o uso de **import** e **export**, 
+conforme ES6 no exemplo [modulos](../modulos). Vamos aqui fazer mais um uso para que tudo fique
 claro. 
 
 Primeiro, optamos por não usar o **require** (que não é padrão).
