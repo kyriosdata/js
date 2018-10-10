@@ -2,6 +2,7 @@
 Assumo que você já possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
 1. [O ambiente](documentos/ambiente.md)
+1. [Familiarização](documentos/familiarizar.md)
 
 # Segundo, vamos nos ambientar com JavaScript?
 
