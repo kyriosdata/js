@@ -14,5 +14,5 @@ QUnit.test("soma trivial", function (assert) {
   let resultado = operacao.soma(3, -1);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 2, "soma incorreta");
+  assert.equal(resultado, 2, "Adiciona 3 ao valor -1");
 });
