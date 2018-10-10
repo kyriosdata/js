@@ -1,4 +1,3 @@
-
 \[[Home](https://github.com/kyriosdata/js)\] \[[Próximo](familiarizar.md)\]
 
 # O ambiente sugerido
