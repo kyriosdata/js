@@ -1,4 +1,8 @@
 
+- [Home](https://github.com/kyriosdata/js)
+
+<hr>
+
 # O ambiente sugerido
 As ferramentas principais são:
 - [Git](https://git-scm.com/) combinado com [Github](https://github.com). É por meio destas ferramentas que vamos "guardar" o que produzimos ao longo do tempo.
@@ -11,6 +15,3 @@ Consulte a págia destas ferramentas, familiarize-se com as funções que oferec
 ### O que farei com este ambiente?
 Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade, além de reutilizar código disponível (_open source_) e,  criar algo que possa ser empregado por outros. 
 
-<hr>
-
-- [Glossário](https://github.com/kyriosdata/js)
