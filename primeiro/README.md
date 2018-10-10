@@ -14,4 +14,4 @@ Observe que abaixo seguem links para pequenos trechos de código em JavaScript. 
   - Versão [2](https://runkit.com/kyriosdata/padrao/2.0.0)
   - Versão [3](https://runkit.com/kyriosdata/padrao/3.0.0)
 - Um pequeno problema e a solução correspondente empregando [sequência](https://runkit.com/kyriosdata/verifica-propriedade) de caracteres.
-- [Momento](https://runkit.com/kyriosdata/moment-js-exemplo) Ilustra recurso para uso de datas, além de uso de _locale_.
+- Reutilizando código feito por terceiros ([Momento](https://runkit.com/kyriosdata/moment-js-exemplo)) para manipulação de datas, além de uso de _locale_.
