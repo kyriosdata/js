@@ -13,4 +13,4 @@ Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade,
 
 <hr>
 
-- [Glossário](..)
+- [Glossário](../..)
