@@ -1,8 +1,6 @@
 
 - \[[Home](https://github.com/kyriosdata/js)\] \[[Próximo](familiarizar.md)\]
 
-<hr>
-
 # O ambiente sugerido
 As ferramentas principais são:
 - [Git](https://git-scm.com/) combinado com [Github](https://github.com). É por meio destas ferramentas que vamos "guardar" o que produzimos ao longo do tempo.
