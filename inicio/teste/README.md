@@ -13,7 +13,7 @@ Esse exemplo faz uso do conceito de "módulo" para dividir nosso código
 entre arquivos. Para tal precisamos fazer uso de 
 **module.exports** ou **exports**. A diferença entre ambos nem sempre
 é adequadamente compreendida. Para uma explanação satisfatória 
-consulte https://medium.freecodecamp.org/node-js-module-exports-vs-exports-ec7e254d63ac. 
+sugiro este [link](https://medium.freecodecamp.org/node-js-module-exports-vs-exports-ec7e254d63ac). 
 
 ## QUnit com resultado exibido via browser (HTML)
 Observe que no diretório **test** encontra-se o arquivo **index.html**, que 
