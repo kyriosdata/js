@@ -1,5 +1,5 @@
 
-- \[[Home](https://github.com/kyriosdata/js)\] \[[Próximo](familiarizar.md)\]
+\[[Home](https://github.com/kyriosdata/js)\] \[[Próximo](familiarizar.md)\]
 
 # O ambiente sugerido
 As ferramentas principais são:
