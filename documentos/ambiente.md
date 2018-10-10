@@ -12,3 +12,5 @@ Consulte a págia destas ferramentas, familiarize-se com as funções que oferec
 Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade, além de reutilizar código disponível (_open source_) e,  criar algo que possa ser empregado por outros. 
 
 <hr>
+
+- [Glossário](..)
