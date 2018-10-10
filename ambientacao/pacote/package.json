@@ -7,7 +7,9 @@
     "test": "echo \"Não há testes...\" && exit 0",
     "start": "node relogio.js",
     "home": "open https://github.com/kyriosdata/js/tree/master/ambientacao/pacote",
-    "relogio": "./node node_modules/relogio-cli/relogio.js"
+    "relogio": "./node node_modules/relogio-cli/relogio.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
     "chalk": "^2.3.2",
     "cli-cursor": "^2.1.0",
     "death": "^1.1.0",
-    "npm": "^6.0.0"
-  }
+    "npm": "^6.0.0",
+    "snyk": "^1.103.1"
+  },
+  "snyk": true
 }
