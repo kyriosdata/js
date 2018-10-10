@@ -1,6 +1,6 @@
 ## Primeiros contatos com JavaScript...
 
-Observe que abaixo seguem links para pequenos trechos de código em JavaScript. Siga cada um deles, leia, interprete, compreenda o código, e não esqueça de executá-los.
+Observe que abaixo seguem links para pequenos trechos de código em JavaScript. Sugiro que leia e execute cada um deles.Resultado esperado: você terá uma noção de aspectos léxicos e sintáticos de JavaScript. Lembre-se, estamos no começo. 
 
 - [Documentação](https://runkit.com/kyriosdata/documentacao)
 - [Tipos dinâmicos](https://runkit.com/kyriosdata/tipo-dinamico)
