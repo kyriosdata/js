@@ -6,7 +6,7 @@ const onDeath = require("death");
  * Limpa a tela.
  */
 function limparTela() {
-    process.stdout.write('\x1bc');
+    process.stdout.write("\x1bc");
 }
 
 /**
