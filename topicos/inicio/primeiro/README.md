@@ -1,4 +1,4 @@
-\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../../documentos/familiarizar.md)\]
+\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](..)\]
 
 ## Meu primeiro exemplo em JavaScript
 
