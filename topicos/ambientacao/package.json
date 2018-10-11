@@ -4,7 +4,8 @@
   "description": "Um conjunto de pequenos exemplos em JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "qunit"
+    "test": "qunit",
+    "lint": "eslint \"./**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kyriosdata/js/issues"
   },
-  "homepage": "https://github.com/kyriosdata/js#readme"
+  "homepage": "https://github.com/kyriosdata/js#readme",
+  "dependencies": {
+    "eslint": "^5.6.1"
+  }
 }
