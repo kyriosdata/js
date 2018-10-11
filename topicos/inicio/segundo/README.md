@@ -2,7 +2,8 @@
 
 ## Segundo exemplo em JavaScript
 O aplicativo [quadrado.js](quadrado.js) exibe informações sobre si, na saída padrão, 
-além do resultado da chamada de uma função.
+além do resultado da chamada de uma função. A função simplesmente retorna o quadrado do número fornecido. 
+O aplicativo chama esta função com o valor 2, ou seja, espera-se como resultado o valor 4.
 
 Veja <a href="https://asciinema.org/a/161533"> aqui <img src="../../../images/asciinema.svg" width="12" align="center"></a> como executar este 
 aplicativo. 
