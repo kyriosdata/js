@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/kyriosdata/js.svg?branch=master)](https://travis-ci.org/kyriosdata/js)
 
-# Fluência em JavaScript
-Seguem vários pequenos programas para familiarização com os recursos de JavaScript e do Node.js. Bom proveito!
+# Tópicos frequentes em JavaScript
+Seguem vários pequenos programas para adquirir conhecimento e fluência em recursos amplamente empregados em código escrito em JavaScript. Bom proveito!
 
 - [Classe](classe)
 - [Linha de comandos](command-line)
