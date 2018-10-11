@@ -1,4 +1,4 @@
-\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](..)\]
+\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](..)\] \[[Próximo](../segundo)\]
 
 ## Meu primeiro exemplo em JavaScript
 
