@@ -1,10 +1,10 @@
 \[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../primeiro)\]
 
-# Segundo aplicativo em JavaScript
+## Segundo aplicativo em JavaScript
 Aplicativo que exibe informações sobre si, na saída padrão, 
 além do resultado da chamada de uma função.
 
-Veja <a href="https://asciinema.org/a/161533"> aqui <img src="../../images/asciinema.svg" width="12" align="center"></a> como executar este 
+Veja <a href="https://asciinema.org/a/161533"> aqui <img src="../../../images/asciinema.svg" width="12" align="center"></a> como executar este 
 aplicativo. 
 
 ## Próximo passo...
