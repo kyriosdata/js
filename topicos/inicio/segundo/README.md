@@ -1,6 +1,6 @@
 \[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../primeiro)\] \[[Próximo](../teste)\]
 
-## Segundo aplicativo em JavaScript
+## Segundo exemplo em JavaScript
 Aplicativo que exibe informações sobre si, na saída padrão, 
 além do resultado da chamada de uma função.
 
