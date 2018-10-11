@@ -1,3 +1,5 @@
+\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../segundo)\]
+
 ## Como testar código em JavaScript?
 
 No arquivo [codigo.js](codigo.js) encontra-se uma única função 
