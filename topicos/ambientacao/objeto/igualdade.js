@@ -11,7 +11,7 @@ let o2 = {
 };
 
 // Por que ambas as sentenças abaixo produzem "false"?
-console.log("Usando operador de igualdade (referências distintas)...")
+console.log("Usando operador de igualdade (referências distintas)...");
 console.log(o1 == o2);
 console.log(o1 === o2);
 
