@@ -6,5 +6,5 @@ A ideia é um contato progressivo com JavaScript, ou seja, eu recomendo não sal
 
 - Primeiro contato com JavaScript ([aqui](../topicos/primeiro)). 
 - Após o primeiro contato podemos ir para o [início](../topicos/inicio). Já dizia Platão que "O início é sempre a parte mais difícil."
-- Finalmente a nossa [ambientação](../topicos/ambientacao) atinge o seu ponto máximo aqui. Após passar pelos programas criados para esta ambientação você deve se sentir confortável com JavaScript. Não acredito que isso é possível apenas "lendo" o código dos programas fornecidos, você deve executá-los, fazer pequenos ajustes e experimentar os ajustes.
+- Vamos em frente com [tópicos](../topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript. 
 
