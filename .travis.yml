@@ -6,4 +6,3 @@ before_script:
     - npm install
 
 - cd topicos/ambientacao/classe && npm install && npm run lint
-# - cd ../../ambientacao/modulos && npm install && npm run test
