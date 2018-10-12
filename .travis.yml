@@ -4,4 +4,5 @@ node_js:
 before_script: 
     - cd topicos/ambientacao
     - npm install
+script:
     - npm run lint
