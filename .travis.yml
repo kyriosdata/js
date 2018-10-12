@@ -4,5 +4,4 @@ node_js:
 before_script: 
     - cd topicos/ambientacao/classe
     - npm install
-
-- cd topicos/ambientacao/classe && npm install && npm run lint
+    - cd topicos/ambientacao/classe && npm install && npm run lint
