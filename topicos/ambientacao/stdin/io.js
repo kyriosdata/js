@@ -1,4 +1,4 @@
-const readline = require("readline");
+const readline = require('readline');
 
 // ESLint (define variáveis globais)
 /* global console, require, process */
@@ -14,7 +14,7 @@ const rl = readline.createInterface({
  * não contenha uma data no formato dd/mm/aaaa.
  */
 function dataFromEntrada(entrada) {
-  let data = null;
+  let data = null
   if (entrada.match(/^(\d{2}\/\d{2}\/\d{4})$/)) {
     try {
       data = new Date(entrada);
