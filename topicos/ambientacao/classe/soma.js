@@ -1,6 +1,6 @@
 // Aplicação que realiza a soma dos argumentos fornecidos.
 
-const Matematica = require('./matematica');
+const Matematica = require("./matematica");
 
 const funcoes = new Matematica();
 

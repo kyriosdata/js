@@ -3,9 +3,13 @@
 // node maiuscula casa
 // CASA
 
-if (process.argv.length != 3) {
-  console.log("Forneça um único argumento.");
-  return;
+function iniciar() {
+    if (process.argv.length != 3) {
+        console.log("Forneça um único argumento.");
+        return;
+    }
+   
+    console.log(process.argv[2].toUpperCase());
 }
- 
-console.log(process.argv[2].toUpperCase());
+
+iniciar();

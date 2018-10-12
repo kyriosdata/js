@@ -1,12 +1,4 @@
-const fs = require('fs');
-
-if (process.argv.length != 3) {
-    console.log("Uso: node exibe-buffer <arquivo>");
-    process.exitCode = 0;
-    return;
-}
-
-const path = process.argv[2];
+const fs = require("fs");
 
 function leQuatroPrimeirosBytes(path) {
     try {
@@ -27,6 +19,17 @@ function converteInteiroParaHexa(valor) {
     return valor.toString(16);
 }
 
-const inteiro = leQuatroPrimeirosBytes(path);
+function iniciar() {
+    if (process.argv.length != 3) {
+        console.log("Uso: node exibe-buffer <arquivo>");
+        process.exitCode = 0;
+        return;
+    }
+    
+    const path = process.argv[2];
+    const inteiro = leQuatroPrimeirosBytes(path);
+    
+    console.log(converteInteiroParaHexa(inteiro) || "Arquivo existe?");    
+}
 
-console.log(converteInteiroParaHexa(inteiro) || "Arquivo existe?");
+iniciar();

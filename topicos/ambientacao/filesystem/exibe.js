@@ -1,12 +1,4 @@
-const fs = require('fs');
-
-if (process.argv.length !== 3) {
-    console.log("Uso: node exibe <arquivo>");
-    process.exitCode = 0;
-    return;
-}
-
-const path = process.argv[2];
+const fs = require("fs");
 
 /**
  * Exibe o conteúdo de um arquivo. Assume que se trata de um arquivo
@@ -20,4 +12,15 @@ function exibeArquivoUtf8(arquivo) {
     });
 }
 
-exibeArquivoUtf8(path);
+function iniciar() {
+    if (process.argv.length !== 3) {
+        console.log("Uso: node exibe <arquivo>");
+        process.exitCode = 0;
+        return;
+    }
+    
+    const path = process.argv[2];
+    exibeArquivoUtf8(path);
+}
+
+iniciar();

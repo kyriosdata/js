@@ -1,13 +1,4 @@
-const fs = require('fs');
-
-if (process.argv.length !== 4) {
-    console.log("Uso: node cria <arquivo> <conteúdo>");
-    process.exitCode = 0;
-    return;
-}
-
-let path = process.argv[2];
-let conteudo = process.argv[3];
+const fs = require("fs");
 
 /**
  * Acrescenta texto em um arquivo usando o enconding UTF-8.
@@ -24,4 +15,16 @@ function acrescentaTextoEmArquivo(arquivo, texto) {
     }
 }
 
-console.log(acrescentaTextoEmArquivo(path, conteudo));
+function iniciar() {
+    if (process.argv.length !== 4) {
+        console.log("Uso: node cria <arquivo> <conteúdo>");
+        process.exitCode = 0;
+        return;
+    }
+    
+    let path = process.argv[2];
+    let conteudo = process.argv[3];
+    console.log(acrescentaTextoEmArquivo(path, conteudo));
+}
+
+iniciar();
