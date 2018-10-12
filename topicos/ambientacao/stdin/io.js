@@ -1,4 +1,4 @@
-const readline = require('readline');
+const readline = require("readline");
 
 // ESLint (define variáveis globais)
 /* global console, require, process */
