@@ -1,4 +1,4 @@
-## Trabalhando com objetos em JavaScript
+## Objetos em JavaScript
 
 - [Definindo](definicao.js)
 - [Verificando igualdade](igualdade.js)
