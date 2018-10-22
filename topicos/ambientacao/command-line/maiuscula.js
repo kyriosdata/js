@@ -3,13 +3,22 @@
 // node maiuscula casa
 // CASA
 
-function iniciar() {
-    if (process.argv.length != 3) {
-        console.log("Forneça um único argumento.");
-        return;
-    }
-   
-    console.log(process.argv[2].toUpperCase());
+/**
+ * Recupera entrada (argumento fornecido ao programa via linha de comandos)
+ */
+function getEntrada() {
+    return process.argv[2];
 }
 
-iniciar();
+function entradaValida() {
+    return process.argv.length == 3;    
+}
+function principal() {
+    if (entradaValida()) {
+        console.log(getEntrada().toUpperCase());
+    } else {
+        console.log("Forneça um único argumento.");
+    }
+}
+
+principal();
