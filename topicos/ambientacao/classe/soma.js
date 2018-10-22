@@ -1,11 +1,28 @@
-// Aplicação que realiza a soma dos argumentos fornecidos.
-
 const Matematica = require("./matematica");
 
-const funcoes = new Matematica();
+/**
+ * Encapsula obtenção das parcelas a serem somadas.
+ */
+function argumentos() {
 
-const a = parseInt(process.argv[2]);
-const b = parseInt(process.argv[3]);
-const soma = funcoes.soma(a, b);
+    const a = parseInt(process.argv[2]);
+    const b = parseInt(process.argv[3]);
 
-console.log(`A soma de ${a} e ${b} é ${soma}.`);
+    return [ a, b ];
+}
+
+/**
+ * Executa soma dos argumentos fornecidos.
+ */
+function principal() {
+    const funcoes = new Matematica();
+
+    const [a, b] = argumentos();
+
+    const soma = funcoes.soma(a, b);
+
+    console.log(`A soma de ${a} e ${b} é ${soma}.`);
+}
+
+// Executa aplicação
+principal();
