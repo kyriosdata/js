@@ -13,3 +13,5 @@ function exibeVariaveisDeAmbiente() {
         .sort()
         .forEach(e => console.log(`${e} : ${process.env[e]}`));
 }
+
+exibeVariaveisDeAmbiente();
