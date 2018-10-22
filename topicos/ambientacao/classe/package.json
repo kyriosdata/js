@@ -7,6 +7,6 @@
     "doc": "jsdoc matematica.js"
   },
   "devDependencies": {
-    "qunit": "^2.6.0"
+    "qunit": "^2.7.1"
   }
 }
