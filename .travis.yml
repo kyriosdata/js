@@ -1,8 +1,14 @@
 language: node_js
 node_js:
-  - "7"
+  - "8"
+
+addons:
+  sonarcloud:
+    organization: "kyriosdata-github"
+
 before_script: 
     - cd topicos/ambientacao
     - npm install
 script:
     - npm run lint
+    - sonar-scanner
