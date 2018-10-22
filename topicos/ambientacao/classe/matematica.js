@@ -1,7 +1,7 @@
 /**
  * Operações matemáticas básicas fornecidas apenas com o
  * único propósito de ilustrar como funções ou métodos podem oferecer
- * funcionalidas agrupadas em uma classe.
+ * funcionalidas encapsuladas por uma classe.
  *
  * <p>Adicionalmente, a presente classe também ilustra o uso de
  * <a href="http://usejsdoc.org/">JSDoc</a>.</p>
