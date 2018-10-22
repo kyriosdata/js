@@ -18,3 +18,5 @@
 function exibeArgumentosAlternativo() {
     process.argv.forEach((e,i) => console.log(`${i} : ${e}`));
 }
+
+exibeArgumentosAlternativo();
