@@ -2,7 +2,7 @@
 Assumo que você já possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
 1. Primeiro, o [ambiente](documentos/ambiente.md).
-1. Segundo, vários cenários típicos de desenvolvimento usando JavaScript para [Familiarização](documentos/familiarizar.md).
+1. Segundo, vários cenários típicos de desenvolvimento usando JavaScript para [familiarização](documentos/familiarizar.md).
 
 
 ## Terceiro, e agora?
