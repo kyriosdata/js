@@ -1,9 +1,15 @@
-// Exibe as variáveis de ambiente e os respectivos valores
-// (variáveis e valores é o conteúdo do objeto 'process.env')
-// console.log(process.env);
-
-// Exibe apenas as variáveis de ambiente
-// console.log(Object.keys(process.env));
-
-// Variáveis e valores correspondentes são exibidos, após ordenados.
-Object.keys(process.env).sort().forEach(e => console.log(`${e} : ${process.env[e]}`));
+/**
+ * Exibe as variáveis de ambiente definidas e os respectivos valores, 
+ * uma por linha, em ordem alfabética. Consulte detalhes em 
+ * <a href="https://nodejs.org/api/process.html#process_process_env">
+ * process.env</a>.
+ * 
+ * <p>Foi empregado o método <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">
+ * Object.keys</a> que retorna um vetor contendo os nomes das propriedades do 
+ * objeto fornecido como argumento.</p>
+ */
+function exibeVariaveisDeAmbiente() {
+    Object.keys(process.env)
+        .sort()
+        .forEach(e => console.log(`${e} : ${process.env[e]}`));
+}
