@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/kyriosdata/js.svg?branch=master)](https://travis-ci.org/kyriosdata/js)
+![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=kyriosdata-github&metric=alert_status)
 
 # Tópicos frequentes em JavaScript
 Seguem vários pequenos programas para adquirir conhecimento e fluência em recursos amplamente empregados em código escrito em JavaScript. Bom proveito!
