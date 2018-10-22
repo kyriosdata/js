@@ -28,8 +28,8 @@ class Matematica {
     /**
      * Produz a subtração entre o primeiro e o segundo argumento.
      *
-     * @param a O valor do qual será feita a subtração.
-     * @param b O valor a ser subtraído.
+     * @param {number} a O valor do qual será feita a subtração.
+     * @param {number} b O valor a ser subtraído.
      *
      * @see {@link Matematica#soma}
      *
