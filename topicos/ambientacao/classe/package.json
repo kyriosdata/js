@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "dependencies": {},
   "scripts": {
-    "test": "qunit",
+    "test": "jest",
     "doc": "jsdoc matematica.js"
   },
   "devDependencies": {
-    "qunit": "^2.7.1"
+    "jest": "^23.6.0"
   }
 }
