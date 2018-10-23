@@ -1,0 +1,17 @@
+{
+  "name": "command-line",
+  "version": "1.0.0",
+  "description": "Executa soma dos argumentos fornecidos via linha de comandos.",
+  "main": "soma.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Fábio Nogueira de Lucena",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
