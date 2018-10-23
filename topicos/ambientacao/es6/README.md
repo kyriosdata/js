@@ -27,8 +27,9 @@ recurso de ES6.
 Agora, após executar 
 
 ```
+npm install
 npm run build
-node lib/soma
+node out/soma
 ```
 
 O aplicativo é executado normalmente pelo Node.js, dado que o código
