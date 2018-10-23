@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {},
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "doc": "jsdoc matematica.js"
   },
   "devDependencies": {

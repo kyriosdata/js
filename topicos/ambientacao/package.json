@@ -4,7 +4,7 @@
   "description": "Um conjunto de pequenos exemplos em JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint \"./**/*.js\""
   },
   "repository": {
