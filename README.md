@@ -1,7 +1,5 @@
 ## Vamos aprender JavaScript?
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/kyriosdata/js.svg)](https://greenkeeper.io/)
-
 Assumo que você já possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
 1. Primeiro, o [ambiente](documentos/ambiente.md).
