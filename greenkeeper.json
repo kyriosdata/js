@@ -1,0 +1,21 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "outros/httpserver/package.json",
+        "outros/server/package.json",
+        "outros/sons/package.json",
+        "topicos/ambientacao/classe/package.json",
+        "topicos/ambientacao/command-line/package.json",
+        "topicos/ambientacao/es6/package.json",
+        "topicos/ambientacao/filesystem/package.json",
+        "topicos/ambientacao/modulos/package.json",
+        "topicos/ambientacao/package.json",
+        "topicos/ambientacao/pacote/package.json",
+        "topicos/ambientacao/seguranca/package.json",
+        "topicos/ambientacao/stdin/package.json",
+        "topicos/inicio/teste/package.json"
+      ]
+    }
+  }
+}
