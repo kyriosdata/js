@@ -10,8 +10,6 @@ Assumo que você já possui familiaridade com alguma linguagem de programação 
 
 1. Vamos em frente com [tópicos](./topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript. 
 
-1. Segundo, vários cenários típicos de desenvolvimento usando JavaScript para [familiarização](documentos/familiarizar.md).
-
 
 ## Terceiro, e agora?
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
