@@ -1,6 +1,4 @@
-\[[Home](https://github.com/kyriosdata/js)\] \[[Próximo](familiarizar.md)\]
-
-# O ambiente sugerido
+# Um ambiente para aprender JavaScript
 As ferramentas principais são:
 - [Git](https://git-scm.com/) combinado com [Github](https://github.com). É por meio destas ferramentas que vamos "guardar" o que produzimos ao longo do tempo.
 - [Node.js](https://nodejs.org/). O ambiente onde código em JavaScript será executado. Sim, não é um _browser_. 
