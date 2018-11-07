@@ -1,4 +1,4 @@
-## Vamos aprender JavaScript?
+## Fase 1 (compreendendo JavaScript e seu ecossistema)
 
 Assumo que você já possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
@@ -8,8 +8,8 @@ Assumo que você já possui familiaridade com alguma linguagem de programação 
 
 1. Trechos em JavaScript para quem está iniciando. O [primeiro](./topicos/inicio/primeiro) exemplo, o [segundo](./topicos/inicio/segundo) e, por último, o primeiro [teste](./topicos/inicio/teste).
 
+## Segundo passo (realizando operações comuns com JavaScript)
 1. Vamos em frente com [tópicos](./topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript. 
-
 
 ## Terceiro, e agora?
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
