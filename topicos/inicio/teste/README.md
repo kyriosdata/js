@@ -7,8 +7,7 @@ que retorna a soma dos dois argumentos fornecidos.
 Um único teste para esta função encontra-se no diretório **test**, a saber, o arquivo **codigo.test.js**. Se seguirmos este padrão saberemos que **codigo.teste.js** contém código que testa o código que está no arquivo **codigo.js**. 
 Em tempo, usaremos [Jest](https://jestjs.io/) como ferramenta para execução dos nossos testes.
 
-No diretório **test** há um único arquivo, [testa-codigo.js](test/testa-codigo.js). 
-Veja <a href="https://asciinema.org/a/161530"> aqui <img src="../../../images/asciinema.svg" width="12" align="center"></a> como executar tal teste, inclusive como instalar o QUnit.
+Conforme acima, no diretório **test** há o arquivo, [codigo.test.js](test/codigo.test.js). Após instalado o jest, ```npm install -g jest``` você poderá executar os testes neste arquivo com o comando ```jest```.
 
 Esse exemplo faz uso do conceito de "módulo" para dividir nosso código
 entre arquivos. Para tal precisamos fazer uso de 
