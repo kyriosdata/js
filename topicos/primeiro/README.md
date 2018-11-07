@@ -1,4 +1,4 @@
-\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../../documentos/familiarizar.md)\] \[[Próximo](../inicio)\]
+\[[Home](https://github.com/kyriosdata/js)\]
 ## Contato "visual" com JavaScript
 
 Observe que abaixo seguem links para pequenos trechos de código em JavaScript. Sugiro que leia e execute cada um deles.Resultado esperado: você terá uma noção de aspectos léxicos e sintáticos de JavaScript. Lembre-se, estamos no começo. 
