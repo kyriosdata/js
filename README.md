@@ -4,7 +4,7 @@ Assumo que você já possui familiaridade com alguma linguagem de programação 
 
 1. Primeiro, o [ambiente](documentos/ambiente.md). Afinal, queremos experimentar JavaScript, tanto escrever código nesta linguagem quanto executar este código, inclusive testes de unidade.
 1. Familiarização com o ambiente sugerido. Recomendo não saltar os tópicos, principalmente se você está iniciando sua programação nesta linguagem.
-    1. Primeiro contato com JavaScript ([aqui](./topicos/primeiro)). 
+    1. Contato "visual" com JavaScript ([aqui](./topicos/primeiro)). 
     1. Após o primeiro contato podemos ir para o [início](./topicos/inicio). Já dizia Platão que "O início é sempre a parte mais difícil."
     1. Vamos em frente com [tópicos](./topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript. 
 
