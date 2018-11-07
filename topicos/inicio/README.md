@@ -1,6 +1,4 @@
-\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../../documentos/familiarizar.md)\]
-
-# Após o primeiro contato com JavaScript...
+# Trechos em JavaScript para quem está iniciando...
 
 - Meu [primeiro](primeiro) exemplo.
 - [Segundo](segundo) exemplo (uma função).
