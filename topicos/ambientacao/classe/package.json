@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "dependencies": {},
   "scripts": {
-    "test": "jest --coverage",
+    "test" : "jest",
+    "coverage": "jest --coverage",
     "doc": "jsdoc matematica.js",
-    "lint" : "eslint \"./**/*.js\""
+    "lint": "eslint \"./**/*.js\""
   },
   "devDependencies": {
     "eslint": "^5.9.0",
