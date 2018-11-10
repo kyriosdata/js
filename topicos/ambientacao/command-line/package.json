@@ -13,5 +13,19 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^23.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "exemplo",
+    "linha",
+    "de",
+    "comandos"
+  ],
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme"
 }

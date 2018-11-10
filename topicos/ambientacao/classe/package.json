@@ -7,6 +7,7 @@
     "doc": "jsdoc matematica.js"
   },
   "devDependencies": {
+    "eslint": "^5.9.0",
     "jest": "^23.6.0"
   },
   "description": "Um exemplo está no arquivo [matematica.js](matematica.js). Este arquivo possui uma única classe, contendo apenas dois  métodos (_soma_ e _subtracao_), exportada por meio de  **module.exports**.",
