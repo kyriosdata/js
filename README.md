@@ -9,7 +9,9 @@ Assumo que você já possui familiaridade com alguma linguagem de programação 
 1. Trechos em JavaScript para quem está iniciando. O [primeiro](./topicos/inicio/primeiro) exemplo, o [segundo](./topicos/inicio/segundo) e, por último, o primeiro [teste](./topicos/inicio/teste).
 
 ## Fase 2 (realizando operações comuns com JavaScript)
-Vamos em frente com [tópicos](./topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript.
+Vamos em frente com [tópicos](./topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript. 
+
+Observe que agora temos objetivos além de um contato visual, é preciso ler, compreender e executar o código. 
 
 ## E agora?
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
