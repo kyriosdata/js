@@ -24,3 +24,4 @@ Os exemplos aqui fornecidos permitem:
 1. ```npm run test``` executa testes e exibe relatório correspondente.
 1. ```npm run coverage``` executa testes, exibe o relatório da execução dos testes e da cobertura.
 1. ```npm run lint``` executa análise estática e exibe relatório.
+1. ```npm run doc``` gera a representação HTML da documentação contida no código em JavaScript.
