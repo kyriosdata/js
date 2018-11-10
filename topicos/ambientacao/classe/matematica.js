@@ -6,7 +6,6 @@
  * <p>Adicionalmente, a presente classe também ilustra o uso de
  * <a href="http://usejsdoc.org/">JSDoc</a>.</p>
  *
- *
  * @type {module.Matematica}
  */
 class Matematica {
@@ -14,8 +13,8 @@ class Matematica {
     /**
      * Produz a soma dos argumentos fornecidos.
      *
-     * @param {number} a Um dos argumentos.
-     * @param {number} b O outro argumento.
+     * @param {number} a A primeira parcela.
+     * @param {number} b A segunda parcela.
      *
      * @see {@link Matematica#subtracao}
      *
@@ -28,8 +27,8 @@ class Matematica {
     /**
      * Produz a subtração entre o primeiro e o segundo argumento.
      *
-     * @param {number} a O valor do qual será feita a subtração.
-     * @param {number} b O valor a ser subtraído.
+     * @param {number} a O minuendo (o valor do qual será feita a subtração).
+     * @param {number} b O subtraend (o valor a ser subtrído).
      *
      * @see {@link Matematica#soma}
      *
