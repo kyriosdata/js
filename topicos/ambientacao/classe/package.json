@@ -8,5 +8,24 @@
   },
   "devDependencies": {
     "jest": "^23.6.0"
-  }
+  },
+  "description": "Um exemplo está no arquivo [matematica.js](matematica.js). Este arquivo possui uma única classe, contendo apenas dois  métodos (_soma_ e _subtracao_), exportada por meio de  **module.exports**.",
+  "main": "matematica.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "exemplos",
+    "JavaScript"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme"
 }
