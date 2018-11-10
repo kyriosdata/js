@@ -5,6 +5,7 @@ Observe que abaixo seguem links para pequenos trechos de código em JavaScript. 
 
 - [Documentação](https://runkit.com/kyriosdata/documentacao)
 - [Tipos dinâmicos](https://runkit.com/kyriosdata/tipo-dinamico)
+- [Igualdade](https://runkit.com/kyriosdata/igualdade)
 - [Curto-circuito](https://runkit.com/kyriosdata/short-circuit)
 - Fatorial
   - [iterativo](https://runkit.com/kyriosdata/fatorial-iterativo)
