@@ -11,7 +11,7 @@ Assumo que você já possui familiaridade com alguma linguagem de programação 
 ## Fase 2 (realizando operações comuns com JavaScript)
 Vamos em frente com [tópicos](./topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript. 
 
-> Observe que agora temos objetivos além de um contato visual, a sugestão é que você leia, compreenda, execute e introduza variações para > observar os resultados.
+> Observe que agora temos objetivos além de um contato visual, a sugestão é que você leia, compreenda, execute e introduza variações para  observar os resultados.
 
 ## E agora?
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
