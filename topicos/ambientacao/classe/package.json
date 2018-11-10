@@ -3,14 +3,15 @@
   "version": "0.0.1",
   "dependencies": {},
   "scripts": {
-    "test" : "jest",
+    "test": "jest",
     "coverage": "jest --coverage",
     "doc": "jsdoc matematica.js",
     "lint": "eslint \"./**/*.js\""
   },
   "devDependencies": {
     "eslint": "^5.9.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "jsdoc": "^3.5.5"
   },
   "description": "Um exemplo está no arquivo [matematica.js](matematica.js). Este arquivo possui uma única classe, contendo apenas dois  métodos (_soma_ e _subtracao_), exportada por meio de  **module.exports**.",
   "main": "matematica.js",
