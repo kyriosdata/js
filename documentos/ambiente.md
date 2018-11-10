@@ -8,5 +8,5 @@ As ferramentas principais são:
 Consulte as páginas destas ferramentas, familiarize-se com as funções que oferecem, e obtenha detalhes de como instalá-las. É possível que já estejam instaladas em seu ambiente (computador). Veja [aqui](https://asciinema.org/a/162065) como fazer esta verificação. 
 
 ### O que farei com este ambiente?
-Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade, além de reutilizar código disponível (_open source_) e,  criar algo que possa ser empregado por outros. 
+Vamos utilizá-lo para criar código em JavaScript, inclusive testes de unidade, além de reutilizar código disponível (_open source_) e  criar algo que possa ser empregado por outros. 
 
