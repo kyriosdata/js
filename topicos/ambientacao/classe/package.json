@@ -4,7 +4,8 @@
   "dependencies": {},
   "scripts": {
     "test": "jest --coverage",
-    "doc": "jsdoc matematica.js"
+    "doc": "jsdoc matematica.js",
+    "lint" : "eslint \"./**/*.js\""
   },
   "devDependencies": {
     "eslint": "^5.9.0",
