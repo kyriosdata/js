@@ -1,6 +1,6 @@
 ## Fase 1 (compreendendo JavaScript e seu ecossistema)
 
-Assumo que você já possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
+Assumo que você possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
 1. Primeiro, o [ambiente](documentos/ambiente.md). Afinal, queremos experimentar JavaScript, tanto escrever código nesta linguagem quanto executar este código, inclusive testes de unidade.
 
