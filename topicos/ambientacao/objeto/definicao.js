@@ -1,3 +1,4 @@
+// Módulo que define três objetos, todos eles exportados: sapato, tenis e chuteira.
 // Um objeto é uma coleção de propriedades.
 // Cada propriedade possui um nome e um valor, conforme ilustrado abaixo.
 
@@ -25,11 +26,8 @@ let chuteira = {
     "marca do fabricante" : "Nike"
 };
 
-// Como ter acesso aos valores das propriedades?
-console.log(sapato.numero);
-console.log(tenis.cor);
-console.log(chuteira["marca do fabricante"]);
-
-// Propriedade inexistente resulta em undefined
-
-console.log(sapato.propriedadeDesconhecida);
+module.exports = {
+    sapato,
+    tenis,
+    chuteira
+};

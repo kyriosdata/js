@@ -1,33 +1,45 @@
 // Como verificar se dois objetos são iguais?
 
+/**
+ * Um objeto para ilustrar operação de igualdade.
+ */
 let o1 = {
     x : 1,
     y : false
 };
 
+/**
+ * Mais um objeto apenas para ilustrar operação de igualdade.
+ */
 let o2 = {
     x : 1,
     y : false
 };
 
-// Por que ambas as sentenças abaixo produzem "false"?
-console.log("Usando operador de igualdade (referências distintas)...");
-console.log(o1 == o2);
-console.log(o1 === o2);
-
 // Em JavaScript valores primitivos são comparados pelos valores,
 // enquanto objetos, vetores e outros, pelas referências.
 
-console.log("Comparandos as referências, que agora são iguais...");
+/**
+ * Um objeto cuja referência é a mesma de outro.
+ */
 let o3 = o2;
-console.log(o3 == o2);
-console.log(o3 === o2);
 
+/**
+ * Mais um objeto, desta vez, o quarto.
+ */
 let o4 = {
     x: 2,
     y : false
 };
 
+/**
+ * Compara os objetos fornecidos e retorna true se forem iguais.
+ * Igualdade aqui significa que possuem a mesma quantidade de atributos,
+ * os atributos possuem os mesmos nomes com os mesmos valores.
+ * 
+ * @param {*} a Um dos objetos a ser comparado.
+ * @param {*} b O outro objeto. 
+ */
 function iguais(a, b) {
     let propertiesOfA = Object.keys(a);
     let propertiesOfB = Object.keys(b);
@@ -41,8 +53,6 @@ function iguais(a, b) {
     return !propertiesOfA.some(e => a[e] !== b[e]);
 }
 
-console.log("Usando a função criada...");
-console.log(iguais(o1, o2));
-console.log(iguais(o2, o3));
-console.log(iguais(o1, o3));
-console.log(iguais(o1, o4));
+module.exports = {
+    o1, o2, o3, o4, iguais
+};

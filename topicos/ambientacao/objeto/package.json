@@ -1,0 +1,31 @@
+{
+  "name": "objeto",
+  "version": "1.0.0",
+  "description": "Ilustra emprego de objeto e operador de igualdade",
+  "main": "definicao.js",
+  "scripts": {
+    "test": "jest",
+    "coverage" : "jest --coverage",
+    "doc"      : "jsdoc ./*.js",
+    "lint"     : "eslint \"./**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "exemplo",
+    "objeto"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "jest": "^23.6.0",
+    "jsdoc": "^3.5.5"
+  }
+}
