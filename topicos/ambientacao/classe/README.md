@@ -9,3 +9,9 @@ encapsular o que não é relevante para clientes desta classe.
 Um cliente está no arquivo [soma.js](soma.js), que importa
 a classe e faz uso do método _soma_ para produzir a soma 
 dos argumentos fornecidos a este programa (cliente).
+
+## Como usar?
+
+- ```node soma 1 -56``` requisita a soma de 1 com -56.
+- ```jest``` requisita execução dos testes.
+- ```jest --coverage``` requisita execução dos testes e análise de cobertura.
