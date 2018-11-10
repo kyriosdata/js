@@ -12,6 +12,7 @@ dos argumentos fornecidos a este programa (cliente).
 
 ## Como usar?
 
-- ```node soma 1 -56``` requisita a soma de 1 com -56.
-- ```jest``` requisita execução dos testes.
-- ```jest --coverage``` requisita execução dos testes e análise de cobertura.
+1. ```npm install```
+1. ```node soma 1 -56``` requisita a soma de 1 com -56.
+1. ```jest``` requisita execução dos testes.
+1. ```jest --coverage``` requisita execução dos testes e análise de cobertura.
