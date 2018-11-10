@@ -3,7 +3,7 @@
  * que se o vetor fornecido é "process.argv", então os dois primeiros
  * argumentos deste vetor serão ignorados.
  * 
- * @param {[number]} argumentos Vetor contendo argumentos, possivelmente 
+ * @param {number[]} argumentos Vetor contendo argumentos, possivelmente 
  * "process.argv".
  */
 function recuperaDoisArgumentosLinhaDeComandos(argumentos) {
