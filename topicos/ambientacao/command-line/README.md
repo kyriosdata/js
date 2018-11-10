@@ -21,5 +21,6 @@ Os exemplos aqui fornecidos permitem:
 1. ```node maiuscula saúde``` converte argumento no equivalente usando letras maiúsculas
 1. ```node maiuscula "A vida é bela!"``` converte para maiúscula o único argumento (entre aspas)
 1. ```node soma.js 234 345``` exibe o resultado da soma dos argumentos fornecidos (dois primeiros). Sim, você pode ou não fornecer a extensão .js.
-1. ```jest``` executa testes e exibe relatório correspondente.
-1. ```jest --coverage``` executa testes, exibe o relatório da execução dos testes e da cobertura.
+1. ```npm run test``` executa testes e exibe relatório correspondente.
+1. ```npm run coverage``` executa testes, exibe o relatório da execução dos testes e da cobertura.
+1. ```npm run lint``` executa análise estática e exibe relatório.
