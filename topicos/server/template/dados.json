@@ -1,0 +1,9 @@
+{
+    "nome": "Testando",
+    "ano": 2018,
+    "cores" : [ "azul", "branca", "amarela" ],
+    "outro" : {
+        "estado" : true,
+        "preco" : 10.2
+    }
+}

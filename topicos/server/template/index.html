@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="handlebars-v4.0.12.js"></script>
+    <script>
+
+        // Retorna callback para formatar dados carregados conforme
+        // "templateId" e depositar o resultado em "saidaId"
+        function onload(templateId, saidaId) {
+            return function() {
+                var template = document.getElementById(templateId).innerHTML;
+                var json = JSON.parse(this.responseText);
+                var hb = Handlebars.compile(template)(json);
+
+                var destino = document.getElementById(saidaId);
+                destino.innerHTML = hb; 
+            }
+        }
+
+        // Carrega o arquivo JSON, formata o conteúdo conforme o conteúdo do
+        // template Handlebars (templateId) e deposita resultado em "saidaId"
+        function carregaDados(arquivo, templateId, saidaId) {
+            var request = new XMLHttpRequest();
+            request.addEventListener("load", onload(templateId, saidaId));
+            request.open("GET", arquivo);
+            request.send();
+        }
+
+        window.onload = carregaDados("dados.json", "template", "saida");
+    </script>
+</head>
+
+<body>
+    <div id="saida"></div>
+
+    <script id="template" type="text/x-handlebars-template">
+        <h1>{{nome}}</h1>
+        <h2>{{ano}}</h2>
+        <ol>
+            {{#each cores}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ol>
+
+        <p>O estado ({{outro.estado}}) tem interferência no preço {{outro.preco}}.</p>
+    </script>
+
+</body>
+
+</html>
