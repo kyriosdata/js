@@ -9,7 +9,7 @@
     "lint": "eslint \"./**/*.js\""
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
+    "eslint": "^5.15.3",
     "jest": "^23.6.0",
     "jsdoc": "^3.5.5"
   },
