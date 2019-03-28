@@ -32,6 +32,6 @@ test("a única temperatura é a menor", () => {
 test("casos clássicos", () => {
     expect(menorTemperatura([-1, -2])).toBe(-2);
     expect(menorTemperatura([0, -2])).toBe(-2);
-    expect(menorTemperatura([0, 2])).toBe(2);
+    expect(menorTemperatura([0, 2])).toBe(0);
     expect(menorTemperatura([10, 52])).toBe(52);
 });
