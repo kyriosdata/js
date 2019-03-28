@@ -15,9 +15,9 @@ function soma(x, y) {
 // a função por meio de "exports" ao criar um módulo.
 
 // module.exports é a referência para o objeto retornado
-// por chamadas require(). Em vez da opção abaixo é usada
-// outra forma, considerada mais segura e recomendada.
-// module.exports.soma = soma;
+// por chamadas require(). Tais chamadas deverão ser 
+// feitas em outros arquivos JS que vão fazer uso desta
+// função.
 
 exports.soma = soma;
 
