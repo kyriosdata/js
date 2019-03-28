@@ -2,6 +2,10 @@
 const ArgumentoInvalido = {};
 
 function menorTemperatura(vetor) {
+    if (arguments.length != 1) {
+        throw new TypeError("only one argument expected");
+    }
+
     if (!Array.isArray(vetor)) {
         throw new TypeError("array expected");
     }
@@ -12,6 +16,10 @@ function menorTemperatura(vetor) {
 
     return Math.min(...vetor);
 }
+
+test("apenas um argumento deve ser fornecido", () => {
+    expect(menorTemperatura([0], "teste")).toBe(0);
+});
 
 test("excecao gerada se arg nao e vetor", () => {
     expect(() => menorTemperatura("a")).toThrow(TypeError);
