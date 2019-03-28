@@ -1,10 +1,10 @@
-// TODO design separar cópia da interação com o usuário.
-// TODO documentar adequadamente.
-
 const fs = require("fs");
 
 /**
  * Função que ilustra a criação da cópia de um arquivo. 
+ * 
+ * @todo Isolar interação com o usuário da cópia (aqui misturadas)
+ * @todo Documentar adequadamente.
  */
 function iniciar() {
     if (process.argv.length != 4) {
