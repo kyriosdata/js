@@ -6,7 +6,7 @@
 # Tópicos frequentes em JavaScript
 Seguem vários pequenos programas para adquirir conhecimento e fluência em recursos amplamente empregados em código escrito em JavaScript. Bom proveito!
 
-- [Classe](classe)
+- [Classe](classe/README.md)
 - [Linha de comandos](command-line)
 - [Objeto](objeto)
 - [Manipulação de arquivos](filesystem)
