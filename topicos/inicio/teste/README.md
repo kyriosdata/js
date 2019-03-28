@@ -1,4 +1,4 @@
-\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../segundo)\]
+\[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../segundo/README.md)\]
 
 ## Como testar código em JavaScript?
 
