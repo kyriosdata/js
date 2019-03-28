@@ -1,3 +1,10 @@
+/**
+ * @module copia
+ * 
+ * Ilustra operação de criação de cópia de arquivo. 
+ * 
+ * @todo Criar testes.
+ */
 const fs = require("fs");
 
 /**
