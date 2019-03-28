@@ -19,6 +19,7 @@ test("excecao gerada se arg nao e vetor", () => {
     expect(() => menorTemperatura(1)).toThrow(TypeError);
     expect(() => menorTemperatura(null)).toThrow(TypeError);
     expect(() => menorTemperatura(undefined)).toThrow(TypeError);
+    expect(() => menorTemperatura(undefined)).toThrow("array expected");
 });
 
 test("nenhum elemento no vetor gera exececao", () => {
