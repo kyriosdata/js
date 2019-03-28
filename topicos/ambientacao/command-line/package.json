@@ -7,13 +7,11 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "doc": "jsdoc ./*.js",
-    "lint": "eslint \"./**/*.js\"",
-    "document": "documentjs"
+    "lint": "eslint \"./**/*.js\""
   },
   "author": "Fábio Nogueira de Lucena",
   "license": "ISC",
   "devDependencies": {
-    "documentjs": "^0.5.5",
     "eslint": "^5.15.3",
     "jest": "^24.5.0",
     "jsdoc": "^3.5.5"
