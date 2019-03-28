@@ -4,8 +4,10 @@
   "description": "Manipulação de arquivos (exemplos)",
   "main": "arquivos.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node arquivos.js"
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "doc": "jsdoc ./*.js",
+    "lint": "eslint \"./**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,9 @@
     "url": "https://github.com/kyriosdata/js/issues"
   },
   "homepage": "https://github.com/kyriosdata/js#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "jest": "^24.5.0",
+    "jsdoc": "^3.5.5"
+  }
 }
