@@ -13,7 +13,7 @@
  * de process.argv[2] que seguem os argumentos
  * fornecidos ao programa.
  * 
- * @see {@link exibeArgumentosAlternativo}
+ * {@link exibeArgumentosAlternativo}
  */
 function exibeArgumentos() {
     for (let i = 0; i < process.argv.length; i++) {
