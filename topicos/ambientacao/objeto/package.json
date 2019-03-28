@@ -5,9 +5,9 @@
   "main": "definicao.js",
   "scripts": {
     "test": "jest",
-    "coverage" : "jest --coverage",
-    "doc"      : "jsdoc ./*.js",
-    "lint"     : "eslint \"./**/*.js\""
+    "coverage": "jest --coverage",
+    "doc": "jsdoc ./*.js",
+    "lint": "eslint \"./**/*.js\""
   },
   "repository": {
     "type": "git",

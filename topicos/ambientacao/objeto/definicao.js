@@ -26,6 +26,9 @@ let chuteira = {
     "marca do fabricante" : "Nike"
 };
 
+// Exporte para consumo por outros módulos, um objeto,
+// composto por outros três objetos. 
+
 module.exports = {
     sapato,
     tenis,
