@@ -17,7 +17,12 @@ dos argumentos fornecidos a este programa (cliente).
 
 1. ```npm install```
 1. ```node soma 1 -56``` requisita a soma de 1 com -56.
-1. ```npm run test``` requisita execução dos testes e exibição de relatório correspondente.
-1. ```npm run coverage``` requisita execução dos testes, relatório de resultados e análise de cobertura.
-1. ```npm run lint``` relatório da execução da análise estática sobre o código JavaScript. Se nada é relatado, então temos um bom sinal, mas isso depende da configuração do [ESLint](https://eslint.org/).
-1. ```npm run doc``` gera representação HTML da documentação contida no código em JavaScript no diretório **out**.
+1. ```npm run test``` requisita execução dos testes e exibição de relatório 
+correspondente.
+1. ```npm run coverage``` requisita execução dos testes, relatório de 
+resultados e análise de cobertura.
+1. ```npm run lint``` relatório da execução da análise estática sobre o 
+código JavaScript. Se nada é relatado, então temos um bom sinal, mas isso 
+depende da configuração do [ESLint](https://eslint.org/).
+1. ```npm run doc``` gera representação HTML da documentação contida no 
+código em JavaScript no diretório **out**.
