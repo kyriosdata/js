@@ -1,21 +1,4 @@
-
-const ArgumentoInvalido = {};
-
-function menorTemperatura(vetor) {
-    if (arguments.length != 1) {
-        throw new TypeError("um unico arg esperado");
-    }
-
-    if (!Array.isArray(vetor)) {
-        throw new TypeError("vetor esperado");
-    }
-
-    if (vetor.length === 0) {
-        throw new RangeError("vetor vazio");
-    }
-
-    return Math.min(...vetor);
-}
+const menorTemperatura = require("../menor-temperatura");
 
 test("apenas um argumento deve ser fornecido", () => {
     expect(() => menorTemperatura([0], "teste")).toThrow(TypeError);
