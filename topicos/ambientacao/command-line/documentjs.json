@@ -1,7 +1,8 @@
 {
     "sites": {
       "docs": {
-        "glob" : "*.{js,md}"
+        "glob" : "*.{js,md}",
+        "out" : "out"
       }
     }
   }
