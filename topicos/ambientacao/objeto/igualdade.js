@@ -33,8 +33,6 @@ let o4 = {
 };
 
 /**
- * @function iguais
- * 
  * Compara os objetos fornecidos e retorna true se forem iguais.
  * Igualdade aqui significa que possuem a mesma quantidade de atributos,
  * os atributos possuem os mesmos nomes com os mesmos valores.
