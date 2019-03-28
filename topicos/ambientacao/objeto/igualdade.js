@@ -48,8 +48,10 @@ function iguais(a, b) {
         return false;
     }
 
-    // A função "some" retorna true ao primeiro elemento que satisfaz a condição.
-    // Se nenhum elemento satisfaz, então retorna false.
+    // A função "some" retorna true ao primeiro elemento que 
+    // satisfaz a condição, neste caso desigualdade entre valores
+    // do mesmo atributo. Se nenhum elemento satisfaz, então 
+    // retorna false.
     return !propertiesOfA.some(e => a[e] !== b[e]);
 }
 
