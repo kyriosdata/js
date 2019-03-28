@@ -3,7 +3,7 @@
  * 
  * @param {number[]} vetor Vetor de temperaturas (números).
  * 
- * @returns O menor valor presente no vetor fornecido.
+ * @returns {number} O menor valor presente no vetor fornecido.
  * 
  * @throws {TypeError} Se o argumento fornecido não for um vetor.
  * Este objeto também é gerado se a função não é chamada exatamente
