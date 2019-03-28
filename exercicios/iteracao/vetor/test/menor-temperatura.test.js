@@ -23,6 +23,7 @@ test("excecao gerada se arg nao e vetor", () => {
 
 test("nenhum elemento no vetor gera exececao", () => {
     expect(() => menorTemperatura([])).toThrow(RangeError);
+    expect(() => menorTemperatura([])).toThrow("empty array");
 });
 
 test("a única temperatura é a menor", () => {
