@@ -1,4 +1,6 @@
 /**
+ * Tipo que detalha um calçado.
+ * 
  * @typedef Calcado
  * @type {object}
  * @property {string} identificador - O identificador único do calçado.

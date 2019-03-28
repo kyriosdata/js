@@ -1,8 +1,11 @@
 /**
-  @typedef ObjetoXY
-  @type {object}
-  @property {number} x - Um valor inteiro.
-  @property {boolean} y - Um valor lógico.
+ * Um tipo de objeto criado exclusivamente para teste
+ * de operação de igualdade com objetos. 
+ * 
+ * @typedef ObjetoXY
+ * @type {object}
+ * @property {number} x - Um valor inteiro.
+ * @property {boolean} y - Um valor lógico.
  */
 
 /** 
