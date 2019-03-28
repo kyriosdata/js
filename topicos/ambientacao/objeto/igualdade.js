@@ -3,9 +3,13 @@
   @type {object}
   @property {number} x - Um valor inteiro.
   @property {boolean} y - Um valor lógico.
- /
+ */
 
-/** @type {ObjetoXY} */
+/** 
+ * Um simples objeto para ilustrar comparação de igualdade.
+ * 
+ * @type {ObjetoXY}
+ */
 let o1 = {
     x : 1,
     y : false
@@ -13,6 +17,8 @@ let o1 = {
 
 /**
  * Mais um objeto apenas para ilustrar operação de igualdade.
+ * 
+ * @type {ObjetoXY}
  */
 let o2 = {
     x : 1,
@@ -24,11 +30,15 @@ let o2 = {
 
 /**
  * Um objeto cuja referência é a mesma de outro.
+ * 
+ * @type {ObjetoXY}
  */
 let o3 = o2;
 
 /**
  * Mais um objeto, desta vez, o quarto.
+ * 
+ * @type {ObjetoXY}
  */
 let o4 = {
     x: 2,
@@ -40,8 +50,10 @@ let o4 = {
  * Igualdade aqui significa que possuem a mesma quantidade de atributos,
  * os atributos possuem os mesmos nomes com os mesmos valores.
  * 
- * @param {*} a Um dos objetos a ser comparado.
- * @param {*} b O outro objeto. 
+ * @param {ObjetoXY} a Um dos objetos a ser comparado.
+ * @param {ObjetoXY} b O outro objeto. 
+ * @returns {boolean} O valor true se e somente se os objetos fornecidos
+ * são iguais.
  */
 function iguais(a, b) {
     let propertiesOfA = Object.keys(a);
