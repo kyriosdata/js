@@ -3,22 +3,23 @@ const ArgumentoInvalido = {};
 
 function menorTemperatura(vetor) {
     if (arguments.length != 1) {
-        throw new TypeError("only one argument expected");
+        throw new TypeError("um unico arg esperado");
     }
 
     if (!Array.isArray(vetor)) {
-        throw new TypeError("array expected");
+        throw new TypeError("vetor esperado");
     }
 
     if (vetor.length === 0) {
-        throw new RangeError("empty array");
+        throw new RangeError("vetor vazio");
     }
 
     return Math.min(...vetor);
 }
 
 test("apenas um argumento deve ser fornecido", () => {
-    expect(menorTemperatura([0], "teste")).toBe(0);
+    expect(() => menorTemperatura([0], "teste")).toThrow(TypeError);
+    expect(() => menorTemperatura([0], "teste")).toThrow("um unico arg esperado");
 });
 
 test("excecao gerada se arg nao e vetor", () => {
@@ -27,12 +28,12 @@ test("excecao gerada se arg nao e vetor", () => {
     expect(() => menorTemperatura(1)).toThrow(TypeError);
     expect(() => menorTemperatura(null)).toThrow(TypeError);
     expect(() => menorTemperatura(undefined)).toThrow(TypeError);
-    expect(() => menorTemperatura(undefined)).toThrow("array expected");
+    expect(() => menorTemperatura(undefined)).toThrow("vetor esperado");
 });
 
 test("nenhum elemento no vetor gera exececao", () => {
     expect(() => menorTemperatura([])).toThrow(RangeError);
-    expect(() => menorTemperatura([])).toThrow("empty array");
+    expect(() => menorTemperatura([])).toThrow("vetor vazio");
 });
 
 test("a única temperatura é a menor", () => {
