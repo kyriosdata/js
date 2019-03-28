@@ -1,10 +1,17 @@
-const fs = require("fs");
+/**
+ * @module cria
+ * @todo Criar testes.
+ */
+
+ const fs = require("fs");
 
 /**
  * Acrescenta texto em um arquivo usando o enconding UTF-8.
  *
  * @param arquivo O nome do arquivo.
  * @param texto O texto a ser acrescentado.
+ * 
+ * @todo Documentar retorno da função.
  */
 function acrescentaTextoEmArquivo(arquivo, texto) {
     try {
@@ -15,6 +22,9 @@ function acrescentaTextoEmArquivo(arquivo, texto) {
     }
 }
 
+/**
+ * @todo Documentar a função. 
+ */
 function iniciar() {
     if (process.argv.length !== 4) {
         console.log("Uso: node cria <arquivo> <conteúdo>");
