@@ -7,7 +7,8 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "doc": "jsdoc ./*.js",
-    "lint": "eslint \"./**/*.js\""
+    "lint": "eslint \"./**/*.js\"",
+    "document" : "documentjs"
   },
   "author": "Fábio Nogueira de Lucena",
   "license": "ISC",
