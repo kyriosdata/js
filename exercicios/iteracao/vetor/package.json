@@ -1,5 +1,5 @@
 {
-  "name": "matematica",
+  "name": "iteracao-vetor",
   "version": "0.0.1",
   "dependencies": {},
   "scripts": {
@@ -13,8 +13,8 @@
     "jest": "^24.5.0",
     "jsdoc": "^3.5.5"
   },
-  "description": "Um exemplo está no arquivo [matematica.js](matematica.js). Este arquivo possui uma única classe, contendo apenas dois  métodos (_soma_ e _subtracao_), exportada por meio de  **module.exports**.",
-  "main": "matematica.js",
+  "description": "Especificação formal de código a ser implementado",
+  "main": "menor-temperatura.js",
   "directories": {
     "test": "test"
   },
@@ -23,7 +23,8 @@
     "url": "git+https://github.com/kyriosdata/js.git"
   },
   "keywords": [
-    "exemplos",
+    "exercícios",
+    "especificação formal",
     "JavaScript"
   ],
   "author": "Fábio Nogueira de Lucena",

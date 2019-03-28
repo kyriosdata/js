@@ -1,4 +1,4 @@
-import menorTemperatura from "../menor-temperatura";
+const menorTemperatura = require("../menor-temperatura");
 
 test("apenas um argumento deve ser fornecido", () => {
     expect(() => menorTemperatura([0], "teste")).toThrow(TypeError);
