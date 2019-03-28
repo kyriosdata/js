@@ -1,0 +1,3 @@
+# Arquivos...
+Sim, é inevitável armazenar dados. E quando se armazena, 
+em algum momento um arquivo será utilizado.
