@@ -1,6 +1,4 @@
 /**
- * Ilustra operação de criação de cópia de arquivo. 
- * 
  * @module copia
  * @todo Criar testes.
  */
