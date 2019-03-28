@@ -9,7 +9,7 @@ function menorTemperatura(vetor) {
     if (vetor.length === 0) {
         throw new RangeError("empty array");
     }
-    
+
     return Math.min(...vetor);
 }
 
@@ -27,4 +27,11 @@ test("nenhum elemento no vetor gera exececao", () => {
 
 test("a única temperatura é a menor", () => {
     expect(menorTemperatura([0])).toBe(0);
+});
+
+test("casos clássicos", () => {
+    expect(menorTemperatura([-1, -2])).toBe(-2);
+    expect(menorTemperatura([0, -2])).toBe(-2);
+    expect(menorTemperatura([0, 2])).toBe(2);
+    expect(menorTemperatura([10, 52])).toBe(52);
 });
