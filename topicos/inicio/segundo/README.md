@@ -1,12 +1,17 @@
 \[[Home](https://github.com/kyriosdata/js)\] \[[Anterior](../primeiro/README.md)\] \[[Próximo](../teste/README.md)\]
 
 ## Segundo exemplo em JavaScript
-O aplicativo [quadrado.js](quadrado.js) exibe informações sobre si, na saída padrão, 
-além do resultado da chamada de uma função. A função simplesmente retorna o quadrado do número fornecido. 
-O aplicativo chama esta função com o valor 2, ou seja, a  saída deve ser o valor 4.
+O aplicativo [quadrado.js](quadrado.js) exibe informações sobre si, 
+na saída padrão, além do resultado da chamada de uma função. A função 
+simplesmente retorna o quadrado do número fornecido ou, caso nenhum
+número seja fornecido, o quadrado do valor 3. 
 
 Veja <a href="https://asciinema.org/a/161533"> aqui <img src="../../../images/asciinema.svg" width="12" align="center"></a> como executar este 
 aplicativo. 
+
+Para a chamada `node quadrado` o quadrado de 2 será exibido. Por outro lado,
+`node quadrado 10` exibirá o quadrado de 10. Observe o que acontece se você
+não fornecer um número como argumento, por exemplo, "x". 
 
 ## Próximo passo...
 Como você testaria este aplicativo? Bem, este é muito simples, 
