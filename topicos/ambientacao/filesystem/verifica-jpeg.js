@@ -1,3 +1,7 @@
+/**
+ * @module verifica-jpeg
+ * @todo criar testes
+ */
 const fs = require("fs");
 
 /**
@@ -32,6 +36,9 @@ function verificaPresencaMarcadoresJpeg(path) {
     }
 }
 
+/**
+ * @todo documentar
+ */
 function iniciar() {
     if (process.argv.length !== 3) {
         console.log("Uso: node verifica-jpeg <arquivo JPEG>");
