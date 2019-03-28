@@ -6,7 +6,6 @@
  * @property {string} marca - A marca do calçado.
  * @property {string} cor - A cor do calçado.
  * @property {boolean} vendido - Indica se o calçado está vendido ou não.
- * @property {string} "marca do fabricante" - A marca do fabricante.
  */
 
  /**
@@ -14,7 +13,7 @@
   * 
   * @type {Calcado}
   */
-let sapato = {
+const sapato = {
     identificador : "123454555-234",
     numero : 42,
     marca: "Nike",
@@ -27,7 +26,7 @@ let sapato = {
  * 
  * @type {Calcado}
  */
-let tenis = {
+const tenis = {
     "identificador" : "1",
     "numero" : 24,
     "marca" : "Nikon",
@@ -36,11 +35,12 @@ let tenis = {
 };
 
 /**
- * Um outro calçado.
+ * Um outro calçado, com um atributo "diferente" dos
+ * demais calçados.
  * 
  * @type {Calcado}
  */
-let chuteira = {
+const chuteira = {
     "marca do fabricante" : "Nike"
 };
 
