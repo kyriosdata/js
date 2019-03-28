@@ -2,11 +2,16 @@
 const ArgumentoInvalido = {};
 
 function menorTemperatura(vetor) {
-    throw new TypeError("argumento não é vetor");
+    if (!Array.isArray(vetor)) {
+        throw new TypeError('Hello', "someFile.js", 10);
+    }
 }
 
-test("se arg não é vetor então exception", () => {
-    expect(menorTemperatura("a")).toThrowError("argumento");
+test("excecao gerada se arg nao e vetor", () => {
+    expect(() => menorTemperatura("a")).toThrow(TypeError);
+    expect(() => menorTemperatura()).toThrow(TypeError);
+    expect(() => menorTemperatura(1)).toThrow(TypeError);
+    expect(() => menorTemperatura(null)).toThrow(TypeError);
 });
 
 // test("a única temperatura é a menor", () => {
