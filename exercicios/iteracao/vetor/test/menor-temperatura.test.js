@@ -33,5 +33,6 @@ test("casos clássicos", () => {
     expect(menorTemperatura([-1, -2])).toBe(-2);
     expect(menorTemperatura([0, -2])).toBe(-2);
     expect(menorTemperatura([0, 2])).toBe(0);
-    expect(menorTemperatura([10, 52])).toBe(52);
+    expect(menorTemperatura([10, 52])).toBe(10);
+    expect(menorTemperatura([2.34, 2.339])).toBe(2.339);
 });
