@@ -1,8 +1,11 @@
-// Como verificar se dois objetos são iguais?
-
 /**
- * Um objeto para ilustrar operação de igualdade.
- */
+  @typedef ObjetoXY
+  @type {object}
+  @property {number} x - Um valor inteiro.
+  @property {boolean} y - Um valor lógico.
+ /
+
+/** @type {ObjetoXY} */
 let o1 = {
     x : 1,
     y : false
