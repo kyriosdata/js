@@ -55,6 +55,7 @@ function iguais(a, b) {
     return !propertiesOfA.some(e => a[e] !== b[e]);
 }
 
+// Exporta um objeto que compreende quatro outros objetos e uma função.
 module.exports = {
     o1, o2, o3, o4, iguais
 };
