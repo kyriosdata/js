@@ -6,7 +6,7 @@ Assumo que você possui familiaridade com alguma linguagem de programação e qu
 
 1. Familiarize-se com o ambiente sugerido. Recomendo não saltar os tópicos do seu _Contato "visual" com JavaScript_ ([aqui](topicos/primeiro/README.md)), o que é especialmente válido para quem está iniciando sua programação nesta linguagem.
 
-1. Trechos em JavaScript para quem está iniciando. O [primeiro](./topicos/inicio/primeiro/README.md) exemplo, o [segundo](./topicos/inicio/segundo) e, por último, [teste](./topicos/inicio/teste).
+1. Trechos em JavaScript para quem está iniciando. O [primeiro](topicos/inicio/primeiro/README.md) exemplo, o [segundo](topicos/inicio/segundo/README.md) e, por último, [teste](./topicos/inicio/teste).
 
 ## Fase 2 (realizando operações comuns com JavaScript)
 Vamos em frente com [tópicos](./topicos/ambientacao) que *seguramente* você irá precisar quando estiver programando em JavaScript. 
