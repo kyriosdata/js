@@ -8,5 +8,13 @@ function raiz(n, delta) {
         if (Math.abs(quadrado - n) < delta) {
             return r;
         }
+
+        if (quadrado > n) {
+            f = r;
+        } else {
+            i = r;
+        }
     }
 }
+
+module.exports = raiz;
