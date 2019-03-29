@@ -4,7 +4,7 @@
  * @param {number[]} vetor Vetor de valores numéricos.
  * @param {number} valor O valor cujo total de ocorrência no vetor é desejado.
  * 
- * @returns A quantidade de ocorrências do valor no vetor fornecido.
+ * @returns {number} A quantidade de ocorrências do valor no vetor fornecido.
  * Se não há ocorrência, então o retorno deve ser zero. Valores são
  * considerados idênticos, para efeito desta função, se a diferença dos
  * valores for inferior a 0.0001. 
