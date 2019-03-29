@@ -1,30 +1,36 @@
 const numeroPorExtenso = require("../numero-por-extenso");
-const request = require("request");
 
-// AVISO. ESTA NAO É UMA BOA IDEIA: 
-// fazer uso de um serviço remoto para obter o resultado
-// esperado de um teste. Nem tampouco é considerado
-// um teste de unidade por este motivo. 
-// DITO ISTO, faço uso frequente desta estratégia, mas
-// não para teste, mas quando estou experimentando ou 
-// aprendendo algo. 
-test("requisicao remota", (done) => {
-    request.post(montaRequisicao(23), function(e, r, b) {
-        expect(numeroPorExtenso(23)).toBe(b.trim());
-        done();
-    });
+test("argumento inválido", () => {
+    expect(() => numeroPorExtenso("a")).toThrow(TypeError);
+    expect(() => numeroPorExtenso(true)).toThrow(TypeError);
+    expect(() => numeroPorExtenso()).toThrow(TypeError);
+    expect(() => numeroPorExtenso([])).toThrow(TypeError);
+    expect(() => numeroPorExtenso(null)).toThrow(TypeError);
+    expect(() => numeroPorExtenso(undefined)).toThrow(TypeError);
+    expect(() => numeroPorExtenso(undefined)).toThrow(TypeError);
 });
 
-function montaRequisicao(n) {
-    const destino = "https://www.4devs.com.br/ferramentas_online.php";
-    const formulario = {
-        unidade : "N",
-        txt_valor : n,
-        acao : "escrever_extenso"
-    };
+test("numero fora da faixa", () => {
+    expect(numeroPorExtenso(-1)).toThrow(RangeError);
+    expect(numeroPorExtenso(1000)).toThrow(RangeError);
+});
 
-    return {
-        url : destino,
-        form : formulario
-    };
-}
+test("unidade", () => {
+    expect(numeroPorExtenso(0)).toBe("zero");
+    expect(numeroPorExtenso(7)).toBe("sete");
+});
+
+test("dezenas", () => {
+    expect(numeroPorExtenso(10)).toBe("dez");
+    expect(numeroPorExtenso(17)).toBe("dezessete");
+    expect(numeroPorExtenso(29)).toBe("vinte e nove");
+    expect(numeroPorExtenso(33)).toBe("trinta e três");
+    expect(numeroPorExtenso(40)).toBe("quarenta");
+});
+
+test("centenas", () => {
+    expect(numeroPorExtenso(101)).toBe("cento e um");
+    expect(numeroPorExtenso(567)).toBe("quinhentos e sessenta e sete");
+    expect(numeroPorExtenso(999)).toBe("novecentos e noventa e nove");
+});
+
