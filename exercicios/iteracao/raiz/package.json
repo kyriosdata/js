@@ -1,0 +1,36 @@
+{
+  "name": "iteracao-vetor",
+  "version": "0.0.1",
+  "dependencies": {},
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "doc": "jsdoc *.js",
+    "lint": "eslint \"./**/*.js\""
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "jest": "^24.5.0",
+    "jsdoc": "^3.5.5"
+  },
+  "description": "Especificação formal de código a ser implementado",
+  "main": "menor-temperatura.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriosdata/js.git"
+  },
+  "keywords": [
+    "exercícios",
+    "especificação formal",
+    "JavaScript"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyriosdata/js/issues"
+  },
+  "homepage": "https://github.com/kyriosdata/js#readme"
+}
