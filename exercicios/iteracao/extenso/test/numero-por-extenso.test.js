@@ -1,19 +1,39 @@
 const numeroPorExtenso = require("../numero-por-extenso");
+const request = require("request");
 
-async function carregaArquivoTexto(arquivo) {
-    let falha = false;
+// AVISO. ESTA NAO É UMA BOA IDEIA: 
+// fazer uso de um serviço remoto para obter o resultado
+// esperado de um teste. Nem tampouco é considerado
+// um teste de unidade. 
+test("requisicao remota", (done) => {
+    const destino = "https://www.4devs.com.br/ferramentas_online.php";
+    const formulario = {
+        unidade : "N",
+        txt_valor : 23,
+        acao : "escrever_extenso"
+    };
 
-    const texto = await fetch(arquivo)
-        .then(function (response) {
-            if (!response.ok) {
-                throw Error(response.statusText)
-            }
-            return response.text();
-        })
-        .catch(function (error) {
-            falha = true;
-            formataMsgErro(error);
-        });
+    const requisicao = {
+        url : destino,
+        form : formulario
+    };
 
-    return falha ? null : texto;
+    request.post(requisicao, function(e, r, b) {
+        expect(b).toBe(" vinte e três");
+        done();
+    });
+});
+
+function montaRequisicao(n) {
+    const destino = "https://www.4devs.com.br/ferramentas_online.php";
+    const formulario = {
+        unidade : "N",
+        txt_valor : n,
+        acao : "escrever_extenso"
+    };
+
+    return {
+        url : destino,
+        form : formulario
+    };
 }
