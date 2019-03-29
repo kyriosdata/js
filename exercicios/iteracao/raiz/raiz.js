@@ -14,7 +14,7 @@
  * 
  * @todo Tratar casos excepcionais e documentar (p.ex., valores negativos)
  * @todo Otimizar a atribuição ao valor r (simplificar a expressao, eliminar subtracao)
- * @todo A chamada ao método abs é desnecessária, calcular limites previamente. 
+ * @todo Otimizar. A chamada ao método abs é desnecessária, calcular limites previamente. 
  */
 function raiz(n, precisao) {
     let i = 1;
