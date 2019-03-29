@@ -18,7 +18,7 @@ test("requisicao remota", (done) => {
         form : formulario
     };
 
-    request.post(requisicao, function(e, r, b) {
+    request.post(montaRequisicao(23), function(e, r, b) {
         expect(b).toBe(" vinte e três");
         done();
     });
