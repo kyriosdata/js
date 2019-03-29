@@ -34,6 +34,11 @@ test("um elemento uma ocorrência", () => {
     expect(contarOcorrencias([3], 3)).toBe(1);
 });
 
+test("precisao da igualdade", () => {
+    expect(contarOcorrencias([2.001], 2.0001)).toBe(0);
+    expect(contarOcorrencias([2.0001], 2.0001)).toBe(1);
+});
+
 test("varias ocorrências", () => {
     expect(contarOcorrencias([1,2,3,1, 1, 1], 1)).toBe(4);
 });
