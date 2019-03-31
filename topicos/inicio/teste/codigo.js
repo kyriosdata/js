@@ -19,5 +19,5 @@ function soma(x, y) {
 // feitas em outros arquivos JS que vão fazer uso desta
 // função.
 
-exports.soma = soma;
+module.exports.soma = soma;
 
