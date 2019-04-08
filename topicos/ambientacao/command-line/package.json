@@ -12,7 +12,7 @@
   "author": "Fábio Nogueira de Lucena",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "jest": "^24.5.0",
     "jsdoc": "^3.5.5"
   },
