@@ -13,7 +13,7 @@
  * de process.argv[2] que seguem os argumentos
  * fornecidos ao programa.
  * 
- * @see {@link exibeArgumentos}
+ * {@link exibeArgumentos}
  */
 function exibeArgumentosAlternativo() {
     process.argv.forEach((e,i) => console.log(`${i} : ${e}`));

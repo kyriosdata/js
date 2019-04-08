@@ -1,3 +1,8 @@
+/**
+ * @module exibe
+ * @todo Criar testes.
+ */
+
 const fs = require("fs");
 
 /**

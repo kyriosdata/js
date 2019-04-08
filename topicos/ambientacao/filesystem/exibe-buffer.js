@@ -1,5 +1,14 @@
-const fs = require("fs");
+/**
+ * @module exibe-buffer
+ * @todo Criar testes.
+ * @todo provide a better name for this module
+ */
 
+ const fs = require("fs");
+
+ /**
+  * @todo documentar a função
+  */
 function leQuatroPrimeirosBytes(path) {
     try {
         let arquivo = fs.openSync(path, "r");
@@ -15,10 +24,17 @@ function leQuatroPrimeirosBytes(path) {
     }
 }
 
+/**
+ * @todo documentar a função
+ * @todo usar letras maiúsculas,ou seja, CADE em vez de cade.
+ */
 function converteInteiroParaHexa(valor) {
     return valor.toString(16);
 }
 
+/**
+ * @todo documentar a função
+ */
 function iniciar() {
     if (process.argv.length != 3) {
         console.log("Uso: node exibe-buffer <arquivo>");

@@ -1,8 +1,21 @@
-// Módulo que define três objetos, todos eles exportados: sapato, tenis e chuteira.
-// Um objeto é uma coleção de propriedades.
-// Cada propriedade possui um nome e um valor, conforme ilustrado abaixo.
+/**
+ * Tipo que detalha um calçado.
+ * 
+ * @typedef Calcado
+ * @type {object}
+ * @property {string} identificador - O identificador único do calçado.
+ * @property {number} numero - O número do calçado.
+ * @property {string} marca - A marca do calçado.
+ * @property {string} cor - A cor do calçado.
+ * @property {boolean} vendido - Indica se o calçado está vendido ou não.
+ */
 
-let sapato = {
+ /**
+  * Um calçado.
+  * 
+  * @type {Calcado}
+  */
+const sapato = {
     identificador : "123454555-234",
     numero : 42,
     marca: "Nike",
@@ -10,9 +23,12 @@ let sapato = {
     vendido : false
 };
 
-// Também é comum o uso de aspas para definir o nome da propriedade
-
-let tenis = {
+/**
+ * Outro calçado.
+ * 
+ * @type {Calcado}
+ */
+const tenis = {
     "identificador" : "1",
     "numero" : 24,
     "marca" : "Nikon",
@@ -20,11 +36,18 @@ let tenis = {
     "vendido" : true
 };
 
-// O uso de aspas é obrigado no caso abaixo...
-
-let chuteira = {
+/**
+ * Um outro calçado, com um atributo "diferente" dos
+ * demais calçados.
+ * 
+ * @type {Calcado}
+ */
+const chuteira = {
     "marca do fabricante" : "Nike"
 };
+
+// Exporte para consumo por outros módulos, um objeto,
+// composto por outros três objetos. 
 
 module.exports = {
     sapato,

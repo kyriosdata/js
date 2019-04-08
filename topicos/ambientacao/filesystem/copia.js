@@ -1,5 +1,15 @@
+/**
+ * @module copia
+ * @todo Criar testes.
+ */
 const fs = require("fs");
 
+/**
+ * Função que ilustra a criação da cópia de um arquivo. 
+ * 
+ * @todo Isolar interação com o usuário da cópia (aqui misturadas)
+ * @todo Documentar adequadamente.
+ */
 function iniciar() {
     if (process.argv.length != 4) {
         console.log("Uso: node copia <arquivo> <destino>");
