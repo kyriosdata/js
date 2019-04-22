@@ -28,7 +28,7 @@ class Matematica {
      * Produz a subtração entre o primeiro e o segundo argumento.
      *
      * @param {number} a O minuendo (o valor do qual será feita a subtração).
-     * @param {number} b O subtraend (o valor a ser subtrído).
+     * @param {number} b O subtraendo (o valor a ser subtrído).
      *
      * @see {@link Matematica#soma}
      *

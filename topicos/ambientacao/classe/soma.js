@@ -1,7 +1,8 @@
 const Matematica = require("./matematica");
 
 /**
- * Encapsula obtenção das parcelas a serem somadas.
+ * Encapsula obtenção das parcelas a serem somadas dos dois primeiros
+ * argumentos fornecidos via linha de comandos.
  */
 function argumentos() {
 
