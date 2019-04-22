@@ -1,13 +1,13 @@
 const Matematica = require("./matematica");
 
 /**
- * Encapsula obtenção das parcelas a serem somadas dos dois primeiros
- * argumentos fornecidos via linha de comandos.
+ * Encapsula obtenção dos operandos a serem utilizadas pela
+ * operação em questão. 
  */
 function argumentos() {
 
-    const a = parseInt(process.argv[2]);
-    const b = parseInt(process.argv[3]);
+    const a = process.argv[2];
+    const b = process.argv[3];
 
     return [ a, b ];
 }
@@ -20,7 +20,7 @@ function principal() {
 
     const [a, b] = argumentos();
 
-    const soma = funcoes.soma(a, b);
+    const soma = funcoes.divisao(a, b);
 
     console.log(`A soma de ${a} e ${b} é ${soma}.`);
 }

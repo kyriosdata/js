@@ -37,6 +37,33 @@ class Matematica {
     subtracao(a, b) {
         return a - b;
     }
+
+    /**
+     * Produz a divisão de a por b.
+     * 
+     * @param {number} a O dividendo.
+     * @param {number} b O divisor.
+     * 
+     * @returns {number} O quociente de a dividido por b. 
+     * 
+     * @throws {TypeError} Se qualquer um dos argumentos não for um número.
+     * @throws {RangeError} Se o divisor é zero.
+     */
+    divisao(a, b) {
+        if (isNaN(a)) {
+            throw new TypeError(`dividendo ${a} não é um número`);
+        }
+
+        if (isNaN(b)) {
+            throw new TypeError(`divisor ${b} não é um número`);
+        }
+
+        if (b == 0) {
+            throw new RangeError("divisor não pode ser zero");
+        }
+
+        return a / b;
+    }
 }
 
 module.exports = Matematica;
