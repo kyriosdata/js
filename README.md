@@ -1,4 +1,4 @@
-## Fase 1 (compreendendo JavaScript e um ambiente mínimo de desenvolvimento)
+## Fase 1 (compreendendo JavaScript e um ambiente de desenvolvimento)
 
 Assumo que você possui familiaridade com alguma linguagem de programação e que tem interesse em aprender JavaScript.
 
