@@ -2,16 +2,15 @@
  * @module cria
  * @todo Criar testes.
  */
-
  const fs = require("fs");
 
 /**
  * Acrescenta texto em um arquivo usando o enconding UTF-8.
  *
- * @param arquivo O nome do arquivo.
- * @param texto O texto a ser acrescentado.
- * 
- * @todo Documentar retorno da função.
+ * @param {string} arquivo O nome do arquivo.
+ * @param {string} texto O texto a ser acrescentado.
+ * @returns {boolean} O valor verdadeiro se a cópia é realizada de forma
+ * satisfatória ou falso, caso contrário.
  */
 function acrescentaTextoEmArquivo(arquivo, texto) {
     try {

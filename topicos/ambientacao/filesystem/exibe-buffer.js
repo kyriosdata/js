@@ -3,7 +3,6 @@
  * @todo Criar testes.
  * @todo provide a better name for this module
  */
-
  const fs = require("fs");
 
  /**

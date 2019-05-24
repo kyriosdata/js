@@ -15,21 +15,21 @@ const fs = require("fs");
  */
 function verificaPresencaMarcadoresJpeg(path) {
     function leDoisBytes(arquivo, position = 0) {
-        let buffer = Buffer.alloc(2);
-        let lidos = fs.readSync(arquivo, buffer, 0, 2, position);
+        const buffer = Buffer.alloc(2);
+        const lidos = fs.readSync(arquivo, buffer, 0, 2, position);
         return lidos < 2 ? undefined : buffer.readUInt16BE(0, 2);
     }
 
     try {
         // Obtém o tamanho do arquivo
-        let size = fs.statSync(path).size;
+        const size = fs.statSync(path).size;
 
-        let arquivo = fs.openSync(path, "r");
-        let doisPrimeiros = leDoisBytes(arquivo, 0);
-        let doisUltimos = leDoisBytes(arquivo, size - 2);
+        const arquivo = fs.openSync(path, "r");
+        const doisPrimeiros = leDoisBytes(arquivo, 0);
+        const doisUltimos = leDoisBytes(arquivo, size - 2);
         fs.closeSync(arquivo);
 
-        return doisPrimeiros === 65496 && doisUltimos === 65497;
+        return (doisPrimeiros === 65496) && (doisUltimos === 65497);
     } catch (erro) {
         console.error(erro);
         return false;
