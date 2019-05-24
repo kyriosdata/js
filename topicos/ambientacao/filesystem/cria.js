@@ -2,7 +2,7 @@
  * @module cria
  * @todo Criar testes.
  */
- const fs = require("fs");
+const fs = require("fs");
 
 /**
  * Acrescenta texto em um arquivo usando o enconding UTF-8.
