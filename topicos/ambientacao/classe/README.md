@@ -26,3 +26,4 @@ código JavaScript. Se nada é relatado, então temos um bom sinal, mas isso
 depende da configuração do [ESLint](https://eslint.org/).
 1. ```npm run doc``` gera representação HTML da documentação contida no 
 código em JavaScript no diretório **out**.
+1. ```npm run prettier``` aplica estilo aos arquivos .js (não conformidades são corrigidas).
