@@ -3,12 +3,11 @@
  * @todo Criar testes.
  * @todo provide a better name for this module
  */
+const fs = require("fs");
 
- const fs = require("fs");
-
- /**
-  * @todo documentar a função
-  */
+/**
+ * @todo documentar a função
+ */
 function leQuatroPrimeirosBytes(path) {
     try {
         let arquivo = fs.openSync(path, "r");

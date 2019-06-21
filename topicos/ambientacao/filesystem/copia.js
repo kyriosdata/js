@@ -17,8 +17,8 @@ function iniciar() {
         return;
     }
     
-    let origem = process.argv[2];
-    let destino = process.argv[3];
+    const origem = process.argv[2];
+    const destino = process.argv[3];
 
     try {
         fs.copyFileSync(origem, destino);
