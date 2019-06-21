@@ -10,11 +10,11 @@
  * @property {boolean} vendido - Indica se o calçado está vendido ou não.
  */
 
- /**
-  * Um calçado.
-  * 
-  * @type {Calcado}
-  */
+/**
+ * Um calçado.
+ * 
+ * @type {Calcado}
+ */
 const sapato = {
     identificador : "123454555-234",
     numero : 42,
