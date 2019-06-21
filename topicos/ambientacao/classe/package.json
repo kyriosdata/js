@@ -5,7 +5,8 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "doc": "jsdoc .",
-    "lint": "eslint \"./**/*.js\""
+    "lint": "eslint \"./**/*.js\"",
+    "prettier" : "prettier --write \"./**/*.js\""
   },
   "devDependencies": {
     "eslint": "^5.16.0",

@@ -5,9 +5,9 @@ const Matematica = require("../matematica");
 const matematica = new Matematica();
 
 test("subtração trivial", () => {
-    expect(matematica.subtracao(100,1)).toBe(99);
+  expect(matematica.subtracao(100, 1)).toBe(99);
 });
 
 test("soma trivial", () => {
-    expect(matematica.soma(1,2)).toBe(3);
+  expect(matematica.soma(1, 2)).toBe(3);
 });
