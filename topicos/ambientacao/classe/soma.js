@@ -6,8 +6,8 @@ const Matematica = require("./matematica");
  */
 function argumentos() {
 
-    const a = process.argv[2];
-    const b = process.argv[3];
+    const a = parseInt(process.argv[2]);
+    const b = parseInt(process.argv[3]);
 
     return [ a, b ];
 }
@@ -20,7 +20,7 @@ function principal() {
 
     const [a, b] = argumentos();
 
-    const soma = funcoes.divisao(a, b);
+    const soma = funcoes.soma(a, b);
 
     console.log(`A soma de ${a} e ${b} é ${soma}.`);
 }
