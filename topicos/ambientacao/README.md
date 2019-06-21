@@ -4,7 +4,7 @@
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=kyriosdata-github&metric=alert_status)](https://sonarcloud.io/dashboard?id=kyriosdata-github)
 
 # Tópicos frequentes em JavaScript
-Seguem vários pequenos programas para adquirir conhecimento e fluência em recursos amplamente empregados em código escrito em JavaScript. Bom proveito!
+Seguem vários pequenos programas para adquirir conhecimento e fluência em recursos amplamente empregados em código escrito em JavaScript. São vários os [recursos](https://codeburst.io/the-7-most-used-javascript-topics-you-should-know-bd242aca41a0) amplamente empregados em JavaScript. Bom proveito!
 
 - [Classe](classe/README.md)
 - [Linha de comandos](command-line/README.md)
