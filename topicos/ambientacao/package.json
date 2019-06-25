@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/kyriosdata/js#readme",
   "dependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.0.1"
   },
   "devDependencies": {
     "jest": "^23.5.0",
