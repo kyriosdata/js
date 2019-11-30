@@ -9,7 +9,7 @@
     "prettier" : "prettier --write \"./**/*.js\""
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^6.7.2",
     "jest": "^24.5.0",
     "jsdoc": "^3.6.2",
     "prettier": "1.18.2"
