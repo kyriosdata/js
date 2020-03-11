@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/kyriosdata/js#readme",
   "dependencies": {
-    "baudio": "^2.1.2"
+    "baudio": "^2.1.3"
   }
 }
