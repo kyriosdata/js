@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/kyriosdata/js#readme",
   "dependencies": {
-    "chalk": "^2.3.2",
+    "chalk": "^4.0.0",
     "cli-cursor": "^3.0.0",
     "death": "^1.1.0",
     "npm": "^6.0.0"
