@@ -15,6 +15,10 @@
  * que 999.
  */
 function numeroPorExtenso(n) {
+    if (arguments.length != 1) {
+        throw new TypeError("apenas um argumento é esperado");
+    }
+    
     return "zero";
 }
 
