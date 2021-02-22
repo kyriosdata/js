@@ -1,5 +1,5 @@
-const fs = require("fs");
+const notes = require("./notes");
 
-//fs.writeFileSync("notes.txt", "sempre a primeira linha");
+const notas = notes.getNotes();
 
-fs.appendFileSync("notes.txt", "conteúdo");
+console.log(notas);
