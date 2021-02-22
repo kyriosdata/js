@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kyriosdata/js/issues"
   },
-  "homepage": "https://github.com/kyriosdata/js#readme"
+  "homepage": "https://github.com/kyriosdata/js#readme",
+  "dependencies": {
+    "validator": "^13.5.2"
+  }
 }
