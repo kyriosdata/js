@@ -10,8 +10,21 @@ yargs.version("1.23.0-beta");
 yargs.command({
   command: "add",
   describe: "Adiciona uma nota",
-  handler: function () {
-    console.log("adding a new note");
+  builder: {
+    title: {
+      describe: "Note title",
+      demandOption: true,
+      type: "string",
+    },
+    body: {
+      describe: "Body of note",
+      demandOption: true,
+      type: "string",
+    },
+  },
+  handler: function (args) {
+    console.log("Title: %s", args.title);
+    console.log("Body: %s", args.body);
   },
 });
 
@@ -35,5 +48,5 @@ yargs.command({
 console.log("MINHAS NOTAS APP");
 
 const notas = notes.getNotes();
-const argv = yargs.argv;
-//console.log(yargs.argv);
+
+yargs.parse();
