@@ -23,8 +23,7 @@ yargs.command({
     },
   },
   handler: function (args) {
-    console.log("Title: %s", args.title);
-    console.log("Body: %s", args.body);
+    notes.addNote(args.title, args.body);
   },
 });
 
