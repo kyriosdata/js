@@ -1,4 +1,5 @@
 const fs = require("fs");
+const chalk = require("chalk");
 
 function getNotes() {
   return "Your notes...";
@@ -38,10 +39,10 @@ function removeNote(title) {
 
   if (excluido.length !== notes.length) {
     saveNotes(excluido);
-    console.log("Note with title '%s' removed.", title);
+    console.log(chalk.bgGreen("Note removed with title", title));
     return;
   } else {
-    console.log("No note with title %s", title);
+    console.log(chalk.bgRed("No note founud with title", title));
   }
 }
 
