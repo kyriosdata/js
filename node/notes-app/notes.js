@@ -24,7 +24,7 @@ function addNote(title, body) {
   const notes = loadNotes();
   const noteFind = notes.find((note) => note.title === title);
   if (noteFind) {
-    console.log("Note with title '%s' already in use", title);
+    console.log(chalk.green.inverse(`Note with title ${title} already in use`));
     return;
   }
 
