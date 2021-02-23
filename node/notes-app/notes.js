@@ -21,8 +21,8 @@ function saveNotes(notes) {
 
 function addNote(title, body) {
   const notes = loadNotes();
-  const indice = notes.find((note) => note.title === title);
-  if (indice) {
+  const noteFind = notes.find((note) => note.title === title);
+  if (noteFind) {
     console.log("Note with title '%s' already in use", title);
     return;
   }
@@ -32,7 +32,21 @@ function addNote(title, body) {
   console.log("New note added");
 }
 
+function removeNote(title) {
+  const notes = loadNotes();
+  const excluido = notes.filter((note) => note.title !== title);
+
+  if (excluido.length !== notes.length) {
+    saveNotes(excluido);
+    console.log("Note with title '%s' removed.", title);
+    return;
+  } else {
+    console.log("No note with title %s", title);
+  }
+}
+
 module.exports = {
   getNotes: getNotes,
   addNote: addNote,
+  removeNote: removeNote,
 };
