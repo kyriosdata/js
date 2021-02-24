@@ -22,13 +22,13 @@ function addNote(title, body) {
   const notes = loadNotes();
   const noteFind = notes.find((note) => note.title === title);
   if (noteFind) {
-    console.log(chalk.green.inverse(`Note with title ${title} already in use`));
+    console.log(chalk.red.inverse(`Note with title ${title} already in use`));
     return;
   }
 
   notes.push({ title: title, body: body });
   saveNotes(notes);
-  console.log("New note added");
+  console.log(chalk.green.inverse("New note added"));
 }
 
 function removeNote(title) {
