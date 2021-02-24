@@ -1,7 +1,11 @@
 const fs = require("fs");
 const chalk = require("chalk");
 
-const getNotes = () => "Your notes...";
+const getNotes = () => {
+  console.log(chalk.green("Your notes"));
+  const notes = loadNotes();
+  notes.forEach((note) => console.log(`${note.title} : ${note.body}`));
+};
 
 function loadNotes() {
   try {

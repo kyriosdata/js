@@ -60,6 +60,4 @@ yargs.command({
 // Título da aplicação
 console.log("MINHAS NOTAS APP");
 
-const notas = notes.getNotes();
-
 yargs.parse();
