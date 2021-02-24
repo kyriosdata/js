@@ -38,7 +38,6 @@ function removeNote(title) {
   if (excluido.length !== notes.length) {
     saveNotes(excluido);
     console.log(chalk.bgGreen("Note removed with title", title));
-    return;
   } else {
     console.log(chalk.bgRed("No note founud with title", title));
   }
