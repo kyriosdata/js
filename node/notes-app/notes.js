@@ -5,8 +5,6 @@ const getNotes = () => {
   console.log(chalk.green("Your notes"));
   const notes = loadNotes();
 
-  debugger;
-
   notes.forEach((note) => console.log(`${note.title} : ${note.body}`));
 };
 
