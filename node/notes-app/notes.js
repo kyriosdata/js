@@ -47,8 +47,20 @@ function removeNote(title) {
   }
 }
 
+function readNote(title) {
+  const notes = loadNotes();
+  const note = notes.find((n) => n.title === title);
+  if (note) {
+    console.log("Title: " + chalk.green(note.title));
+    console.log("Body: " + note.body);
+  } else {
+    console.log("There is no note with title", title);
+  }
+}
+
 module.exports = {
   getNotes: getNotes,
   addNote: addNote,
   removeNote: removeNote,
+  readNote: readNote,
 };
