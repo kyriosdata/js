@@ -1,9 +1,7 @@
 const fs = require("fs");
 const chalk = require("chalk");
 
-function getNotes() {
-  return "Your notes...";
-}
+const getNotes = () => "Your notes...";
 
 function loadNotes() {
   try {
