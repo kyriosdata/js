@@ -13,6 +13,13 @@ Vamos em frente com [tópicos](topicos/ambientacao/README.md) que *seguramente* 
 
 > Observe que agora temos objetivos além de um contato visual, a sugestão é que você leia, compreenda, execute e introduza variações para  observar os resultados.
 
+## Fase 3 (debugging)
+
+- Acrescente a sentença `debugger` na linha onde se deseja inserir um _breakpoint_.
+- Execute `node inspect app.js arg1 arg2` talvez tenha que executar `node --inspect-brk app.js arg1 arg2` no Windows. 
+- Abra o Chrome, forneça como URL `chrome://inspect`. Na entrada **Target** clique em `inspect`. 
+- Na janela que se abre, adicione (+) ao FileSystem o diretório contendo o código fonte que está sendo exerimentado.
+
 ## E agora?
 Sugiro que faça um [clone](https://asciinema.org/a/161953) do presente projeto caso queira experimentar o código aqui disponível.
 
