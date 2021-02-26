@@ -1,19 +1,10 @@
 console.log("starting");
 
-setTimeout(() => {
-  console.log("?");
-}, 0);
+const exibeInterrogacao = () => console.log("?");
+const exibeApos3s = () => console.log("apos 3s");
 
-let naoAcabou = true;
+setTimeout(exibeInterrogacao, 0);
 
-setTimeout(() => {
-  naoAcabou = false;
-  console.log(naoAcabou);
-}, 3000);
+setTimeout(exibeApos3s, 3000);
 
-let contador = 0;
-while (naoAcabou) {
-  contador++;
-  debugger;
-  if (contador % 10000000 === 0) console.log(contador);
-}
+console.log("stoping");
