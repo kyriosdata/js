@@ -9,9 +9,10 @@ if (!WEATHER_STACK_KEY) {
   return;
 }
 
-const url = host + getParams(WEATHER_STACK_KEY, "-16,-49");
+const URL =
+  host + getParams(WEATHER_STACK_KEY, "-16.45012977562169, -49.50002769191121");
 
-function getTemperatura(callback) {
+function getJson(url, callback) {
   function internaResposta(res) {
     const chunks = [];
 
@@ -25,7 +26,7 @@ function getTemperatura(callback) {
       if (objeto.error) {
         console.log("houve um erro...");
       } else {
-        callback(objeto.current.temperature);
+        callback(objeto);
       }
     });
   }
@@ -33,4 +34,4 @@ function getTemperatura(callback) {
   http.get(url, internaResposta).end();
 }
 
-getTemperatura((graus) => console.log(`It is ${graus}`));
+getJson(URL, (objeto) => console.log(`It is ${objeto.current.temperature}`));
