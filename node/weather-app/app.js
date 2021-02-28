@@ -25,9 +25,7 @@ function getTemperatura(callback) {
       if (objeto.error) {
         console.log("houve um erro...");
       } else {
-        callback(
-          `It is ${objeto.current.temperature}, but seems ${objeto.current.feelslike}`
-        );
+        callback(objeto.current.temperature);
       }
     });
   }
@@ -35,4 +33,4 @@ function getTemperatura(callback) {
   http.get(url, internaResposta).end();
 }
 
-getTemperatura(console.log);
+getTemperatura((graus) => console.log(`It is ${graus}`));
