@@ -2,7 +2,14 @@ const http = require("follow-redirects").http;
 
 const host = "http://api.weatherstack.com/current?";
 const getParams = (key, local) => `access_key=${key}&query=${local}`;
-const url = host + getParams("a6b608ea77ab5a41c318022931d84b9d", "-16,-49");
+
+const WEATHER_STACK_KEY = process.env.WEATHER_STACK_KEY;
+if (!WEATHER_STACK_KEY) {
+  console.log("We need WEATHERSTACK key to run...");
+  return;
+}
+
+const url = host + getParams(WEATHER_STACK_KEY, "-16,-49");
 
 function getTemperatura(callback) {
   function internaResposta(res) {
