@@ -6,7 +6,7 @@ function getJson(url, callback) {
 
     res.on("data", (chunk) => chunks.push(chunk));
 
-    res.on("end", function (chunk) {
+    res.on("end", function () {
       const body = Buffer.concat(chunks);
       const json = body.toString();
       const objeto = JSON.parse(json);
