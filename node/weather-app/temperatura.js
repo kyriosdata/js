@@ -14,17 +14,17 @@ const weatherUrl = (key, local) =>
  * @param {function} callback Função com dois argumentos, 'error' e 'data', fornecidos
  * nesta ordem quando chamada.
  */
-function temperatura(local, callback) {
+function temperatura({ cidade, latitude, longitude }, callback) {
   const temperaturaPara = (error, weatherAnswer) => {
     if (error) {
       callback("Não foi possível obter temperatura. " + error.info);
     } else {
       const temperature = weatherAnswer.current.temperature;
-      callback(undefined, { cidade: local.cidade, temperatura: temperature });
+      callback(undefined, { cidade, temperatura: temperature });
     }
   };
 
-  const posicao = `${local.latitude},${local.longitude}`;
+  const posicao = `${latitude},${longitude}`;
   const wurl = weatherUrl(process.env.WEATHER_STACK_KEY, posicao);
   getJson(wurl, temperaturaPara);
 }
