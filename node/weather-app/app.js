@@ -40,4 +40,11 @@ getJson(URL, (objeto) => console.log(`It is ${objeto.current.temperature}`));
 const geoUrl = (local, key) =>
   `https://maps.googleapis.com/maps/api/geocode/json?address=${local}&key=${key}&language=pt-br`;
 
-getJson(geoUrl("caturai", process.env.GOOGLE_API_KEY), console.log);
+const latLong = (googleAnswer) => {
+  const location = googleAnswer.results[0].geometry.location;
+  return `${location.lat},${location.lng}`;
+};
+
+const exibeLocation = (geo) => console.log(latLong(geo));
+
+getJson(geoUrl("caturai", process.env.GOOGLE_API_KEY), exibeLocation);
