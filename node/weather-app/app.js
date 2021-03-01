@@ -24,8 +24,9 @@ function grausPara(cidade) {
 }
 
 function exibeClima(cidade) {
-  const geocodeUrl = geoUrl(cidade, process.env.GOOGLE_API_KEY);
+  const encoded = encodeURIComponent(cidade);
+  const geocodeUrl = geoUrl(encoded, process.env.GOOGLE_API_KEY);
   getJson(geocodeUrl, grausPara(cidade));
 }
 
-exibeClima("New York");
+exibeClima("Brasília");
