@@ -1,4 +1,3 @@
-const task = () => console.log("fiz");
+const add = (x, y, c) => setTimeout(() => c(x + y), 2000);
 
-setTimeout(task, 3000);
-console.log("imediato");
+add(1, 4, console.log);
