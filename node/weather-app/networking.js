@@ -27,4 +27,40 @@ function getJson(url, callback, error) {
   protocolo.get(url, internaResposta).on("error", erro).end();
 }
 
-module.exports = getJson;
+const geoUrl = (local, key) =>
+  `https://maps.googleapis.com/maps/api/geocode/json?address=${local}&key=${key}&language=pt-br`;
+
+const weatherUrl = (key, local) =>
+  `http://api.weatherstack.com/current?access_key=${key}&query=${local}&units=f`;
+
+function geocode(cidade, callback) {
+  const localizacao = (geocodeGoogleAnswer) => {
+    const location = geocodeGoogleAnswer.results[0].geometry.location;
+    callback({
+      cidade: cidade,
+      latitude: location.lat,
+      longitude: location.lng,
+    });
+  };
+
+  const encoded = encodeURIComponent(cidade);
+  const geocodeUrl = geoUrl(encoded, process.env.GOOGLE_API_KEY);
+  getJson(geocodeUrl, localizacao);
+}
+
+function weather(local, callback) {
+  const temperaturaPara = (weatherAnswer) => {
+    const temperatura = weatherAnswer.current.temperature;
+    callback({ cidade: local.cidade, temperatura: temperatura });
+  };
+
+  const posicao = `${local.latitude},${local.longitude}`;
+  const wurl = weatherUrl(process.env.WEATHER_STACK_KEY, posicao);
+  getJson(wurl, temperaturaPara);
+}
+
+module.exports = {
+  getJson: getJson,
+  geocode: geocode,
+  weather: weather,
+};
