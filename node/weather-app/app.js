@@ -6,9 +6,9 @@ const geoUrl = (local, key) =>
 const weatherUrl = (key, local) =>
   `http://api.weatherstack.com/current?access_key=${key}&query=${local}&units=f`;
 
-function grausPara(cidade) {
-  const getTemperatura = (geocodeGoogleAnswer) => {
-    const msg = (weatherAnswer) => {
+function exibeTemperaturaPara(cidade) {
+  const temperaturaPara = (geocodeGoogleAnswer) => {
+    const exibeTemperatura = (weatherAnswer) => {
       const temperatura = weatherAnswer.current.temperature;
       console.log(`A temperatura em '${cidade}' é ${temperatura}`);
     };
@@ -17,16 +17,12 @@ function grausPara(cidade) {
     const posicao = `${location.lat},${location.lng}`;
 
     const wurl = weatherUrl(process.env.WEATHER_STACK_KEY, posicao);
-    getJson(wurl, msg);
+    getJson(wurl, exibeTemperatura);
   };
 
-  return getTemperatura;
-}
-
-function exibeClima(cidade) {
   const encoded = encodeURIComponent(cidade);
   const geocodeUrl = geoUrl(encoded, process.env.GOOGLE_API_KEY);
-  getJson(geocodeUrl, grausPara(cidade));
+  getJson(geocodeUrl, temperaturaPara);
 }
 
-exibeClima("Brasília");
+exibeTemperaturaPara("Brasília");
