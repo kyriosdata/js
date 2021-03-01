@@ -1,6 +1,7 @@
-const { geocode, weather } = require("./networking");
+const geocode = require("./geocode");
+const temperatura = require("./temperatura");
 
-function weatherCallback(error, data) {
+function temperaturaCallback(error, data) {
   if (error) {
     console.log(error);
   } else {
@@ -12,7 +13,7 @@ function geocodeCallback(error, local) {
   if (error) {
     console.log(error);
   } else {
-    weather(local, weatherCallback);
+    temperatura(local, temperaturaCallback);
   }
 }
 
