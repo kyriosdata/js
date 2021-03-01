@@ -17,5 +17,10 @@ function geocodeCallback(error, local) {
   }
 }
 
-geocode("São Miguel do Araguaia", geocodeCallback);
+if (process.argv.length < 3) {
+  console.log("Forneca o nome da cidade cuja temperatura é desejada.");
+  return;
+}
+
+geocode(process.argv[2], geocodeCallback);
 console.log("Espere um pouco, recuperando temperatura...");
