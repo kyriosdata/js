@@ -1,7 +1,7 @@
-const http = require("follow-redirects").http;
+const { http, https } = require("follow-redirects");
 
 const host = "http://api.weatherstack.com/current?";
-const getParams = (key, local) => `access_key=${key}&query=${local}`;
+const getParams = (key, local) => `access_key=${key}&query=${local}&units=f`;
 
 const WEATHER_STACK_KEY = process.env.WEATHER_STACK_KEY;
 if (!WEATHER_STACK_KEY) {
@@ -31,7 +31,13 @@ function getJson(url, callback) {
     });
   }
 
-  http.get(url, internaResposta).end();
+  const protocolo = url.startsWith("https") ? https : http;
+  protocolo.get(url, internaResposta).end();
 }
 
 getJson(URL, (objeto) => console.log(`It is ${objeto.current.temperature}`));
+
+const geoUrl = (local, key) =>
+  `https://maps.googleapis.com/maps/api/geocode/json?address=${local}&key=${key}&language=pt-br`;
+
+getJson(geoUrl("caturai", process.env.GOOGLE_API_KEY), console.log);
