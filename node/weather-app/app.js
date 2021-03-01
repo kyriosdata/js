@@ -1,4 +1,4 @@
-const { http, https } = require("follow-redirects");
+const getJson = require("./networking");
 
 const host = "http://api.weatherstac.com/current?";
 const getParams = (key, local) => `access_key=${key}&query=${local}&units=f`;
@@ -12,34 +12,9 @@ if (!WEATHER_STACK_KEY) {
 const URL =
   host + getParams(WEATHER_STACK_KEY, "-16.45012977562169, -49.50002769191121");
 
-function getJson(url, callback, error) {
-  function internaResposta(res) {
-    const chunks = [];
-
-    res.on("data", (chunk) => chunks.push(chunk));
-
-    res.on("end", function (chunk) {
-      const body = Buffer.concat(chunks);
-      const json = body.toString();
-      const objeto = JSON.parse(json);
-
-      if (objeto.error) {
-        console.log("houve um erro...");
-      } else {
-        // TODO tratar high level error (depende do serviço)
-        callback(objeto);
-      }
-    });
-  }
-
-  // Use tratamento de erro de baixo nível, se fornecido
-  const erro = error ? error : () => console.log("ERRO " + url);
-
-  const protocolo = url.startsWith("https") ? https : http;
-  protocolo.get(url, internaResposta).on("error", erro).end();
-}
-
 const msg = (objeto) => console.log(`It is ${objeto.current.temperature}`);
+
+// Aqui é feita a chamada
 getJson(URL, msg);
 
 const geoUrl = (local, key) =>
