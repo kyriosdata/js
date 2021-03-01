@@ -1,7 +1,7 @@
 const { http, https } = require("follow-redirects");
 
-function getJson(url, callback, error) {
-  function internaResposta(res) {
+function getJson(url, callback) {
+  function resposta(res) {
     const chunks = [];
 
     res.on("data", (chunk) => chunks.push(chunk));
@@ -12,35 +12,44 @@ function getJson(url, callback, error) {
       const objeto = JSON.parse(json);
 
       if (objeto.error) {
-        console.log("houve um erro...");
+        callback(objeto.error);
       } else {
-        // TODO tratar high level error (depende do serviço)
-        callback(objeto);
+        callback(undefined, objeto);
       }
     });
   }
 
-  // Use tratamento de erro de baixo nível, se fornecido
-  const erro = error ? error : () => console.log("ERRO " + url);
+  const callOnError = (error) => callback(error);
+  const request = url.startsWith("https") ? https : http;
 
-  const protocolo = url.startsWith("https") ? https : http;
-  protocolo.get(url, internaResposta).on("error", erro).end();
+  request.get(url, resposta).on("error", callOnError).end();
 }
 
 const geoUrl = (local, key) =>
   `https://maps.googleapis.com/maps/api/geocode/json?address=${local}&key=${key}&language=pt-br`;
 
 const weatherUrl = (key, local) =>
-  `http://api.weatherstack.com/current?access_key=${key}&query=${local}&units=f`;
+  `http://api.weatherstack.com/current?access_key=${key}&query=${local}&units=m`;
 
 function geocode(cidade, callback) {
-  const localizacao = (geocodeGoogleAnswer) => {
-    const location = geocodeGoogleAnswer.results[0].geometry.location;
-    callback({
-      cidade: cidade,
-      latitude: location.lat,
-      longitude: location.lng,
-    });
+  const localizacao = (error, geocodeAnswer) => {
+    if (error) {
+      callback(error);
+    } else if (geocodeAnswer.results.length === 0) {
+      const detalhe = geocodeAnswer.error_message;
+      if (detalhe) {
+        callback("Não foi possível obter localização. " + detalhe);
+      } else {
+        callback(`Nenhum resultado encontrado para ${cidade}`);
+      }
+    } else {
+      const location = geocodeAnswer.results[0].geometry.location;
+      callback(undefined, {
+        cidade: cidade,
+        latitude: location.lat,
+        longitude: location.lng,
+      });
+    }
   };
 
   const encoded = encodeURIComponent(cidade);
@@ -49,9 +58,13 @@ function geocode(cidade, callback) {
 }
 
 function weather(local, callback) {
-  const temperaturaPara = (weatherAnswer) => {
-    const temperatura = weatherAnswer.current.temperature;
-    callback({ cidade: local.cidade, temperatura: temperatura });
+  const temperaturaPara = (error, weatherAnswer) => {
+    if (error) {
+      callback("Não foi possível obter temperatura. " + error.info);
+    } else {
+      const temperatura = weatherAnswer.current.temperature;
+      callback(undefined, { cidade: local.cidade, temperatura: temperatura });
+    }
   };
 
   const posicao = `${local.latitude},${local.longitude}`;
