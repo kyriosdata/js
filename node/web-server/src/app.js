@@ -7,6 +7,7 @@ const express = require("express");
 const hbs = require("hbs");
 
 const geocode = require("./geocode");
+const temperatura = require("./temperatura");
 
 const app = express();
 
@@ -51,9 +52,18 @@ app.get("/weather", (req, res) => {
     return res.send({ error: "It is necessary to send address to query" });
   }
 
-  res.send({
-    cidade: "Goiânia",
-    temperatura: 29,
+  geocode(req.query.address, (error, geo) => {
+    if (error) {
+      return res.send({ erro: error });
+    }
+
+    temperatura(geo, (error, graus) => {
+      if (error) {
+        return res.send({ erro: error });
+      }
+
+      res.send(graus);
+    });
   });
 });
 

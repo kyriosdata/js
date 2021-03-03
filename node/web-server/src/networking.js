@@ -21,7 +21,6 @@ function getJson(url, callback) {
 
   const callOnError = (error) => callback(error);
   const request = url.startsWith("https") ? https : http;
-
   request.get(url, resposta).on("error", callOnError).end();
 }
 

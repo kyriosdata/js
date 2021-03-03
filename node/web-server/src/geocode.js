@@ -35,6 +35,7 @@ function geocode(cidade, callback) {
         cidade: cidade,
         latitude: location.lat,
         longitude: location.lng,
+        formatted_address: geocodeAnswer.results[0].formatted_address,
       });
     }
   };
