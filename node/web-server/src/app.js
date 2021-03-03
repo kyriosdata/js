@@ -1,11 +1,24 @@
+/**
+ * Web Server (Express.js)
+ */
+
 const path = require("path");
 const express = require("express");
+const hbs = require("hbs");
 
 const app = express();
 
+// Diretórios configurados
+const publicDir = path.join(__dirname, "../public");
+const viewsDir = path.join(__dirname, "../templates/views");
+const partialsDir = path.join(__dirname, "../templates/partials");
+
 // Configura Express para usar handlebars
 app.set("view engine", "hbs");
-app.use(express.static(path.join(__dirname, "../public")));
+app.set("views", viewsDir);
+hbs.registerPartials(partialsDir);
+
+app.use(express.static(publicDir));
 
 // Render by handlebars
 app.get("", (req, res) => {
@@ -17,13 +30,14 @@ app.get("", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "Weather App",
+    title: "Weather App (about)",
     author: "Fábio Nogueira de Lucena",
   });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
+    title: "Weather App (help)",
     msg: "The help text goes here.",
     author: "Fábio Nogueira de Lucena",
   });
