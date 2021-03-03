@@ -18,6 +18,7 @@ app.set("view engine", "hbs");
 app.set("views", viewsDir);
 hbs.registerPartials(partialsDir);
 
+// Search here first.
 app.use(express.static(publicDir));
 
 // Render by handlebars
@@ -47,6 +48,22 @@ app.get("/weather", (req, res) => {
   res.send({
     cidade: "Goiânia",
     temperatura: 29,
+  });
+});
+
+app.get("/help/*", (req, res) => {
+  res.render("404", {
+    title: "Something went wrong (404)",
+    msg: "Help article not fond",
+    author: "Fábio Nogueira de Lucena",
+  });
+});
+
+app.get("*", (req, res) => {
+  res.render("404", {
+    title: "Something went wrong (404)",
+    msg: "Page not found",
+    author: "Fábio Nogueira de Lucena",
   });
 });
 
