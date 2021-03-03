@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "follow-redirects": "^1.13.3",
     "hbs": "^4.1.1"
   }
 }
