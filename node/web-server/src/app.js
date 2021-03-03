@@ -57,9 +57,9 @@ app.get("/weather", (req, res) => {
       return res.send({ erro: error });
     }
 
-    temperatura(geo, (error, graus) => {
-      if (error) {
-        return res.send({ erro: error });
+    temperatura(geo, (temperatureError, graus) => {
+      if (temperatureError) {
+        return res.send({ erro: temperatureError });
       }
 
       res.send(graus);
