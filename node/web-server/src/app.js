@@ -54,12 +54,12 @@ app.get("/weather", (req, res) => {
 
   geocode(req.query.address, (error, geo) => {
     if (error) {
-      return res.send({ erro: error });
+      return res.send({ error: error });
     }
 
     temperatura(geo, (temperatureError, graus) => {
       if (temperatureError) {
-        return res.send({ erro: temperatureError });
+        return res.send({ error: temperatureError });
       }
 
       res.send(graus);
