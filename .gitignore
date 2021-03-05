@@ -66,9 +66,7 @@ typings/
 .next
 
 bin/
-public/
 routes/
-views/
 
 # Documentação gerada pelo jsdoc
 out/
