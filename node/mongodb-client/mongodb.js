@@ -16,5 +16,28 @@ MongoClient.connect(conexaoUrl, { useNewUrlParser: true }, (error, client) => {
     return console.log("Erro ao conectar com banco de dados");
   }
 
-  console.log("Conexão realizada satisfatoriamente");
+  const db = client.db(database);
+  db.collection("tasks").insertMany(
+    [
+      {
+        description: "Lavar o rosto",
+        completed: true,
+      },
+      {
+        description: "comprar pão",
+        completed: false,
+      },
+      {
+        description: "fazer o café",
+        completed: true,
+      },
+    ],
+    (errorInsert, result) => {
+      if (errorInsert) {
+        return console.log("Ocorreu um erro...");
+      }
+
+      console.log(result.ops);
+    }
+  );
 });
