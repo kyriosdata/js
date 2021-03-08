@@ -1,5 +1,4 @@
-const mongodb = require("mongodb");
-const MongoClient = mongodb.MongoClient;
+const { MongoClient, ObjectID } = require("mongodb");
 
 // Informações necessárias fornecidas via variáveis de ambiente
 const mongodbUser = process.env.MONGODB_USER;
@@ -11,33 +10,19 @@ const database = process.env.MONGODB_DBNAME;
 const credencial = `${mongodbUser}:${mongodbPass}`;
 const conexaoUrl = `mongodb://${credencial}@${server}:${port}/${database}`;
 
-MongoClient.connect(conexaoUrl, { useNewUrlParser: true }, (error, client) => {
+MongoClient.connect(conexaoUrl, {}, (error, client) => {
   if (error) {
-    return console.log("Erro ao conectar com banco de dados");
+    console.log("Não foi possível conexão...");
+  } else {
+    console.log("Conexão estabelecida.");
   }
 
   const db = client.db(database);
-  db.collection("tasks").insertMany(
-    [
-      {
-        description: "Lavar o rosto",
-        completed: true,
-      },
-      {
-        description: "comprar pão",
-        completed: false,
-      },
-      {
-        description: "fazer o café",
-        completed: true,
-      },
-    ],
-    (errorInsert, result) => {
-      if (errorInsert) {
-        return console.log("Ocorreu um erro...");
-      }
+  const collection = db.collection("tasks");
 
-      console.log(result.ops);
-    }
-  );
+  collection.findOne({ x: undefined }, (e, r) => {
+    console.log(r);
+  });
+
+  client.close();
 });
