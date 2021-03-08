@@ -19,10 +19,10 @@ MongoClient.connect(conexaoUrl, {}, (error, client) => {
 
   const db = client.db(database);
   const collection = db.collection("tasks");
+  const incrementePor = (valor) => ({ $set: { k: valor } });
 
-  collection.updateMany({}, { $inc: { x: 3 } }, (e, r) => {
-    console.log(r);
-  });
-
-  client.close();
+  collection
+    .updateMany({}, incrementePor(4))
+    .then(console.log)
+    .then(client.close());
 });
