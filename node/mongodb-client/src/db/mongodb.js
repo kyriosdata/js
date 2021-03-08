@@ -1,14 +1,5 @@
-const { MongoClient, ObjectID } = require("mongodb");
-
-// Informações necessárias fornecidas via variáveis de ambiente
-const mongodbUser = process.env.MONGODB_USER;
-const mongodbPass = process.env.MONGODB_PASS;
-const server = process.env.MONGODB_SERVER;
-const port = process.env.MONGODB_PORT;
-const database = process.env.MONGODB_DBNAME;
-
-const credencial = `${mongodbUser}:${mongodbPass}`;
-const conexaoUrl = `mongodb://${credencial}@${server}:${port}/${database}`;
+const { MongoClient } = require("mongodb");
+const { conexaoUrl, database } = require("./mongodb-utils");
 
 MongoClient.connect(conexaoUrl, {}, (error, client) => {
   if (error) {
@@ -19,7 +10,7 @@ MongoClient.connect(conexaoUrl, {}, (error, client) => {
 
   const db = client.db(database);
   const collection = db.collection("tasks");
-  const incrementePor = (valor) => ({ $set: { k: valor } });
+  const incrementePor = (valor) => ({ $inc: { k: valor } });
 
   collection
     .updateMany({}, incrementePor(4))

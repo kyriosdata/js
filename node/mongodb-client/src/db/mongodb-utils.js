@@ -8,4 +8,4 @@ const database = process.env.MONGODB_DBNAME;
 const credencial = `${mongodbUser}:${mongodbPass}`;
 const conexaoUrl = `mongodb://${credencial}@${server}:${port}/${database}`;
 
-module.exports = conexaoUrl;
+module.exports = { conexaoUrl, database };
