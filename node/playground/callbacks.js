@@ -16,10 +16,15 @@ function callbackToExecutAtTheEnd(error, result) {
 
 algumaOperacaoAssincrona(callbackToExecutAtTheEnd);
 
+// Agora usando Promise
+
+// Função que executa operação assíncrona (recebe 2 funções como parâmetros)
+// (se tudo ok, chame a primeira, resolve, com o retorno)
+// (se houve erro, chame a segunda, reject, com o retorno)
 const funcao = (resolve, reject) => {
-  setTimeout(() => resolve("ok"), 2000);
+  reject("reject");
 };
 
 const comPromise = new Promise(funcao);
 
-comPromise.then(console.log);
+comPromise.then(console.log).catch(console.log);
