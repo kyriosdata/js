@@ -20,7 +20,7 @@ MongoClient.connect(conexaoUrl, {}, (error, client) => {
   const db = client.db(database);
   const collection = db.collection("tasks");
 
-  collection.findOne({ x: undefined }, (e, r) => {
+  collection.updateMany({}, { $inc: { x: 3 } }, (e, r) => {
     console.log(r);
   });
 
