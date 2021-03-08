@@ -22,7 +22,7 @@ algumaOperacaoAssincrona(callbackToExecutAtTheEnd);
 // (se tudo ok, chame a primeira, resolve, com o retorno)
 // (se houve erro, chame a segunda, reject, com o retorno)
 const funcao = (resolve, reject) => {
-  reject("reject");
+  setTimeout(() => reject("reject"), 2000);
 };
 
 const comPromise = new Promise(funcao);
