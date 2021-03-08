@@ -15,3 +15,11 @@ function callbackToExecutAtTheEnd(error, result) {
 }
 
 algumaOperacaoAssincrona(callbackToExecutAtTheEnd);
+
+const funcao = (resolve, reject) => {
+  setTimeout(() => resolve("ok"), 2000);
+};
+
+const comPromise = new Promise(funcao);
+
+comPromise.then(console.log);
