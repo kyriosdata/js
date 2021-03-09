@@ -8,14 +8,14 @@ mongoose.connect(conexaoUrl, {
 });
 
 const User = mongoose.model("User", {
-  name: {
+  description: {
     type: String,
   },
-  age: {
-    type: Number,
+  completed: {
+    type: Boolean,
   },
 });
 
-const me = new User({ name: "Fábio", age: 53 });
+const me = new User({ description: "Fábio", completed: true });
 
 me.save().then(console.log).catch(console.log);
