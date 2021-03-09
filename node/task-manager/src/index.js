@@ -2,6 +2,8 @@ const express = require("express");
 require("./db/mongoose");
 
 const User = require("./models/user");
+const Task = require("./models/task");
+const { ObjectID } = require("bson");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,8 +21,23 @@ app.post("/user", (req, res) => {
   const user = new User(req.body);
   user
     .save()
-    .then((x) => res.send({ saved: x._id }))
+    .then((x) => {
+      res.status(201);
+      res.send({ saved: x._id });
+    })
     .catch((e) => res.send({ erro: e }));
+});
+
+// Acrescentar tarefa
+app.post("/task", (req, res) => {
+  const task = new Task(req.body);
+  task
+    .save()
+    .then((x) => {
+      res.status(201);
+      res.send({ saved: x._id });
+    })
+    .catch((e) => res.status(500).send({ erro: e }));
 });
 
 app.get("/user", (req, res) => {
@@ -34,6 +51,39 @@ app.get("/user", (req, res) => {
   });
 });
 
+app.get("/user/:id", (req, res) => {
+  User.findById(req.params.id)
+    .then((u) => {
+      if (!u) {
+        res.status(404).send({ msg: "Nenhum usuário com o id fornecido" });
+      } else {
+        res.send(u);
+      }
+    })
+    .catch((e) => res.status(500).send(e));
+});
+
+app.get("/task/:id", (req, res) => {
+  Task.findById(req.params.id)
+    .then((u) => {
+      if (!u) {
+        res.status(404).send({ msg: "Nenhuma tarefa com o id fornecido" });
+      } else {
+        res.send(u);
+      }
+    })
+    .catch((e) => res.status(500).send(e));
+});
+
+app.get("/task", (req, res) => {
+  Task.find({})
+    .then((r) => {
+      res.setHeader("total", r.length);
+      res.send(r);
+    })
+    .catch((e) => res.status(500).send(e));
+});
+
 // Contar total de usuários
 app.get("/user/count", (req, res) => {
   User.countDocuments({}, (e, c) => {
@@ -41,6 +91,17 @@ app.get("/user/count", (req, res) => {
       res.send({ erro: e });
     } else {
       res.send({ type: "User", total: c });
+    }
+  });
+});
+
+// Contar total de tarefas
+app.get("/task/count", (req, res) => {
+  Task.countDocuments({}, (e, c) => {
+    if (e) {
+      res.status(500).send({ erro: e });
+    } else {
+      res.send({ type: "Task", total: c });
     }
   });
 });
