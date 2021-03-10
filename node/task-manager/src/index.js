@@ -18,14 +18,24 @@ app.get("", (req, res) => {
 // Acrescentar usuário
 app.post("/user", (req, res) => {
   const user = new User(req.body);
+  let saved_id = -1;
   user
     .save()
     .then((x) => {
-      res.status(201);
-      res.send({ saved: x._id });
+      saved_id = x._id;
+      return User.countDocuments({});
     })
-    .catch((e) => res.send({ erro: e }));
+    .then((c) => res.send({ saved: saved_id, total: c }))
+    .catch((e) => res.status(500).send({ erro: e }));
 });
+
+// User.countDocuments({}, (e, c) => {
+//   if (e) {
+//     res.send({ erro: e });
+//   } else {
+//     res.send({ type: "User", total: c });
+//   }
+// });
 
 // Acrescentar tarefa
 app.post("/task", (req, res) => {
