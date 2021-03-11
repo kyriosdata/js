@@ -1,6 +1,7 @@
 ## Projeto Gerenciador de Tarefas
 
-Ilustra o emprego de MongoDB, Mongoose e Expressjs.
+Ilustra o emprego de MongoDB, [Mongoose](https://mongoosejs.com/) e
+[Expressjs](https://expressjs.com/).
 
 ## REST API
 
