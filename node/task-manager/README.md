@@ -13,3 +13,10 @@ Ilustra o emprego de MongoDB, [Mongoose](https://mongoosejs.com/) e
 - Crie modelos (diretório **models**)
 - Configure as variáveis de ambiente (veja [mongodb-utils.js](./src/db/mongodb-utils.js))
 - Configure o [mongoose](./src/db/mongoose.js).
+
+## Iniciando
+
+Disponibiliza _endpoints_ para gerenciamento de tarefas.
+
+- `npm run start` ou
+- `npm run dev`
