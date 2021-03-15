@@ -15,37 +15,29 @@ app.get("", (req, res) => {
   res.send("ok");
 });
 
+const createAndCount = async (usr) => {
+  const created = await new User(usr).save();
+  const total = await User.countDocuments({});
+  return { saved: created._id, total };
+};
+
 // Acrescentar usuário
 app.post("/user", (req, res) => {
-  const user = new User(req.body);
-  let saved_id = -1;
-  user
-    .save()
-    .then((x) => {
-      saved_id = x._id;
-      return User.countDocuments({});
-    })
-    .then((c) => res.send({ saved: saved_id, total: c }))
+  createAndCount(req.body)
+    .then((r) => res.send(r))
     .catch((e) => res.status(500).send({ erro: e }));
 });
 
-// User.countDocuments({}, (e, c) => {
-//   if (e) {
-//     res.send({ erro: e });
-//   } else {
-//     res.send({ type: "User", total: c });
-//   }
-// });
+const createTaskAndCount = async (task) => {
+  const created = await new Task(task).save();
+  const total = await Task.countDocuments({});
+  return { saved: created._id, total };
+};
 
 // Acrescentar tarefa
 app.post("/task", (req, res) => {
-  const task = new Task(req.body);
-  task
-    .save()
-    .then((x) => {
-      res.status(201);
-      res.send({ saved: x._id });
-    })
+  createTaskAndCount(req.body)
+    .then((x) => res.status(201).send(x))
     .catch((e) => res.status(500).send({ erro: e }));
 });
 
