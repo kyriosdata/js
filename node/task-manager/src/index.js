@@ -84,6 +84,20 @@ app.get("/task/:id", (req, res) => {
     .catch((e) => res.status(500).send(e));
 });
 
+const deleteTaskWithTotalReturned = async (id) => {
+  const task = await Task.findById(id);
+  if (task) {
+    await task.deleteOne();
+  }
+  return await Task.countDocuments({});
+};
+
+app.delete("/task/:id", (req, res) => {
+  deleteTaskWithTotalReturned(req.params.id)
+    .then((total) => res.send({ total }))
+    .catch((e) => res.status(500).send(e));
+});
+
 app.get("/task", (req, res) => {
   Task.find({})
     .then((r) => {
