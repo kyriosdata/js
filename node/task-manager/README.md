@@ -20,3 +20,5 @@ Disponibiliza _endpoints_ para gerenciamento de tarefas.
 
 - `npm run start` ou
 - `npm run dev`
+
+Na sequência pode-se usar uma ferramenta como Postman para efetuar as requisições que vão atingir os _endpoints_ disponibilizados.

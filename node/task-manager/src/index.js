@@ -90,18 +90,18 @@ app.patch("/task/:id", async (req, res) => {
   }
 });
 
-const deleteTaskWithTotalReturned = async (id) => {
-  const task = await Task.findById(id);
-  if (task) {
-    await task.deleteOne();
+app.delete("/task/:id", async (req, res) => {
+  try {
+    const task = await Task.findByIdAndDelete(req.params.id);
+    if (task) {
+      const total = await Task.countDocuments({});
+      res.send({ total, deleted: task });
+    } else {
+      res.send(404).send();
+    }
+  } catch (e) {
+    res.status(400).send({ erro: e });
   }
-  return await Task.countDocuments({});
-};
-
-app.delete("/task/:id", (req, res) => {
-  deleteTaskWithTotalReturned(req.params.id)
-    .then((total) => res.send({ total }))
-    .catch((e) => res.status(500).send(e));
 });
 
 app.get("/task", (req, res) => {
