@@ -20,6 +20,7 @@ router.patch("/task/:id", async (req, res) => {
   try {
     const alterada = await Task.findByIdAndUpdate(req.params.id, req.body, {
       new: false,
+      useFindAndModify: false,
       runValidators: true,
     });
 
