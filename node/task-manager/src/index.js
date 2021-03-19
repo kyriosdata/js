@@ -72,6 +72,24 @@ app.get("/task/:id", (req, res) => {
     .catch((e) => res.status(500).send(e));
 });
 
+app.patch("/task/:id", async (req, res) => {
+  const nova = req.body.description;
+  try {
+    const alterada = await Task.findByIdAndUpdate(req.params.id, req.body, {
+      new: false,
+      runValidators: true,
+    });
+
+    if (!alterada) {
+      res.send(404).send();
+    } else {
+      res.send({ alterada: alterada.description, nova });
+    }
+  } catch (e) {
+    res.status(400).send({ erro: e });
+  }
+});
+
 const deleteTaskWithTotalReturned = async (id) => {
   const task = await Task.findById(id);
   if (task) {
