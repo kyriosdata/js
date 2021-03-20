@@ -4,7 +4,7 @@ const User = require("../models/user");
 const router = new express.Router();
 
 // Acrescentar usuário
-router.post("/user", async (req, res) => {
+router.post("/users", async (req, res) => {
   try {
     const created = await new User(req.body).save();
     const total = await User.countDocuments({});
@@ -14,38 +14,54 @@ router.post("/user", async (req, res) => {
   }
 });
 
-router.get("/user", (req, res) => {
-  User.find({}, (e, r) => {
-    if (e) {
-      res.send({ erro: e });
+router.get("/users", async (req, res) => {
+  try {
+    const usuarios = await User.find({});
+    if (usuarios) {
+      res.setHeader("total", usuarios.length);
+      res.send(usuarios);
     } else {
-      res.setHeader("total", r.length);
-      res.send(r);
+      res.send({ erro: usuarios });
     }
-  });
+  } catch (e) {
+    res.status(400).send({ erro: e });
+  }
 });
 
-router.get("/user/:id", (req, res) => {
-  User.findById(req.params.id)
-    .then((u) => {
-      if (!u) {
-        res.status(404).send({ msg: "Nenhum usuário com o id fornecido" });
-      } else {
-        res.send(u);
-      }
-    })
-    .catch((e) => res.status(500).send(e));
+router.get("/users/:id", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      res.send(user);
+    } else {
+      res.status(404).send({ msg: "Nenhum usuário com o id fornecido" });
+    }
+  } catch (e) {
+    res.status(500).send(e);
+  }
 });
 
 // Contar total de usuários
-router.get("/user/count", (req, res) => {
-  User.countDocuments({}, (e, c) => {
-    if (e) {
-      res.send({ erro: e });
+router.get("/total/users", async (req, res) => {
+  try {
+    const total = await User.countDocuments({});
+    res.send({ type: "User", total });
+  } catch (erro) {
+    res.send({ erro });
+  }
+});
+
+router.delete("/todas/users", async (req, res) => {
+  try {
+    const removidos = await User.deleteMany({});
+    if (removidos) {
+      res.send({ removidos });
     } else {
-      res.send({ type: "User", total: c });
+      res.status(400).send({ erro: "nenhum removido" });
     }
-  });
+  } catch (erro) {
+    res.status(400).send({ erro });
+  }
 });
 
 module.exports = router;

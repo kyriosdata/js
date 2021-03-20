@@ -15,7 +15,13 @@ app.use(userRouter);
 
 // Apenas para verificar funcionamento (health)
 app.get("", (req, res) => {
-  res.send({ mongoose: mongoose.connection.readyState });
+  res.send({
+    mongoose: mongoose.connection.readyState,
+    user: process.env.MONGODB_USER,
+    server: process.env.MONGODB_SERVER,
+    port: process.env.MONGODB_PORT,
+    dbname: process.env.MONGODB_DBNAME,
+  });
 });
 
 app.listen(port, () => {
