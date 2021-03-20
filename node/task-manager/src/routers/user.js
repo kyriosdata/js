@@ -14,6 +14,25 @@ router.post("/users", async (req, res) => {
   }
 });
 
+router.patch("/users/:id", async (req, res) => {
+  const nova = req.body.description;
+  try {
+    const alterada = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: false,
+      useFindAndModify: false,
+      runValidators: true,
+    });
+
+    if (!alterada) {
+      res.stats(404).send();
+    } else {
+      res.send({ alterada, nova });
+    }
+  } catch (e) {
+    res.status(400).send({ erro: e });
+  }
+});
+
 router.get("/users", async (req, res) => {
   try {
     const usuarios = await User.find({});
