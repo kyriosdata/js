@@ -27,19 +27,26 @@ router.get("/task/:id", (req, res) => {
 });
 
 router.patch("/task/:id", async (req, res) => {
-  const nova = req.body.description;
-  try {
-    const alterada = await Task.findByIdAndUpdate(req.params.id, req.body, {
-      new: false,
-      useFindAndModify: false,
-      runValidators: true,
-    });
+  const updates = Object.keys(req.body);
+  const allowed = ["description", "completed"];
+  const isValid = updates.every((change) => allowed.includes(change));
+  if (!isValid) {
+    return res.status(404).send({ error: "invalid udate" });
+  }
 
-    if (!alterada) {
+  try {
+    // Recupera a tarefa a ser atualizada.
+    const tarefa = await Task.findById(req.params.id);
+    if (!tarefa) {
       res.stats(404).send();
-    } else {
-      res.send({ alterada: alterada.description, nova });
     }
+
+    // Atualiza com valores fornecidos (permitidos, conforme acima)
+    updates.forEach((change) => (tarefa[change] = req.body[change]));
+
+    await tarefa.save();
+
+    res.send({ alterada: alterada.description, nova });
   } catch (e) {
     res.status(400).send({ erro: e });
   }

@@ -14,6 +14,7 @@ router.post("/users", async (req, res) => {
   }
 });
 
+// Atualiza usuário (evita getByIdAndUpdate para não pular middleware)
 router.patch("/users/:id", async (req, res) => {
   const updates = Object.keys(req.body);
   const allowed = ["email", "password"];
@@ -23,20 +24,15 @@ router.patch("/users/:id", async (req, res) => {
     return res.status(400).send({ error: "invalid updates" });
   }
 
-  const nova = req.body.description;
   try {
-    //const alterada = await User.findById(req.params.id);
-    const alterada = await User.findByIdAndUpdate(req.params.id, req.body, {
-      new: false,
-      useFindAndModify: false,
-      runValidators: true,
-    });
-
-    if (!alterada) {
-      res.stats(404).send();
-    } else {
-      res.send({ alterada, nova });
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return res.stats(404).send();
     }
+
+    updates.forEach((change) => (user[change] = req.body[change]));
+    await user.save();
+    res.send(user);
   } catch (e) {
     res.status(400).send({ erro: e });
   }
