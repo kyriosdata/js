@@ -15,8 +15,17 @@ router.post("/users", async (req, res) => {
 });
 
 router.patch("/users/:id", async (req, res) => {
+  const updates = Object.keys(req.body);
+  const allowed = ["email", "password"];
+  const isValidOperation = updates.every((update) => allowed.includes(update));
+
+  if (!isValidOperation) {
+    return res.status(400).send({ error: "invalid updates" });
+  }
+
   const nova = req.body.description;
   try {
+    //const alterada = await User.findById(req.params.id);
     const alterada = await User.findByIdAndUpdate(req.params.id, req.body, {
       new: false,
       useFindAndModify: false,
