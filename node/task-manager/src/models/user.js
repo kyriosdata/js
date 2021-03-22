@@ -16,6 +16,7 @@ const userSchema = mongoose.Schema({
   },
   email: {
     type: String,
+    unique: true,
     required: true,
     trim: true,
     lowercase: true,
@@ -32,8 +33,24 @@ const userSchema = mongoose.Schema({
   },
 });
 
+userSchema.statics.checkCredentials = async (email, password) => {
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new Error("nao foi possivel login...");
+  }
+
+  const ok = await bcrypt.compare(password, user.password);
+  if (!ok) {
+    throw new Error("Falhou login...");
+  }
+
+  return user;
+};
+
 // middleware.
 // Sempre que executado save em um usuário, função fornecida é executada.
+// Assegura que apenas hash de password é persistida.
 userSchema.pre("save", async function (next) {
   const user = this;
 

@@ -3,6 +3,21 @@ const User = require("../models/user");
 
 const router = new express.Router();
 
+// Login
+router.post("/users/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).send({ error: "forneca email e password" });
+    }
+
+    const user = await User.checkCredentials(email, password);
+    res.send(user);
+  } catch (error) {
+    res.status(400).send({ error: error.toString() });
+  }
+});
+
 // Acrescentar usuário
 router.post("/users", async (req, res) => {
   try {
