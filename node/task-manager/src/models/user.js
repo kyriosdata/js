@@ -32,6 +32,14 @@ const userSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
+  tokens: [
+    {
+      token: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
 userSchema.methods.generateAccessToken = async function () {
@@ -39,6 +47,9 @@ userSchema.methods.generateAccessToken = async function () {
   const token = jwt.sign({ _id: user._id.toString() }, "senha", {
     expiresIn: "30 minutes",
   });
+
+  user.tokens = user.tokens.concat({ token });
+  await user.save();
 
   return token;
 };
