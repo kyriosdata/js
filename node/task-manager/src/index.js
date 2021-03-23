@@ -31,7 +31,7 @@ app.listen(port, () => {
 });
 
 const teste = async () => {
-  const token = jwt.sign({ _id: "abc" }, "senha");
+  const token = jwt.sign({ _id: "abc" }, "senha", { expiresIn: "30 minutes" });
   console.log(token);
 
   const resposta = jwt.verify(token, "senha");

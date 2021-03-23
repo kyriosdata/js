@@ -12,7 +12,8 @@ router.post("/users/login", async (req, res) => {
     }
 
     const user = await User.checkCredentials(email, password);
-    res.send(user);
+    const token = await user.generateAccessToken();
+    res.send({ user, token });
   } catch (error) {
     res.status(400).send({ error: error.toString() });
   }
@@ -23,9 +24,10 @@ router.post("/users", async (req, res) => {
   try {
     const created = await new User(req.body).save();
     const total = await User.countDocuments({});
-    res.send({ saved: created._id, total });
+    const token = await created.generateAccessToken();
+    res.status(201).send({ created, token, total });
   } catch (e) {
-    res.status(500).send(e);
+    res.status(500).send(e.toString());
   }
 });
 
