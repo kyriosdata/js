@@ -22,10 +22,11 @@ router.post("/users/login", async (req, res) => {
 // Acrescentar usuário
 router.post("/users", async (req, res) => {
   try {
-    const created = await new User(req.body).save();
+    const user = new User(req.body);
+    await user.save();
     const total = await User.countDocuments({});
-    const token = await created.generateAccessToken();
-    res.status(201).send({ created, token, total });
+    const token = await user.generateAccessToken();
+    res.status(201).send({ created: user, token, total });
   } catch (e) {
     res.status(500).send(e.toString());
   }
