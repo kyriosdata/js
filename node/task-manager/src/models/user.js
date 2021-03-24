@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+const { geraToken, geraHash } = require("../middleware/auth");
 
 const userSchema = mongoose.Schema({
   password: {
@@ -42,41 +41,36 @@ const userSchema = mongoose.Schema({
   ],
 });
 
-userSchema.methods.generateAccessToken = async function () {
-  const user = this;
-  const token = jwt.sign({ _id: user._id.toString() }, "senha", {
-    expiresIn: "30 minutes",
-  });
+// userSchema.methods.generateAccessToken = async function () {
+//   const user = this;
+//   const token = geraToken(user._id.toString());
 
-  user.tokens = user.tokens.concat({ token });
-  await user.save();
+//   user.tokens = user.tokens.concat({ token });
+//   await user.save();
 
-  return token;
-};
+//   return token;
+// };
 
-userSchema.statics.checkCredentials = async (email, password) => {
-  const user = await User.findOne({ email });
+// userSchema.statics.checkCredentials = async (email, password) => {
+//   const user = await User.findOne({ email });
 
-  if (!user) {
-    throw new Error("nao foi possivel login...");
-  }
+//   if (!user) {
+//     throw new Error("nao foi possivel login...");
+//   }
 
-  const ok = await bcrypt.compare(password, user.password);
-  if (!ok) {
-    throw new Error("Falhou login...");
-  }
+//   await senhaVerificadaComHash(password, user.password);
 
-  return user;
-};
+//   return user;
+// };
 
-// middleware.
+// Mongoose Middleware
 // Sempre que executado save em um usuário, função fornecida é executada.
 // Assegura que apenas hash de password é persistida.
 userSchema.pre("save", async function (next) {
   const user = this;
 
   if (user.isModified("password")) {
-    user.password = await bcrypt.hash(user.password, 12);
+    user.password = await geraHash(user.password);
   }
 
   next();

@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
 
 require("./db/mongoose");
 
@@ -31,13 +30,3 @@ app.get("", (req, res) => {
 app.listen(port, () => {
   console.log("Server está em execuçao na porta " + port);
 });
-
-const teste = async () => {
-  const token = jwt.sign({ _id: "abc" }, "senha", { expiresIn: "30 minutes" });
-  console.log(token);
-
-  const resposta = jwt.verify(token, "senha");
-  console.log(resposta);
-};
-
-teste();

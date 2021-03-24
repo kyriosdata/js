@@ -1,22 +1,71 @@
 const express = require("express");
 const User = require("../models/user");
-const auth = require("../middleware/auth");
+const Auth = require("../middleware/auth");
 
 const router = new express.Router();
 
-// Login
-router.post("/users/login", async (req, res) => {
+/**
+ * Função 'middleware' que é executada com a finalidade de autenticação.
+ * Precisa ser fornecida como segundo parâmetro para cada router
+ * que depender de autenticação.
+ *
+ * Adicionalmente, router configurado só será chamado se método
+ * 'next' for chamado e, por fim, se autenticação for realizada com
+ * sucesso, então a requisição será acrescida do campo 'user' com
+ * o perfil do usuário em questão.
+ *
+ * IMPORTANTE. Esta função usa a base de dados para verificar se token
+ * fornecido está válido, ou seja, não ocorreu logout.
+ *
+ * @param {object} req Requisição conforme recebida pelo Express
+ * @param {object} res Resposta conforme disponibilizada pelo Epress
+ * @param {function} next Função a ser chamada para encaminhar para router
+ */
+const auth = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
-    if (!email || !password) {
-      return res.status(400).send({ error: "forneca email e password" });
+    const header = req.header("Authorization");
+    const token = Auth.extractTokenFromHeader(header);
+    const decoded = Auth.decodeToken(token, SEGREDO);
+
+    const user = await User.findOne({
+      _id: decoded._id,
+      "tokens.token": token,
+    });
+    if (!user) {
+      throw new Error();
     }
 
-    const user = await User.checkCredentials(email, password);
-    const token = await user.generateAccessToken();
+    req.user = user;
+
+    next();
+  } catch (error) {
+    res.status(401).send({ error: "Exige autenticação..." });
+  }
+};
+
+// login - obtém token de acesso
+// token obtido é persistido (acrescentado a lista de 'tokens')
+router.post("/users/login", async (req, res) => {
+  try {
+    const user = await User.findOne({ email: req.body.email });
+
+    if (!user) {
+      throw new Error("nao foi possivel login...");
+    }
+
+    // Verifica se a senha fornecida é compatível com o valor de
+    // hash armazenado em user.password
+    await Auth.verificaHash(req.body.password, user.password);
+
+    const token = Auth.codeToken(user._id);
+    user.tokens = user.tokens.concat({ token });
+
+    await user.save();
+
     res.send({ user, token });
   } catch (error) {
-    res.status(400).send({ error: error.toString() });
+    console.log(error);
+    res.status(400).send({ error: "não foi possível login" });
   }
 });
 
@@ -24,11 +73,13 @@ router.post("/users/login", async (req, res) => {
 router.post("/users", async (req, res) => {
   try {
     const user = new User(req.body);
+    const token = Auth.codeToken(user._id);
+    user.tokens = user.tokens.concat({ token });
     await user.save();
     const total = await User.countDocuments({});
-    const token = await user.generateAccessToken();
     res.status(201).send({ created: user, token, total });
   } catch (e) {
+    console.log(e);
     res.status(500).send(e.toString());
   }
 });
