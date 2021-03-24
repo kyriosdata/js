@@ -11,13 +11,6 @@ const app = express();
 const port = process.env.PORT || 21002;
 
 // Express middleware (intercept every request)
-app.use((req, res, next) => {
-  if (req.method === "GET") {
-    res.status(522).send("GET disabled");
-  } else {
-    next();
-  }
-});
 
 // JSON recebido é convertido em objeto.
 app.use(express.json());

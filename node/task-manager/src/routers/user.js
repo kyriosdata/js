@@ -1,5 +1,6 @@
 const express = require("express");
 const User = require("../models/user");
+const auth = require("../middleware/auth");
 
 const router = new express.Router();
 
@@ -56,7 +57,7 @@ router.patch("/users/:id", async (req, res) => {
   }
 });
 
-router.get("/users", async (req, res) => {
+router.get("/users", auth, async (req, res) => {
   try {
     const usuarios = await User.find({});
     if (usuarios) {
