@@ -24,9 +24,10 @@ const router = new express.Router();
 const auth = async (req, res, next) => {
   try {
     const header = req.header("Authorization");
+    console.log(header);
     const token = Auth.extractTokenFromHeader(header);
     const decoded = Auth.decodeToken(token);
-
+    console.log(decoded._id);
     const user = await User.findOne({
       _id: decoded._id,
       "tokens.token": token,
@@ -77,6 +78,7 @@ router.post("/users/logout", auth, async (req, res) => {
   try {
     // Obtém token a ser removido
     const header = req.header("Authorization");
+    console.log(header);
     const token = Auth.extractTokenFromHeader(header);
 
     // Remove token dentre aqueles produzidos

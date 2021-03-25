@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const { geraToken, geraHash } = require("../middleware/auth");
+const { geraHash } = require("../middleware/auth");
 
 const userSchema = mongoose.Schema({
   password: {
@@ -41,27 +41,19 @@ const userSchema = mongoose.Schema({
   ],
 });
 
-// userSchema.methods.generateAccessToken = async function () {
-//   const user = this;
-//   const token = geraToken(user._id.toString());
+// A conversão de User para JSON
+// ignora os campos 'password' e 'tokens'.
+userSchema.methods.toJSON = function () {
+  const user = this;
+  const userObject = user.toObject();
 
-//   user.tokens = user.tokens.concat({ token });
-//   await user.save();
+  // Remove dois campos que não serão retornados
+  // (segurança)
+  delete userObject.password;
+  delete userObject.tokens;
 
-//   return token;
-// };
-
-// userSchema.statics.checkCredentials = async (email, password) => {
-//   const user = await User.findOne({ email });
-
-//   if (!user) {
-//     throw new Error("nao foi possivel login...");
-//   }
-
-//   await senhaVerificadaComHash(password, user.password);
-
-//   return user;
-// };
+  return userObject;
+};
 
 // Mongoose Middleware
 // Sempre que executado save em um usuário, função fornecida é executada.
