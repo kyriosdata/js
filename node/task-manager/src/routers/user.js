@@ -25,20 +25,21 @@ const auth = async (req, res, next) => {
   try {
     const header = req.header("Authorization");
     const token = Auth.extractTokenFromHeader(header);
-    const decoded = Auth.decodeToken(token, SEGREDO);
+    const decoded = Auth.decodeToken(token);
 
     const user = await User.findOne({
       _id: decoded._id,
       "tokens.token": token,
     });
     if (!user) {
-      throw new Error();
+      throw new Error("usuario/token nao encontrado");
     }
 
     req.user = user;
 
     next();
   } catch (error) {
+    console.log("auth error", error.toString());
     res.status(401).send({ error: "Exige autenticação..." });
   }
 };
@@ -50,16 +51,19 @@ router.post("/users/login", async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
 
     if (!user) {
-      throw new Error("nao foi possivel login...");
+      throw new Error("usuario desconhecido");
     }
 
     // Verifica se a senha fornecida é compatível com o valor de
     // hash armazenado em user.password
     await Auth.verificaHash(req.body.password, user.password);
 
+    // NESTE PONTO A CREDENCIAL (user/password)
+    // FOI VERIFICADA DE FORMA SATISFATORIA
+
+    // Cria o token e persiste com o usuário
     const token = Auth.codeToken(user._id);
     user.tokens = user.tokens.concat({ token });
-
     await user.save();
 
     res.send({ user, token });
@@ -69,15 +73,32 @@ router.post("/users/login", async (req, res) => {
   }
 });
 
+router.post("/users/logout", auth, (req, res) => {
+  try {
+    // Obtém token a ser removido
+    const header = req.header("Authorization");
+    const token = Auth.extractTokenFromHeader(header);
+
+    // Remove token dentre aqueles produzidos
+    const user = req.user;
+    user.tokens = user.tokens.filter((e) => e.token !== token);
+    console.log(user);
+    user.save();
+
+    res.send();
+  } catch (error) {
+    console.log(error);
+    res.status(401).send();
+  }
+});
+
 // Acrescentar usuário
 router.post("/users", async (req, res) => {
   try {
     const user = new User(req.body);
-    const token = Auth.codeToken(user._id);
-    user.tokens = user.tokens.concat({ token });
     await user.save();
     const total = await User.countDocuments({});
-    res.status(201).send({ created: user, token, total });
+    res.status(201).send({ created: user, total });
   } catch (e) {
     console.log(e);
     res.status(500).send(e.toString());
@@ -108,18 +129,8 @@ router.patch("/users/:id", async (req, res) => {
   }
 });
 
-router.get("/users", auth, async (req, res) => {
-  try {
-    const usuarios = await User.find({});
-    if (usuarios) {
-      res.setHeader("total", usuarios.length);
-      res.send(usuarios);
-    } else {
-      res.send({ erro: usuarios });
-    }
-  } catch (e) {
-    res.status(400).send({ erro: e });
-  }
+router.get("/users/me", auth, async (req, res) => {
+  res.send(req.user);
 });
 
 router.get("/users/:id", async (req, res) => {
