@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const { geraHash } = require("../middleware/auth");
+const { geraHash } = require("../middleware/seguranca");
 
 const userSchema = mongoose.Schema({
   password: {
