@@ -1,14 +1,15 @@
 const express = require("express");
 const Task = require("../models/task");
+const auth = require("../middleware/autenticacao");
 
 const router = new express.Router();
 
 // Acrescentar tarefa
-router.post("/task", async (req, res) => {
+router.post("/task", auth, async (req, res) => {
   try {
-    const created = await new Task(req.body).save();
-    const total = await Task.countDocuments({});
-    res.send({ saved: created._id, total });
+    const task = new Task({ ...req.body, owner: req.user._id });
+    await task.save();
+    res.status(201).send(task);
   } catch (e) {
     res.send(500).send(e);
   }
