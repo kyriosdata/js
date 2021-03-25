@@ -73,7 +73,7 @@ router.post("/users/login", async (req, res) => {
   }
 });
 
-router.post("/users/logout", auth, (req, res) => {
+router.post("/users/logout", auth, async (req, res) => {
   try {
     // Obtém token a ser removido
     const header = req.header("Authorization");
@@ -83,8 +83,19 @@ router.post("/users/logout", auth, (req, res) => {
     const user = req.user;
     user.tokens = user.tokens.filter((e) => e.token !== token);
     console.log(user);
-    user.save();
+    await user.save();
 
+    res.send();
+  } catch (error) {
+    console.log(error);
+    res.status(401).send();
+  }
+});
+
+router.post("/users/logoutAll", auth, async (req, res) => {
+  try {
+    req.user.tokens = [];
+    await req.user.save();
     res.send();
   } catch (error) {
     console.log(error);
@@ -97,8 +108,7 @@ router.post("/users", async (req, res) => {
   try {
     const user = new User(req.body);
     await user.save();
-    const total = await User.countDocuments({});
-    res.status(201).send({ created: user, total });
+    res.status(201).send({ user });
   } catch (e) {
     console.log(e);
     res.status(500).send(e.toString());
@@ -106,7 +116,7 @@ router.post("/users", async (req, res) => {
 });
 
 // Atualiza usuário (evita getByIdAndUpdate para não pular middleware)
-router.patch("/users/:id", async (req, res) => {
+router.patch("/users/me", auth, async (req, res) => {
   const updates = Object.keys(req.body);
   const allowed = ["email", "password"];
   const isValidOperation = updates.every((update) => allowed.includes(update));
@@ -116,34 +126,17 @@ router.patch("/users/:id", async (req, res) => {
   }
 
   try {
-    const user = await User.findById(req.params.id);
-    if (!user) {
-      return res.stats(404).send();
-    }
-
-    updates.forEach((change) => (user[change] = req.body[change]));
-    await user.save();
-    res.send(user);
+    updates.forEach((change) => (req.user[change] = req.body[change]));
+    await req.user.save();
+    res.send(req.user);
   } catch (e) {
+    console.log(e.toString());
     res.status(400).send({ erro: e });
   }
 });
 
 router.get("/users/me", auth, async (req, res) => {
   res.send(req.user);
-});
-
-router.get("/users/:id", async (req, res) => {
-  try {
-    const user = await User.findById(req.params.id);
-    if (user) {
-      res.send(user);
-    } else {
-      res.status(404).send({ msg: "Nenhum usuário com o id fornecido" });
-    }
-  } catch (e) {
-    res.status(500).send(e);
-  }
 });
 
 // Contar total de usuários
