@@ -41,6 +41,14 @@ const userSchema = mongoose.Schema({
   ],
 });
 
+// Estabelece a relação de N:1 de tarefa para usuário
+// Desta forma, mongoose busca dados pertinentes
+userSchema.virtual("tasks", {
+  ref: "Task",
+  localField: "_id",
+  foreignField: "owner",
+});
+
 // A conversão de User para JSON
 // ignora os campos 'password' e 'tokens'.
 userSchema.methods.toJSON = function () {
@@ -51,6 +59,8 @@ userSchema.methods.toJSON = function () {
   // (segurança)
   delete userObject.password;
   delete userObject.tokens;
+
+  console.log(Object.keys(userObject));
 
   return userObject;
 };

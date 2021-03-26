@@ -21,7 +21,7 @@ const Auth = require("./seguranca");
 const auth = async (req, res, next) => {
   try {
     const header = req.header("Authorization");
-    console.log(header);
+    console.log(req.method, req.path);
     const token = Auth.extractTokenFromHeader(header);
     const decoded = Auth.decodeToken(token);
     console.log(decoded._id);

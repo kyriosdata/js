@@ -98,6 +98,9 @@ router.patch("/users/me", auth, async (req, res) => {
 });
 
 router.get("/users/me", auth, async (req, res) => {
+  await req.user.populate("tasks").execPopulate();
+  console.log(req.user.tasks);
+  console.log(Object.keys(req.user));
   res.send(req.user);
 });
 

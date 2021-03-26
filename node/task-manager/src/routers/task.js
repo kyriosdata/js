@@ -15,19 +15,30 @@ router.post("/task", auth, async (req, res) => {
   }
 });
 
-router.get("/task/:id", (req, res) => {
-  Task.findById(req.params.id)
-    .then((u) => {
-      if (!u) {
-        res.status(404).send({ msg: "Nenhuma tarefa com o id fornecido" });
-      } else {
-        res.send(u);
-      }
-    })
-    .catch((e) => res.status(500).send(e));
+router.get("/tasks", auth, async (req, res) => {
+  try {
+    await req.user.populate("tasks").execPopulate();
+    res.send(req.user.tasks);
+  } catch (error) {
+    res.status(500).send();
+  }
 });
 
-router.patch("/task/:id", async (req, res) => {
+router.get("/task/:id", auth, async (req, res) => {
+  try {
+    const _id = req.params.id;
+    const task = await Task.findOne({ _id, owner: req.user._id });
+    if (!task) {
+      res.status(404).send();
+    }
+
+    res.send(task);
+  } catch (error) {
+    res.status(500).send();
+  }
+});
+
+router.patch("/tasks/:id", auth, async (req, res) => {
   const updates = Object.keys(req.body);
   const allowed = ["description", "completed"];
   const isValid = updates.every((change) => allowed.includes(change));
@@ -37,7 +48,10 @@ router.patch("/task/:id", async (req, res) => {
 
   try {
     // Recupera a tarefa a ser atualizada.
-    const tarefa = await Task.findById(req.params.id);
+    const tarefa = await Task.findOne({
+      _id: req.params.id,
+      owner: req.user._id,
+    });
     if (!tarefa) {
       res.stats(404).send();
     }
