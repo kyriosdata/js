@@ -3,6 +3,12 @@
 Ilustra o emprego de MongoDB, [Mongoose](https://mongoosejs.com/) e
 [Expressjs](https://expressjs.com/).
 
+## Modelo de dados
+
+- Coleção de usuários (User)
+- Coleção de tarefas (Task)
+- Um usuário pode estar associado a zero ou mais tarefas.
+
 ## REST API
 
 - Consulte detalhes em  

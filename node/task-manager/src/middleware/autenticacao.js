@@ -24,7 +24,7 @@ const auth = async (req, res, next) => {
     console.log(req.method, req.path);
     const token = Auth.extractTokenFromHeader(header);
     const decoded = Auth.decodeToken(token);
-    console.log(decoded._id);
+
     const user = await User.findOne({
       _id: decoded._id,
       "tokens.token": token,
@@ -33,7 +33,10 @@ const auth = async (req, res, next) => {
       throw new Error("usuario/token nao encontrado");
     }
 
+    // Mantém usuário e token
+    // (possivelmente empregados em outras operações)
     req.user = user;
+    req.token = token;
 
     next();
   } catch (error) {

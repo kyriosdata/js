@@ -42,7 +42,8 @@ const userSchema = mongoose.Schema({
 });
 
 // Estabelece a relação de N:1 de tarefa para usuário
-// Desta forma, mongoose busca dados pertinentes
+// Desta forma, mongoose busca dados pertinentes com
+// await req.user.populate("tasks").execPopulate();
 userSchema.virtual("tasks", {
   ref: "Task",
   localField: "_id",

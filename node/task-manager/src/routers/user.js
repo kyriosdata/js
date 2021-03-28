@@ -7,6 +7,7 @@ const router = new express.Router();
 
 // login - obtém token de acesso
 // token obtido é persistido (acrescentado a lista de 'tokens')
+// para que requisições posteriores possam empregá-lo
 router.post("/users/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
@@ -23,6 +24,7 @@ router.post("/users/login", async (req, res) => {
     // FOI VERIFICADA DE FORMA SATISFATORIA
 
     // Cria o token e persiste com o usuário
+    // (token é definido a partir do id do usuário)
     const token = Auth.codeToken(user._id);
     user.tokens = user.tokens.concat({ token });
     await user.save();
@@ -36,15 +38,9 @@ router.post("/users/login", async (req, res) => {
 
 router.post("/users/logout", auth, async (req, res) => {
   try {
-    // Obtém token a ser removido
-    const header = req.header("Authorization");
-    console.log(header);
-    const token = Auth.extractTokenFromHeader(header);
-
     // Remove token dentre aqueles produzidos
     const user = req.user;
-    user.tokens = user.tokens.filter((e) => e.token !== token);
-    console.log(user);
+    user.tokens = user.tokens.filter((e) => e.token !== req.token);
     await user.save();
 
     res.send();
