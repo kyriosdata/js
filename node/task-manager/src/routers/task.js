@@ -67,17 +67,19 @@ router.patch("/tasks/:id", auth, async (req, res) => {
   }
 });
 
-router.delete("/tasks/:id", async (req, res) => {
+router.delete("/tasks/:id", auth, async (req, res) => {
   try {
-    const task = await Task.findByIdAndDelete(req.params.id);
+    // const task = await Task.findByIdAndDelete(req.params.id);
+    const _id = req.params.id;
+    const task = await Task.findOne({ _id, owner: req.user._id });
     if (task) {
-      const total = await Task.countDocuments({});
-      res.send({ total, deleted: task });
+      await task.remove();
+      res.send(task);
     } else {
       res.send(404).send();
     }
   } catch (e) {
-    res.status(400).send({ erro: e });
+    res.status(400).send({ erro: e.toString() });
   }
 });
 

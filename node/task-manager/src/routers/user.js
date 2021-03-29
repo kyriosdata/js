@@ -97,7 +97,7 @@ router.get("/users/me", auth, async (req, res) => {
   await req.user.populate("tasks").execPopulate();
   console.log(req.user.tasks);
   console.log(Object.keys(req.user));
-  res.send(req.user);
+  res.send({ user: req.user, tasks: req.user.tasks });
 });
 
 // Contar total de usuários
@@ -125,6 +125,8 @@ router.delete("/todas/users", async (req, res) => {
 
 router.delete("/users/me", auth, async (req, res) => {
   try {
+    await req.user.populate("tasks").execPopulate();
+
     await req.user.remove();
     res.send();
   } catch (error) {
