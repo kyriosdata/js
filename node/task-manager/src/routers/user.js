@@ -134,14 +134,72 @@ router.delete("/users/me", auth, async (req, res) => {
   }
 });
 
-// Configura multer para persistir dados no diretório 'avatars'.
-const upload = multer({
-  dest: "avatars",
+router.delete("/users/me/avatar", auth, (req, res) => {
+  try {
+    req.user.avatar = undefined;
+    req.user.save();
+    res.send();
+  } catch (error) {
+    res.status(400).send();
+  }
 });
 
-// Parâmetro de nome 'avatar' deve indicar o arquivo a ser carregado
-router.post("/users/me/avatar", upload.single("avatar"), (req, res) => {
-  res.send();
+// UPLOAD
+// Configura multer
+
+const FIELD_UPLOAD = "upload";
+const FIELD_AVATAR = "avatar";
+
+// Deposita no diretório 'avatars' o arquivo carregado, com o
+// mesmo nome (outra estratégia pode ser usada para evitar conflito)
+const storage = multer.diskStorage({
+  destination: "avatars",
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
 });
+
+const avatarOptions = {
+  limits: {
+    fileSize: 500000,
+  },
+  fileFilter(req, file, cb) {
+    if (!file.originalname.match(/\.(png|jpg|jpeg)$/)) {
+      return cb(new Error("Apenas arquivos PNG ou JPG são aceitos"));
+    }
+
+    cb(undefined, true);
+  },
+};
+
+const avatar = multer(avatarOptions);
+const upload = multer({ ...avatarOptions, storage });
+
+// Parâmetro de nome 'avatar' deve indicar o arquivo a ser carregado
+router.post(
+  "/users/me/avatar",
+  auth,
+  avatar.single(FIELD_AVATAR),
+  async (req, res) => {
+    req.user.avatar = req.file.buffer;
+    await req.user.save();
+    res.send();
+  },
+  (error, req, res, next) => {
+    res.status(400).send({ error: error.message });
+  }
+);
+
+// Parâmetro de nome 'upload' (FIELD) deve indicar o arquivo a ser carregado
+router.post(
+  "/upload",
+  upload.single(FIELD_UPLOAD),
+  (req, res) => {
+    res.send();
+  },
+  (error, req, res, next) => {
+    res.status(400).send({ error: error.message });
+  }
+);
 
 module.exports = router;
