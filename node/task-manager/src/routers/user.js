@@ -1,5 +1,6 @@
 const express = require("express");
 const multer = require("multer");
+const sharp = require("sharp");
 const User = require("../models/user");
 const Auth = require("../middleware/seguranca");
 const auth = require("../middleware/autenticacao");
@@ -144,9 +145,24 @@ router.delete("/users/me/avatar", auth, (req, res) => {
   }
 });
 
+router.get("/users/:id/avatar", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user || !user.avatar) {
+      throw new Error("usuário ou avatar não disponível");
+    }
+
+    res.set("Content-Type", "image/png");
+    res.send(user.avatar);
+  } catch (error) {
+    res.status(404).send();
+  }
+});
+
 // UPLOAD
 // Configura multer
 
+const MAX_SIZE_1MB = 1024 * 1024;
 const FIELD_UPLOAD = "upload";
 const FIELD_AVATAR = "avatar";
 
@@ -161,7 +177,7 @@ const storage = multer.diskStorage({
 
 const avatarOptions = {
   limits: {
-    fileSize: 500000,
+    fileSize: MAX_SIZE_1MB,
   },
   fileFilter(req, file, cb) {
     if (!file.originalname.match(/\.(png|jpg|jpeg)$/)) {
@@ -181,7 +197,14 @@ router.post(
   auth,
   avatar.single(FIELD_AVATAR),
   async (req, res) => {
-    req.user.avatar = req.file.buffer;
+    // Transforma o arquivo no correspondente em PNG
+    // após ajuste de tamanho.
+    const buffer = await sharp(req.file.buffer)
+      .resize({ width: 250, height: 250 })
+      .png()
+      .toBuffer();
+
+    req.user.avatar = buffer;
     await req.user.save();
     res.send();
   },
