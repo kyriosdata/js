@@ -1,4 +1,5 @@
 const express = require("express");
+const multer = require("multer");
 const User = require("../models/user");
 const Auth = require("../middleware/seguranca");
 const auth = require("../middleware/autenticacao");
@@ -131,6 +132,16 @@ router.delete("/users/me", auth, async (req, res) => {
     console.log(error.toString());
     res.status(401).send();
   }
+});
+
+// Configura multer para persistir dados no diretório 'avatars'.
+const upload = multer({
+  dest: "avatars",
+});
+
+// Parâmetro de nome 'avatar' deve indicar o arquivo a ser carregado
+router.post("/users/me/avatar", upload.single("avatar"), (req, res) => {
+  res.send();
 });
 
 module.exports = router;

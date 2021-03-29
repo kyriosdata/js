@@ -15,11 +15,45 @@ router.post("/task", auth, async (req, res) => {
   }
 });
 
+// Adaptado para considerar o cenário onde pode existir
+// número considerável de tarefas.
+
+/**
+ * Recupera tarefas associadas ao usuário autenticado. Se não fornecido a
+ * query 'completed', então todas as tarefas são retornadas, concluídas ou não,
+ * caso contrário, se 'completed' é 'true', então apenas aquelas concluídas e,
+ * caso contrário, apenas aquelas que ainda não foram concluídas.
+ *
+ * O limite de tarefas é definido por 'limit' e o início é definido por 'skip'.
+ * Também é possível indicar qual o atributo pelo qual as respostas serão
+ * ordenadas, e se de forma crescente ou decrescente via 'sortBy'. Por exemplo,
+ * 'sortBy=description:desc'.
+ */
 router.get("/tasks", auth, async (req, res) => {
   try {
-    await req.user.populate("tasks").execPopulate();
+    const match = {};
+    const sort = {};
+
+    if (req.query.completed) {
+      match.completed = req.query.completed === "true";
+    }
+
+    if (req.query.sortBy) {
+      const parts = req.query.sortBy.split(":");
+      sort[parts[0]] = parts[1] === "desc" ? -1 : 1;
+    }
+
+    // Define limite, salto e ordenação
+    const options = {
+      limit: parseInt(req.query.limit),
+      skip: parseInt(req.query.skip),
+      sort,
+    };
+
+    await req.user.populate({ path: "tasks", match, options }).execPopulate();
     res.send(req.user.tasks);
   } catch (error) {
+    console.log(error.toString());
     res.status(500).send();
   }
 });
