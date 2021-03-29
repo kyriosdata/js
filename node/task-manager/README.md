@@ -3,6 +3,14 @@
 Ilustra o emprego de MongoDB, [Mongoose](https://mongoosejs.com/) e
 [Expressjs](https://expressjs.com/).
 
+Organização:
+
+- [src/db](src/db) funções utilitárias para acesso ao Mongo, o que inclui
+  configuração do Mongoose.
+- [src/middleware](src/middleware) inclui recursos de autenticação usando Express e outros itens pertinentes à segurança.
+- [src/models](src/models) inclui os modelos (esquemas) das coleções empregadas
+  e do relacionamento entre elas (User e Task).
+
 ## Modelo de dados
 
 - Coleção de usuários (User)
