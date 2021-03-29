@@ -10,6 +10,7 @@ Organização:
 - [src/middleware](src/middleware) inclui recursos de autenticação usando Express e outros itens pertinentes à segurança.
 - [src/models](src/models) inclui os modelos (esquemas) das coleções empregadas
   e do relacionamento entre elas (User e Task).
+- [src/routers](src/routes) inclui os _front controllers_ imlementados no Express.
 
 ## Modelo de dados
 
