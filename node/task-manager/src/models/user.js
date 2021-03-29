@@ -3,44 +3,49 @@ const validator = require("validator");
 const { geraHash } = require("../middleware/seguranca");
 const Task = require("./task");
 
-const userSchema = mongoose.Schema({
-  password: {
-    type: String,
-    required: true,
-    trim: true,
-    minlength: 7,
-    validate(valor) {
-      if (valor.toLowerCase().includes("password")) {
-        throw new Error("Invalid term in password");
-      }
-    },
-  },
-  email: {
-    type: String,
-    unique: true,
-    required: true,
-    trim: true,
-    lowercase: true,
-    validate(valor) {
-      if (!validator.isEmail(valor)) {
-        throw new Error("Email is invalid");
-      }
-    },
-  },
-  name: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  tokens: [
-    {
-      token: {
-        type: String,
-        required: true,
+const userSchema = mongoose.Schema(
+  {
+    password: {
+      type: String,
+      required: true,
+      trim: true,
+      minlength: 7,
+      validate(valor) {
+        if (valor.toLowerCase().includes("password")) {
+          throw new Error("Invalid term in password");
+        }
       },
     },
-  ],
-});
+    email: {
+      type: String,
+      unique: true,
+      required: true,
+      trim: true,
+      lowercase: true,
+      validate(valor) {
+        if (!validator.isEmail(valor)) {
+          throw new Error("Email is invalid");
+        }
+      },
+    },
+    name: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    tokens: [
+      {
+        token: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+);
 
 // Cria atributo virtual para User para dar a
 // impressão de que há um atributo em User que
