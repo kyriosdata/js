@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 const { geraHash } = require("../middleware/seguranca");
+const Task = require("./task");
 
 const userSchema = mongoose.Schema({
   password: {
@@ -41,6 +42,10 @@ const userSchema = mongoose.Schema({
   ],
 });
 
+// Cria atributo virtual para User para dar a
+// impressão de que há um atributo em User que
+// mantém todas as tarefas deste usuário.
+
 // Estabelece a relação de N:1 de tarefa para usuário
 // Desta forma, mongoose busca dados pertinentes com
 // await req.user.populate("tasks").execPopulate();
@@ -76,6 +81,14 @@ userSchema.pre("save", async function (next) {
     user.password = await geraHash(user.password);
   }
 
+  next();
+});
+
+// Antes de remover um usuário, remova
+// todas as tarefas associadas ao usuário
+userSchema.pre("remove", async function (next) {
+  const user = this;
+  await Task.deleteMany({ owner: user._id });
   next();
 });
 

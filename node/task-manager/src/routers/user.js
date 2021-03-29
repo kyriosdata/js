@@ -125,11 +125,10 @@ router.delete("/todas/users", async (req, res) => {
 
 router.delete("/users/me", auth, async (req, res) => {
   try {
-    await req.user.populate("tasks").execPopulate();
-
     await req.user.remove();
     res.send();
   } catch (error) {
+    console.log(error.toString());
     res.status(401).send();
   }
 });
