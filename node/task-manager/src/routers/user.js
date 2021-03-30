@@ -130,7 +130,7 @@ router.delete("/todas/users", async (req, res) => {
 router.delete("/users/me", auth, async (req, res) => {
   try {
     await req.user.remove();
-    await Email.cancellationEmail(req.user.email, req.user.name);
+    await Email.cancelaEmail(req.user.email, req.user.name);
     res.send();
   } catch (error) {
     console.log(error.toString());

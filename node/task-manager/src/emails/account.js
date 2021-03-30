@@ -21,7 +21,7 @@ const boasVindasEmail = (email, nome) => {
   });
 };
 
-const cancellationEmail = (email, nome) => {
+const cancelaEmail = (email, nome) => {
   sgMail.send({
     to: email,
     from: "kyriosdata@ufg.br",
@@ -32,5 +32,5 @@ const cancellationEmail = (email, nome) => {
 
 module.exports = {
   boasVindasEmail,
-  cancellationEmail,
+  cancelaEmail,
 };

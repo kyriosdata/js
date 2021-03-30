@@ -8,10 +8,9 @@ const bcrypt = require("bcryptjs");
 /**
  * Chave secreta a ser utilizada para geração de token.
  * Esta chave deve ser gerada ou obtida de alguma forma
- * sem que esteja acessível a terceiros, ao contrário do
- * valor fixo fornecido abaixo.
+ * sem que esteja acessível a terceiros.
  */
-const SEGREDO = "senha";
+const SEGREDO = process.env.JWT_SECRET;
 
 /**
  * Gera o 'token' pertinente ao objeto que contém um atributo, _id,

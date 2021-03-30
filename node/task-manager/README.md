@@ -12,6 +12,21 @@ Organização:
   e do relacionamento entre elas (User e Task).
 - [src/routers](src/routes) inclui os _front controllers_ imlementados no Express.
 
+## Variáveis de ambiente
+
+As seguintes variáveis de ambiente devem estar definidas.
+O uso delas oferece flexibilidade à aplicação e, adicionalmente, segurança.
+
+- **JWT_SECRET**. Senha a ser empregada para a geração de _token_ pelo jsonwebtoken.
+- **SENDGRID_API_KEY**. Chave empregada para autenticação da aplicação com o serviço SendGrid.
+- **PORT**. Porta empregada pelo ExpressJS. Em particular, o nome desta variável é esperado pelo Heroku. Ou seja, não pode
+  ser alterado para **MYAPP_PORT** sem impacto na implantação via Heroku.
+- **MONGODB_USER**
+- **MONGODB_PASS**
+- **MONGODB_SERVER**
+- **MONGODB_PORT**
+- **MONGODB_DBNAME**
+
 ## Modelo de dados
 
 - Coleção de usuários (User)
