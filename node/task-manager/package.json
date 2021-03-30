@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js -e js,hbs,css"
+    "kinghost": "env-cmd -f ./config/kinghost.env nodemon src/index.js -e js,hbs,css",
+    "atlas": "env-cmd -f ./config/atlas.env nodemon src/index.js -e js,hbs,css",
+    "conexao": "env-cmd -f ./config/kinghost.env nodemon src/db/mongoose.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "nodemon": "^2.0.7"
   },
   "dependencies": {

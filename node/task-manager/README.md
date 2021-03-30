@@ -24,11 +24,12 @@ Por comodidade e testes pode ser empregado o utilitário
 - **SENDGRID_API_KEY**. Chave empregada para autenticação da aplicação com o serviço SendGrid.
 - **PORT**. Porta empregada pelo ExpressJS. Em particular, o nome desta variável é esperado pelo Heroku. Ou seja, não pode
   ser alterado para **MYAPP_PORT** sem impacto na implantação via Heroku.
+- **MONGODB_PROTOCOL** Em geral _mongodb_, mas também pode ser _mongodb+srv_.
 - **MONGODB_USER**
 - **MONGODB_PASS**
 - **MONGODB_SERVER**
-- **MONGODB_PORT**
-- **MONGODB_DBNAME**
+- **MONGODB_PORT**. Se não fornecida, então nenhuma porta será fornecida na URL. A porta geralmente usada pelo MongoDB é 27017.
+- **MONGODB_DBNAME**. O nome da base de dados.
 
 ## Modelo de dados
 
