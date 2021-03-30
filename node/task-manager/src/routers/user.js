@@ -4,6 +4,7 @@ const sharp = require("sharp");
 const User = require("../models/user");
 const Auth = require("../middleware/seguranca");
 const auth = require("../middleware/autenticacao");
+const Email = require("../emails/account");
 
 const router = new express.Router();
 
@@ -68,6 +69,7 @@ router.post("/users", async (req, res) => {
   try {
     const user = new User(req.body);
     await user.save();
+    await Email.boasVindasEmail(user.email, user.name);
     res.status(201).send({ user });
   } catch (e) {
     console.log(e);
@@ -128,6 +130,7 @@ router.delete("/todas/users", async (req, res) => {
 router.delete("/users/me", auth, async (req, res) => {
   try {
     await req.user.remove();
+    await Email.cancellationEmail(req.user.email, req.user.name);
     res.send();
   } catch (error) {
     console.log(error.toString());
