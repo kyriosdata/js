@@ -1,6 +1,0 @@
-
-export MONGODB_USER=
-export MONGODB_PASS=
-export MONGODB_SERVER=
-export MONGODB_PORT=
-export MONGODB_DBNAME=
