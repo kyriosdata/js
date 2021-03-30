@@ -1,7 +1,8 @@
 ## Projeto Gerenciador de Tarefas
 
 Ilustra o emprego de MongoDB, [Mongoose](https://mongoosejs.com/) e
-[Expressjs](https://expressjs.com/).
+[Expressjs](https://expressjs.com/), envio de email, armazenamento de _hash_ de senha, uso de JWT (Json Web Token), upload de arquivo, processamento de
+arquivo de imagens e validação de dados.
 
 Organização:
 
@@ -11,11 +12,17 @@ Organização:
 - [src/models](src/models) inclui os modelos (esquemas) das coleções empregadas
   e do relacionamento entre elas (User e Task).
 - [src/routers](src/routes) inclui os _front controllers_ imlementados no Express.
+- [config](config) inclui arquivos com a definição de valores para variáveis de
+  ambiente empregadas pela aplicação.
 
 ## Variáveis de ambiente
 
-As seguintes variáveis de ambiente devem estar definidas.
-O uso delas oferece flexibilidade à aplicação e, adicionalmente, segurança.
+As seguintes variáveis de ambiente devem estar definidas. Durante o desenvolvimento,
+contudo, os arquivos no diretório [config](config) contém valores específicos para
+os ambientes utilizados. Estes valores, conforme o uso do utilitário [env-cmd](https://www.npmjs.com/package/env-cmd), configurado em [package.json](package.json),
+sobrescrevem valores das variáveis de ambiente.
+
+O uso de variáveis de ambiente oferece flexibilidade à aplicação e, adicionalmente, segurança.
 
 Por comodidade e testes pode ser empregado o utilitário
 [env-cmd](https://www.npmjs.com/package/env-cmd), o que não foi feito aqui.
