@@ -22,7 +22,8 @@ contudo, os arquivos no diretório [config](config) contém valores específicos
 os ambientes utilizados. Estes valores, conforme o uso do utilitário [env-cmd](https://www.npmjs.com/package/env-cmd), configurado em [package.json](package.json),
 sobrescrevem valores das variáveis de ambiente.
 
-O uso de variáveis de ambiente oferece flexibilidade à aplicação e, adicionalmente, segurança.
+O uso de variáveis de ambiente oferece flexibilidade à aplicação e, adicionalmente, segurança. Este é o motivo pelo qual a variável **SENDGRID_API_KEY**, por exemplo,
+não está definida nos arquivos contidos no diretório **config**.
 
 Por comodidade e testes pode ser empregado o utilitário
 [env-cmd](https://www.npmjs.com/package/env-cmd), o que não foi feito aqui.
@@ -63,3 +64,10 @@ Disponibiliza _endpoints_ para gerenciamento de tarefas.
 - `npm run dev`
 
 Na sequência pode-se usar uma ferramenta como Postman para efetuar as requisições que vão atingir os _endpoints_ disponibilizados.
+
+## Deploy no Heroku
+
+- `heroku create tarefas-fabio-kyriosdata-api` (nome deve ser único)
+- `heroku config:set key=value` define a variável 'key' com o valor 'value'
+- `heroku config` exibe as variáveis desta aplicação Heroku
+- `git push heroku master`

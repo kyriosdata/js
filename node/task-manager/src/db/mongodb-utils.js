@@ -1,6 +1,7 @@
 // Informações necessárias para conexão com o MongoDB
 // Todas elas fornecidas via variáveis de ambiente
 // Observe que 6 variáveis devem ser definidas.
+// Todas são pertinentes à URL de acesso ao MongoDB.
 
 // Credencial definida por MONGODB_USER e MONGODB_PASS
 const mongodbUser = process.env.MONGODB_USER;
