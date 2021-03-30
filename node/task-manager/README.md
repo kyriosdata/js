@@ -17,6 +17,9 @@ Organização:
 As seguintes variáveis de ambiente devem estar definidas.
 O uso delas oferece flexibilidade à aplicação e, adicionalmente, segurança.
 
+Por comodidade e testes pode ser empregado o utilitário
+[env-cmd](https://www.npmjs.com/package/env-cmd), o que não foi feito aqui.
+
 - **JWT_SECRET**. Senha a ser empregada para a geração de _token_ pelo jsonwebtoken.
 - **SENDGRID_API_KEY**. Chave empregada para autenticação da aplicação com o serviço SendGrid.
 - **PORT**. Porta empregada pelo ExpressJS. Em particular, o nome desta variável é esperado pelo Heroku. Ou seja, não pode
