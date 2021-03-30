@@ -7,7 +7,7 @@ const taskRouter = require("./routers/task");
 const userRouter = require("./routers/user");
 
 const app = express();
-const port = process.env.PORT || 21002;
+const port = process.env.PORT;
 
 // Express middleware (intercept every request)
 
