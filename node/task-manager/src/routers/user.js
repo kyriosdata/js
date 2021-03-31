@@ -34,7 +34,6 @@ router.post("/users/login", async (req, res) => {
 
     res.send({ user, token });
   } catch (error) {
-    console.log(error);
     res.status(400).send({ error: "não foi possível login" });
   }
 });
@@ -72,7 +71,6 @@ router.post("/users", async (req, res) => {
     await Email.boasVindasEmail(user.email, user.name);
     res.status(201).send({ user });
   } catch (e) {
-    console.log(e);
     res.status(500).send(e.toString());
   }
 });
