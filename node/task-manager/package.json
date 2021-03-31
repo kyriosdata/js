@@ -8,7 +8,7 @@
     "kinghost": "env-cmd -f ./config/kinghost.env nodemon src/index.js -e js,hbs,css",
     "atlas": "env-cmd -f ./config/atlas.env nodemon src/index.js -e js,hbs,css",
     "conexao": "env-cmd -f ./config/kinghost.env nodemon src/db/mongoose.js",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
