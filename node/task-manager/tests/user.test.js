@@ -1,6 +1,7 @@
 const app = require("../src/app");
 const request = require("supertest");
 const User = require("../src/models/user");
+const Task = require("../src/models/task");
 
 /**
  * Usário de referência para os testes.
@@ -13,10 +14,23 @@ const usuario = {
 
 /**
  * Prepara o banco de dados para os testes.
+ * Um único usuário sem tarefa associada.
  */
 beforeAll(async () => {
   await User.deleteMany();
+  await Task.deleteMany();
   await new User(usuario).save();
+});
+
+/**
+ * Remove único usuário inserido e, consequentemente,
+ * suas tarefas.
+ */
+afterAll(async () => {
+  await request(app)
+    .delete("/users/me")
+    .set("Authorization", "Bearer " + token)
+    .expect(200);
 });
 
 test("create", async () => {
@@ -56,4 +70,12 @@ test("profile", async () => {
       expect(res.body.user.email).toBe(process.env.EMAIL_SENDTO_TEST);
     })
     .expect(200);
+});
+
+test("adiciona tarefa", async () => {
+  await request(app)
+    .post("/task")
+    .send({ description: "tarefa inserida", completed: false })
+    .set("Authorization", "Bearer " + token)
+    .expect(201);
 });
