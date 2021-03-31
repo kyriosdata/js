@@ -47,7 +47,6 @@ router.post("/users/logout", auth, async (req, res) => {
 
     res.send();
   } catch (error) {
-    console.log(error);
     res.status(401).send();
   }
 });
@@ -58,7 +57,6 @@ router.post("/users/logoutAll", auth, async (req, res) => {
     await req.user.save();
     res.send();
   } catch (error) {
-    console.log(error);
     res.status(401).send();
   }
 });
@@ -90,15 +88,12 @@ router.patch("/users/me", auth, async (req, res) => {
     await req.user.save();
     res.send(req.user);
   } catch (e) {
-    console.log(e.toString());
     res.status(400).send({ erro: e });
   }
 });
 
 router.get("/users/me", auth, async (req, res) => {
   await req.user.populate("tasks").execPopulate();
-  console.log(req.user.tasks);
-  console.log(Object.keys(req.user));
   res.send({ user: req.user, tasks: req.user.tasks });
 });
 
@@ -131,7 +126,6 @@ router.delete("/users/me", auth, async (req, res) => {
     await Email.cancelaEmail(req.user.email, req.user.name);
     res.send();
   } catch (error) {
-    console.log(error.toString());
     res.status(401).send();
   }
 });

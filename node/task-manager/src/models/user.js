@@ -77,8 +77,6 @@ userSchema.methods.toJSON = function () {
   // Evita retornar a imagem
   delete userObject.avatar;
 
-  console.log(Object.keys(userObject));
-
   return userObject;
 };
 
