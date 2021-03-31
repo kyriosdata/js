@@ -13,3 +13,5 @@ async function conectaComMongoDB() {
 }
 
 conectaComMongoDB();
+
+module.exports = mongoose;
