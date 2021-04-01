@@ -22,17 +22,6 @@ beforeAll(async () => {
   await new User(usuario).save();
 });
 
-/**
- * Remove único usuário inserido e, consequentemente,
- * suas tarefas.
- */
-afterAll(async () => {
-  await request(app)
-    .delete("/users/me")
-    .set("Authorization", "Bearer " + token)
-    .expect(200);
-});
-
 test("create", async () => {
   await request(app).post("/users").send(usuario).expect(500);
 });
@@ -72,10 +61,31 @@ test("profile", async () => {
     .expect(200);
 });
 
-test("adiciona tarefa", async () => {
+test("adiciona 2 tarefas", async () => {
   await request(app)
     .post("/task")
     .send({ description: "tarefa inserida", completed: false })
     .set("Authorization", "Bearer " + token)
     .expect(201);
+
+  await request(app)
+    .post("/task")
+    .send({ description: "tarefa inserida", completed: false })
+    .set("Authorization", "Bearer " + token)
+    .expect(201);
+
+  await request(app)
+    .get("/total/tasks")
+    .expect((res) => expect(res.body.total).toBe(2));
+});
+
+test("remove usuário e suas tarefas", async () => {
+  await request(app)
+    .delete("/users/me")
+    .set("Authorization", "Bearer " + token)
+    .expect(200);
+
+  await request(app)
+    .get("/total/tasks")
+    .expect((res) => expect(res.body.total).toBe(0));
 });
