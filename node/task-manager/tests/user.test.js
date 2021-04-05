@@ -97,6 +97,9 @@ test("upload avatar", async () => {
     .set("Authorization", "Bearer " + token)
     .attach("avatar", "tests/fixtures/kyriosdata.jpg")
     .expect(200);
+
+  const user = await User.findOne({ email: usuario.email });
+  expect(user.avatar).toEqual(expect.any(Buffer));
 });
 
 test("profile", async () => {

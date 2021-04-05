@@ -70,13 +70,10 @@ userSchema.methods.toJSON = function () {
   const user = this;
   const userObject = user.toObject();
 
-  // Remove dois campos que não serão retornados
+  // Exclui o retorno de dois campos
   // (segurança)
   delete userObject.password;
   delete userObject.tokens;
-
-  // Evita retornar a imagem
-  delete userObject.avatar;
 
   return userObject;
 };
