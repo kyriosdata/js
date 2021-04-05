@@ -17,10 +17,11 @@ Organização:
 
 ## Variáveis de ambiente
 
-As seguintes variáveis de ambiente devem estar definidas. Durante o desenvolvimento,
-contudo, os arquivos no diretório [config](config) contém valores específicos para
-os ambientes utilizados. Estes valores, conforme o uso do utilitário [env-cmd](https://www.npmjs.com/package/env-cmd), configurado em [package.json](package.json),
-sobrescrevem valores das variáveis de ambiente.
+As seguintes variáveis de ambiente devem estar definidas. Durante o desenvolvimento, contudo, os arquivos no diretório [config](config) contém valores específicos para os ambientes utilizados. Estes valores, conforme o uso do utilitário [env-cmd](https://www.npmjs.com/package/env-cmd), configurado em [package.json](package.json), sobrescrevem valores das variáveis de ambiente.
+
+Observe que nem todas as variáveis foram definidas nestes arquivos
+por uma questão de segurança. Ou seja, terão que ser definidas
+especificamente conforme o ambiente em questão empregado.
 
 O uso de variáveis de ambiente oferece flexibilidade à aplicação e, adicionalmente, segurança. Este é o motivo pelo qual a variável **SENDGRID_API_KEY**, por exemplo,
 não está definida nos arquivos contidos no diretório **config**.
