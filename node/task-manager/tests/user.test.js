@@ -90,6 +90,15 @@ test("login failure", async () => {
     .expect(400);
 });
 
+test("upload avatar", async () => {
+  // FIELD_AVATAR = "avatar"
+  await request(app)
+    .post("/users/me/avatar")
+    .set("Authorization", "Bearer " + token)
+    .attach("avatar", "tests/fixtures/kyriosdata.jpg")
+    .expect(200);
+});
+
 test("profile", async () => {
   await request(app)
     .get("/users/me")
