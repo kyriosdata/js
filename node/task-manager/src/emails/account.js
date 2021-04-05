@@ -13,7 +13,7 @@ const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 sgMail.setApiKey(SENDGRID_API_KEY);
 
 const boasVindasEmail = (email, nome) => {
-  sgMail.send({
+  return sgMail.send({
     to: email,
     from: "kyriosdata@ufg.br",
     subject: "Bem-vindo ao Serviço Premium",
@@ -22,7 +22,7 @@ const boasVindasEmail = (email, nome) => {
 };
 
 const cancelaEmail = (email, nome) => {
-  sgMail.send({
+  return sgMail.send({
     to: email,
     from: "kyriosdata@ufg.br",
     subject: "Cancelamento (confirmação)",

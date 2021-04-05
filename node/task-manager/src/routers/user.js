@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const sharp = require("sharp");
+const log = require("loglevel");
 const User = require("../models/user");
 const Auth = require("../middleware/seguranca");
 const auth = require("../middleware/autenticacao");
@@ -66,10 +67,11 @@ router.post("/users", async (req, res) => {
   try {
     const user = new User(req.body);
     await user.save();
-    await Email.boasVindasEmail(user.email, user.name);
+    Email.boasVindasEmail(user.email, user.name);
     res.status(201).send({ user });
   } catch (e) {
-    res.status(500).send(e.toString());
+    log.warn(e.toString());
+    res.status(400).send(e.toString());
   }
 });
 
@@ -87,6 +89,7 @@ router.patch("/users/me", auth, async (req, res) => {
     await req.user.save();
     res.send(req.user);
   } catch (e) {
+    log.warn(e.toString());
     res.status(400).send({ erro: e });
   }
 });

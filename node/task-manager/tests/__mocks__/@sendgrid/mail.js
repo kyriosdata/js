@@ -8,6 +8,5 @@ module.exports = {
   },
   send(objeto) {
     expect(objeto).not.toBeNull();
-    expect(objeto.to).toBe(process.env.EMAIL_SENDTO_TEST);
   },
 };

@@ -1,6 +1,7 @@
 const app = require("../src/app");
 const request = require("supertest");
 const mongoose = require("mongoose");
+const { customAlphabet } = require("nanoid");
 const User = require("../src/models/user");
 const Task = require("../src/models/task");
 const log = require("loglevel");
@@ -24,7 +25,7 @@ const usuario = {
  */
 beforeAll(async () => {
   // disable all logs
-  log.disableAll();
+  // log.disableAll();
 
   // Evita execução de testes em base que não segue o padrão
   // /test-<alguma coisa>-test
@@ -43,19 +44,26 @@ afterAll(async () => {
   await mongoose.connection.close();
 });
 
-test("cria usuário de referência", async () => {
+test("cria usuário de referência para testes", async () => {
   await request(app).post("/users").send(usuario).expect(201);
 });
 
-test("falha email já empregado", async () => {
-  await request(app).post("/users").send(usuario).expect(500);
+test("falha ao repetir criação do mesmo usuário", async () => {
+  await request(app).post("/users").send(usuario).expect(400);
 });
 
-test("falha nome não é único", async () => {
+test("usuário não pode possuir nome nem email igual a outro", async () => {
   await request(app)
     .post("/users")
     .send({ ...usuario, email: "x@gmail.com" })
-    .expect(500);
+    .expect(400);
+});
+
+test("senha é obrigatória", async () => {
+  await request(app)
+    .post("/users")
+    .send({ ...usuario, password: undefined })
+    .expect(400);
 });
 
 /**
@@ -65,7 +73,7 @@ test("falha nome não é único", async () => {
  */
 let token;
 
-test("login usuario existente", async () => {
+test("login usuario", async () => {
   const response = await request(app)
     .post("/users/login")
     .send(usuario)
@@ -113,7 +121,7 @@ test("profile", async () => {
     .expect(200);
 });
 
-test("profile sem autenticação falha", async () => {
+test("profile exige autenticação", async () => {
   await request(app)
     .get("/users/me")
     .set("Authorization", "Bearer asdf21adfasdf")
@@ -139,6 +147,16 @@ test("adiciona 2 tarefas", async () => {
     .expect((res) => expect(res.body.total).toBe(2));
 });
 
+test("apenas email e password podem ser alteradas", async () => {
+  await request(app)
+    .patch("/users/me")
+    .set("Authorization", "Bearer " + token)
+    .send({
+      name: "Pedro Álvares Cabral",
+    })
+    .expect(400);
+});
+
 test("remove usuário e suas tarefas", async () => {
   await request(app)
     .delete("/users/me")
@@ -154,4 +172,41 @@ test("remove usuário e suas tarefas", async () => {
     .set("Authorization", "Bearer " + token)
     .send()
     .expect(401);
+});
+
+test("altera email de usuário", async () => {
+  const nanoid = customAlphabet("abcdefghijklmnopq", 10);
+  const name = nanoid();
+  const email = name + "@gmail.com";
+
+  const novo = {
+    password: "uma4onga6senha",
+    email,
+    name: name,
+  };
+
+  await request(app).post("/users").send(novo).expect(201);
+
+  let novoToken;
+  const NOVO_EMAIL = "teste@gmail.com";
+
+  await request(app)
+    .post("/users/login")
+    .send(novo)
+    .expect((res) => (novoToken = res.body.token))
+    .expect(200);
+
+  await request(app)
+    .patch("/users/me")
+    .set("Authorization", "Bearer " + novoToken)
+    .send({ email: NOVO_EMAIL })
+    .expect(200);
+
+  const resposta = await request(app)
+    .get("/users/me")
+    .set("Authorization", "Bearer " + novoToken)
+    .send()
+    .expect(200);
+
+  expect(resposta.body.user.email).toBe(NOVO_EMAIL);
 });
