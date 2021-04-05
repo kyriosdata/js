@@ -1,18 +1,21 @@
 const app = require("../src/app");
 const request = require("supertest");
 const mongoose = require("mongoose");
-const { customAlphabet } = require("nanoid");
 const User = require("../src/models/user");
-const Task = require("../src/models/task");
-const log = require("loglevel");
 
 /**
- * Usário de referência para os testes.
+ * Dois usuários são empregados nos testes
  */
-const usuario = {
-  password: "uma longa senha",
+const usuarioA = {
+  password: "senhaUsuarioA",
   email: process.env.EMAIL_SENDTO_TEST,
-  name: "Prefixo Pedro Sufixo Júnior",
+  name: "Usuário A",
+};
+
+const usuarioB = {
+  password: "senhaUsuarioB",
+  email: "usuariob@gmail.com",
+  name: "Usuário B",
 };
 
 /**
@@ -36,8 +39,8 @@ beforeAll(async () => {
     process.exit(1);
   }
 
-  await User.deleteMany();
-  await Task.deleteMany();
+  await User.deleteMany({ name: usuarioA.name });
+  await User.deleteOne({ name: usuarioB.name });
 });
 
 afterAll(async () => {
@@ -45,25 +48,29 @@ afterAll(async () => {
 });
 
 test("cria usuário de referência para testes", async () => {
-  await request(app).post("/users").send(usuario).expect(201);
+  await request(app).post("/users").send(usuarioA).expect(201);
 });
 
 test("falha ao repetir criação do mesmo usuário", async () => {
-  await request(app).post("/users").send(usuario).expect(400);
+  await request(app).post("/users").send(usuarioA).expect(400);
 });
 
 test("usuário não pode possuir nome nem email igual a outro", async () => {
   await request(app)
     .post("/users")
-    .send({ ...usuario, email: "x@gmail.com" })
+    .send({ ...usuarioA, email: "x@gmail.com" })
     .expect(400);
 });
 
 test("senha é obrigatória", async () => {
   await request(app)
     .post("/users")
-    .send({ ...usuario, password: undefined })
+    .send({ ...usuarioA, password: undefined })
     .expect(400);
+});
+
+test("cria usuário B", async () => {
+  await request(app).post("/users").send(usuarioB).expect(201);
 });
 
 /**
@@ -73,19 +80,19 @@ test("senha é obrigatória", async () => {
  */
 let token;
 
-test("login usuario", async () => {
+test("login usuario A", async () => {
   const response = await request(app)
     .post("/users/login")
-    .send(usuario)
+    .send(usuarioA)
     .expect((res) => {
       token = res.body.token;
     })
     .expect(200);
 
-  expect(response.body.user.name).toBe(usuario.name);
+  expect(response.body.user.name).toBe(usuarioA.name);
   expect(token).not.toBeNull();
   expect(token.length).not.toBe(0);
-  expect(response.body.user.password).not.toBe(usuario.password);
+  expect(response.body.user.password).not.toBe(usuarioA.password);
 });
 
 test("login failure", async () => {
@@ -106,7 +113,7 @@ test("upload avatar", async () => {
     .attach("avatar", "tests/fixtures/kyriosdata.jpg")
     .expect(200);
 
-  const user = await User.findOne({ email: usuario.email });
+  const user = await User.findOne({ email: usuarioA.email });
   expect(user.avatar).toEqual(expect.any(Buffer));
 });
 
@@ -174,25 +181,13 @@ test("remove usuário e suas tarefas", async () => {
     .expect(401);
 });
 
-test("altera email de usuário", async () => {
-  const nanoid = customAlphabet("abcdefghijklmnopq", 10);
-  const name = nanoid();
-  const email = name + "@gmail.com";
-
-  const novo = {
-    password: "uma4onga6senha",
-    email,
-    name: name,
-  };
-
-  await request(app).post("/users").send(novo).expect(201);
-
+test("altera email do usuário B", async () => {
   let novoToken;
-  const NOVO_EMAIL = "teste@gmail.com";
+  const NOVO_EMAIL = "novousuariob@gmail.com";
 
   await request(app)
     .post("/users/login")
-    .send(novo)
+    .send(usuarioB)
     .expect((res) => (novoToken = res.body.token))
     .expect(200);
 
@@ -208,5 +203,11 @@ test("altera email de usuário", async () => {
     .send()
     .expect(200);
 
-  expect(resposta.body.user.email).toBe(NOVO_EMAIL);
+  expect(resposta.body.user.email).toEqual(NOVO_EMAIL);
+
+  await request(app)
+    .delete("/users/me")
+    .set("Authorization", "Bearer " + novoToken)
+    .send()
+    .expect(200);
 });
