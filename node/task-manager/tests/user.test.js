@@ -18,7 +18,8 @@ const usuario = {
  * Um único usuário sem tarefa associada.
  *
  * NÃO É PERIGOSO?
- * CRIAR UM BANCO INEXISTENTE SEMPRE?
+ * (não seria indicado criar um banco sempre?)
+ * (estratégia abaixo exige test-<nome>-test por segurança)
  */
 beforeAll(async () => {
   // Evita execução de testes em base que não segue o padrão
