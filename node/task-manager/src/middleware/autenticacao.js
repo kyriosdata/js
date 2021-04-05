@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const Auth = require("./seguranca");
+const log = require("loglevel");
 
 /**
  * Função 'middleware' que é executada com a finalidade de autenticação.
@@ -21,7 +22,6 @@ const Auth = require("./seguranca");
 const auth = async (req, res, next) => {
   try {
     const header = req.header("Authorization");
-    console.log(req.method, req.path);
     const token = Auth.extractTokenFromHeader(header);
     const decoded = Auth.decodeToken(token);
 
@@ -40,7 +40,7 @@ const auth = async (req, res, next) => {
 
     next();
   } catch (error) {
-    console.log("auth error", error.toString());
+    log.warn(error.message);
     res.status(401).send({ error: "Exige autenticação..." });
   }
 };

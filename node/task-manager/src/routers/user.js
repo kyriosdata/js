@@ -73,7 +73,6 @@ router.post("/users", async (req, res) => {
   }
 });
 
-// Atualiza usuário (evita getByIdAndUpdate para não pular middleware)
 router.patch("/users/me", auth, async (req, res) => {
   const updates = Object.keys(req.body);
   const allowed = ["email", "password"];

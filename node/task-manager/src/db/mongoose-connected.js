@@ -8,8 +8,8 @@ async function conectaComMongoDB() {
     useCreateIndex: true,
   });
 
-  const status = mongoose.connection.readyState === 1 ? "conectado" : "erro";
-  console.log("Status de conexão com MongoDB:", status);
+  // const status = mongoose.connection.readyState === 1 ? "conectado" : "erro";
+  // console.log("Status de conexão com MongoDB:", status);
 }
 
 conectaComMongoDB();
