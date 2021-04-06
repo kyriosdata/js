@@ -4,6 +4,8 @@
  */
 const express = require("express");
 const path = require("path");
+const http = require("http");
+const socketio = require("socket.io");
 
 const healthRouter = require("./routers/health");
 
@@ -23,4 +25,12 @@ if (process.env.ENVIRONMENT && process.env.ENVIRONMENT === "dev") {
   console.log("Ambiente de Desenvolvimento");
 }
 
-module.exports = app;
+// Preparação para WebSockets
+const server = http.createServer(app);
+const io = socketio(server);
+
+io.on("connection", () => {
+  console.log("connection...");
+});
+
+module.exports = server;
