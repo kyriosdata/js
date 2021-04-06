@@ -18,4 +18,9 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use(healthRouter);
 
+// Exibe ambiente
+if (process.env.ENVIRONMENT && process.env.ENVIRONMENT === "dev") {
+  console.log("Ambiente de Desenvolvimento");
+}
+
 module.exports = app;
