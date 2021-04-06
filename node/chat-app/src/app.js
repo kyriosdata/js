@@ -29,8 +29,19 @@ if (process.env.ENVIRONMENT && process.env.ENVIRONMENT === "dev") {
 const server = http.createServer(app);
 const io = socketio(server);
 
-io.on("connection", () => {
-  console.log("connection...");
+// Trata cada conexão. A cada nova tentativa de conexão
+// este event handler será chamado. O cliente receberá
+// como resposta o evento 'countUpdated'.
+// servidor <- connection
+io.on("connection", (socket) => {
+  console.log("Mais um evento 'connection'...");
+
+  // Usa a conexão (socket) para enviar evento
+  socket.emit("welcome", "Bem-vindo ao nosso servidor!");
+
+  socket.on("mensagem", (msg) => {
+    io.emit("mensagem", msg);
+  });
 });
 
 module.exports = server;
