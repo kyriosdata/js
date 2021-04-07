@@ -46,8 +46,9 @@ io.on("connection", (socket) => {
   // está se conectando no momento.
   socket.broadcast.emit("mensagem", "Um novo usuário juntou-se a nós!");
 
-  socket.on("mensagem", (msg) => {
+  socket.on("mensagem", (msg, callback) => {
     io.emit("mensagem", msg);
+    callback(msg.length);
   });
 
   // Trata 'sendLocation' gerado por cliente.

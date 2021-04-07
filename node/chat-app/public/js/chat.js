@@ -18,7 +18,7 @@ botao.addEventListener("click", () => {
     const { latitude, longitude } = posicao.coords;
     const local = { latitude, longitude };
 
-    // Envia evento 'sendLocation' e exibe msg quando acknowledge
+    // ENVIA sendLocation
     socket.emit("sendLocation", local, () => {
       console.log("Localização compartilhada");
       botao.disabled = false;
@@ -32,7 +32,11 @@ formulario.addEventListener("submit", (e) => {
   botaoEnvia.disabled = true;
 
   const texto = mensagemEntrada.value;
-  socket.emit("mensagem", texto);
+
+  // ENVIA mensagem
+  socket.emit("mensagem", texto, (retorno) => {
+    console.log(`Enviado ${texto} recebido ${retorno}`);
+  });
 
   mensagemEntrada.value = "";
   mensagemEntrada.removeAttribute("disabled");
