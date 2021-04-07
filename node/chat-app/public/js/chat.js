@@ -1,6 +1,9 @@
-// Objeto do lado do client que está ligado com servidor
+// Representa a conexão com o servidor
 const socket = io();
 
+const formulario = document.getElementById("message-form");
+const mensagemEntrada = document.getElementById("mensagem");
+const botaoEnvia = document.getElementById("botao-envia");
 const botao = document.getElementById("send-location");
 
 // Envia compartilhamento de posição geográfica
@@ -23,12 +26,6 @@ botao.addEventListener("click", () => {
   });
 });
 
-// Sinaliza evento para o servidor
-// cliente -> increment
-const formulario = document.getElementById("message-form");
-const mensagemEntrada = document.getElementById("mensagem");
-const botaoEnvia = document.getElementById("botao-envia");
-
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   mensagemEntrada.setAttribute("disabled", "disabled");
@@ -43,9 +40,8 @@ formulario.addEventListener("submit", (e) => {
   mensagemEntrada.focus();
 });
 
-document.getElementById("mensagem").addEventListener("keyup", () => {
-  const elemento = document.getElementById("mensagem");
-  socket.emit("mensagem", elemento.value);
+mensagemEntrada.addEventListener("keyup", () => {
+  socket.emit("mensagem", mensagemEntrada.value);
 });
 
 // cliente <- welcome
@@ -59,4 +55,11 @@ socket.on("mensagem", (msg) => {
 
 socket.on("amigo", (posicao) => {
   console.log("amigo", posicao);
+});
+
+socket.on("send-credentials", () => {
+  console.log("received send-credentials");
+  socket.emit("credencial", "user/password", (tokenReceived) => {
+    console.log("TOKEN", tokenReceived);
+  });
 });

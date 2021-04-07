@@ -36,6 +36,8 @@ const io = socketio(server);
 io.on("connection", (socket) => {
   console.log("Mais um evento 'connection'...");
 
+  socket.emit("send-credentials");
+
   // Usa a conexão (socket) para enviar evento
   // especificamente para o cliente que está se conectando.
   socket.emit("welcome", "Bem-vindo ao nosso servidor!");
@@ -59,6 +61,11 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     io.emit("mensagem", "Um usuário se desconectou...");
+  });
+
+  socket.on("credencial", (credencial, callback) => {
+    const verificada = credencial.toUpperCase();
+    callback(verificada);
   });
 });
 
