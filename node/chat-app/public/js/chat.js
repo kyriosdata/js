@@ -1,11 +1,15 @@
 // Objeto do lado do client que está ligado com servidor
 const socket = io();
 
+const botao = document.getElementById("send-location");
+
 // Envia compartilhamento de posição geográfica
-document.getElementById("send-location").addEventListener("click", () => {
+botao.addEventListener("click", () => {
   if (!navigator.geolocation) {
     return alert("Geolocation não está disponível no seu browser");
   }
+
+  botao.disabled = true;
 
   navigator.geolocation.getCurrentPosition((posicao) => {
     const { latitude, longitude } = posicao.coords;
@@ -13,17 +17,30 @@ document.getElementById("send-location").addEventListener("click", () => {
 
     // Envia evento 'sendLocation' e exibe msg quando acknowledge
     socket.emit("sendLocation", local, () => {
-      console.log("O evento foi recebido pelo servidor.");
+      console.log("Localização compartilhada");
+      botao.disabled = false;
     });
   });
 });
 
 // Sinaliza evento para o servidor
 // cliente -> increment
-document.getElementById("message-form").addEventListener("submit", (e) => {
+const formulario = document.getElementById("message-form");
+const mensagemEntrada = document.getElementById("mensagem");
+const botaoEnvia = document.getElementById("botao-envia");
+
+formulario.addEventListener("submit", (e) => {
   e.preventDefault();
-  const texto = document.getElementById("mensagem").value;
+  mensagemEntrada.setAttribute("disabled", "disabled");
+  botaoEnvia.disabled = true;
+
+  const texto = mensagemEntrada.value;
   socket.emit("mensagem", texto);
+
+  mensagemEntrada.value = "";
+  mensagemEntrada.removeAttribute("disabled");
+  botaoEnvia.disabled = false;
+  mensagemEntrada.focus();
 });
 
 document.getElementById("mensagem").addEventListener("keyup", () => {
