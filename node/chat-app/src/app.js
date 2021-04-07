@@ -56,7 +56,7 @@ io.on("connection", (socket) => {
   socket.on("sendLocation", (posicao, callback) => {
     const local = `${posicao.latitude},${posicao.longitude}`;
     const url = `https://google.com/maps?q${local}`;
-    io.emit("amigo", url);
+    io.emit("locationMessage", url);
     callback();
   });
 

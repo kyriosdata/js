@@ -4,6 +4,9 @@ const formulario = document.getElementById("message-form");
 const mensagemEntrada = document.getElementById("mensagem");
 const botaoEnvia = document.getElementById("botao-envia");
 const shareLocation = document.getElementById("share-location");
+const messageTemplate = document.getElementById("message-template").innerHTML;
+const locationTemplate = document.getElementById("location-template").innerHTML;
+const mensagens = document.getElementById("messages");
 
 // Alterado apenas quano há informação para ser enviada
 botaoEnvia.disabled = true;
@@ -24,15 +27,12 @@ shareLocation.addEventListener("click", () => {
     // EVENTO sendLocation
     // ------
     socket.emit("sendLocation", local, () => {
-      console.log("Localização compartilhada");
       shareLocation.disabled = false;
     });
   });
 });
 
-formulario.addEventListener("submit", (e) => {
-  e.preventDefault();
-
+function envioHandler() {
   const texto = mensagemEntrada.value;
   if (texto.trim() === "") {
     mensagemEntrada.value = "";
@@ -53,8 +53,16 @@ formulario.addEventListener("submit", (e) => {
 
   mensagemEntrada.value = "";
   mensagemEntrada.removeAttribute("disabled");
-  botaoEnvia.disabled = false;
   mensagemEntrada.focus();
+}
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+  envioHandler();
+});
+
+botaoEnvia.addEventListener("click", () => {
+  envioHandler();
 });
 
 mensagemEntrada.addEventListener("keyup", () => {
@@ -78,14 +86,18 @@ socket.on("welcome", (msg) => {
 // EVENTO mensagem
 // ------
 socket.on("mensagem", (msg) => {
-  console.log("Preciso tratar a mensagem recebida:", msg);
+  const html = Mustache.render(messageTemplate, {
+    message: msg,
+  });
+  messages.insertAdjacentHTML("beforeend", html);
 });
 
 // ------
 // EVENTO amigo
 // ------
-socket.on("amigo", (posicao) => {
-  console.log("amigo", posicao);
+socket.on("locationMessage", (url) => {
+  const html = Mustache.render(locationTemplate, { url });
+  messages.insertAdjacentHTML("beforeend", html);
 });
 
 // ------
