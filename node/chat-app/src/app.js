@@ -35,20 +35,7 @@ const io = socketio(server);
 // como resposta o evento 'countUpdated'.
 // servidor <- connection
 io.on("connection", (socket) => {
-  console.log("Mais um evento 'connection'...");
-
   socket.emit("send-credentials");
-
-  // Usa a conexão (socket) para enviar evento
-  // especificamente para o cliente que está se conectando.
-  socket.emit("welcome", "Bem-vindo ao nosso servidor!");
-
-  // Envia evento para todos os clientes, exceto o que
-  // está se conectando no momento.
-  socket.broadcast.emit(
-    "mensagem",
-    payload("Um novo usuário juntou-se a nós!")
-  );
 
   socket.on("divulgue", (msg) => {
     console.log("Requisitada divulgação de", msg);
@@ -59,7 +46,7 @@ io.on("connection", (socket) => {
   // Quando concluído, gera acknowledge.
   socket.on("sendLocation", (posicao, callback) => {
     const local = `${posicao.latitude},${posicao.longitude}`;
-    const url = `https://google.com/maps?q${local}`;
+    const url = `https://google.com/maps?q=${local}`;
     io.emit("locationMessage", payload(url));
     callback();
   });
@@ -71,6 +58,20 @@ io.on("connection", (socket) => {
   socket.on("credencial", (credencial, callback) => {
     const verificada = credencial.toUpperCase();
     callback(verificada);
+  });
+
+  socket.on("join", ({ username, room }) => {
+    socket.join(room);
+
+    // Usa a conexão (socket) para enviar evento
+    // especificamente para o cliente que está se conectando.
+    socket.emit("welcome", `Bem-vindo à sala ${room}!`);
+
+    // Envia evento para todos os clientes, exceto o que
+    // está se conectando no momento.
+    socket.broadcast
+      .to(room)
+      .emit("mensagem", payload(`${username} juntou-se a nós...`));
   });
 });
 

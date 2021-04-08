@@ -11,6 +11,11 @@ const mensagens = document.getElementById("messages");
 // Alterado apenas quano há informação para ser enviada
 botaoEnvia.disabled = true;
 
+// Options
+const { username, room } = Qs.parse(location.search, {
+  ignoreQueryPrefix: true,
+});
+
 shareLocation.addEventListener("click", () => {
   if (!navigator.geolocation) {
     console.log("Geolocation não está disponível no seu browser");
@@ -100,7 +105,7 @@ socket.on("mensagem", (payload) => {
 // ------
 socket.on("locationMessage", (payload) => {
   const html = Mustache.render(locationTemplate, {
-    url: payload.url,
+    url: payload.msg,
     geradoEm: formataInstante(payload.geradoEm),
   });
   messages.insertAdjacentHTML("beforeend", html);
@@ -121,3 +126,8 @@ socket.on("send-credentials", () => {
 socket.onAny((event, ...args) => {
   console.log(`RECEBIDO ${event} ARGS: ${args}`);
 });
+
+// ------
+// EVENTO join
+// ------
+socket.emit("join", { username, room });
