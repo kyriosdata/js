@@ -85,10 +85,8 @@ socket.on("welcome", (msg) => {
 // ------
 // EVENTO mensagem
 // ------
-socket.on("mensagem", (msg) => {
-  const html = Mustache.render(messageTemplate, {
-    message: msg,
-  });
+socket.on("mensagem", (payload) => {
+  const html = Mustache.render(messageTemplate, payload);
   messages.insertAdjacentHTML("beforeend", html);
 });
 

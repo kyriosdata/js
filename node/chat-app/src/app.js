@@ -8,6 +8,7 @@ const http = require("http");
 const socketio = require("socket.io");
 
 const healthRouter = require("./routers/health");
+const payload = require("./messages");
 
 const app = express();
 
@@ -44,11 +45,14 @@ io.on("connection", (socket) => {
 
   // Envia evento para todos os clientes, exceto o que
   // está se conectando no momento.
-  socket.broadcast.emit("mensagem", "Um novo usuário juntou-se a nós!");
+  socket.broadcast.emit(
+    "mensagem",
+    payload("Um novo usuário juntou-se a nós!")
+  );
 
   socket.on("divulgue", (msg) => {
     console.log("Requisitada divulgação de", msg);
-    socket.broadcast.emit("mensagem", msg.toUpperCase());
+    socket.broadcast.emit("mensagem", payload(msg.toUpperCase()));
   });
 
   // Trata 'sendLocation' gerado por cliente.
@@ -61,7 +65,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    io.emit("mensagem", "Um usuário se desconectou...");
+    io.emit("mensagem", payload("Um usuário se desconectou..."));
   });
 
   socket.on("credencial", (credencial, callback) => {
