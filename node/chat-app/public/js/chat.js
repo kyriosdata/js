@@ -82,19 +82,27 @@ socket.on("welcome", (msg) => {
   console.log(msg);
 });
 
+const formataInstante = (time) => moment(time).format("kk:mm:s");
+
 // ------
 // EVENTO mensagem
 // ------
 socket.on("mensagem", (payload) => {
-  const html = Mustache.render(messageTemplate, payload);
+  const html = Mustache.render(messageTemplate, {
+    msg: payload.msg,
+    geradoEm: formataInstante(payload.geradoEm),
+  });
   messages.insertAdjacentHTML("beforeend", html);
 });
 
 // ------
 // EVENTO amigo
 // ------
-socket.on("locationMessage", (url) => {
-  const html = Mustache.render(locationTemplate, { url });
+socket.on("locationMessage", (payload) => {
+  const html = Mustache.render(locationTemplate, {
+    url: payload.url,
+    geradoEm: formataInstante(payload.geradoEm),
+  });
   messages.insertAdjacentHTML("beforeend", html);
 });
 
