@@ -38,8 +38,8 @@ io.on("connection", (socket) => {
   socket.emit("send-credentials");
 
   socket.on("divulgue", (msg) => {
-    console.log("Requisitada divulgação de", msg);
-    socket.broadcast.emit("mensagem", payload(msg.toUpperCase()));
+    console.log("Requisitada divulgação de", msg.texto, "para", msg.room);
+    io.to(msg.room).emit("mensagem", payload(msg.texto));
   });
 
   // Trata 'sendLocation' gerado por cliente.
@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
     socket.join(room);
 
     // Usa a conexão (socket) para enviar evento
-    // especificamente para o cliente que está se conectando.
+    // especificamente para o cliente que se conecta à sala
     socket.emit("welcome", `Bem-vindo à sala ${room}!`);
 
     // Envia evento para todos os clientes, exceto o que

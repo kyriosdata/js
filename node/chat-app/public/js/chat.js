@@ -11,7 +11,7 @@ const mensagens = document.getElementById("messages");
 // Alterado apenas quano há informação para ser enviada
 botaoEnvia.disabled = true;
 
-// Options
+// LOGIN define 'username' e 'room'
 const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
@@ -52,7 +52,7 @@ function envioHandler() {
   // ------
   // EVENTO divulgue
   // ------
-  socket.emit("divulgue", texto, (retorno) => {
+  socket.emit("divulgue", { texto, room, username }, (retorno) => {
     console.log(`Enviado ${texto} recebido ${retorno}`);
   });
 
@@ -84,20 +84,26 @@ mensagemEntrada.addEventListener("keyup", () => {
 // EVENTO welcome
 // ------
 socket.on("welcome", (msg) => {
-  console.log(msg);
+  exibeInfo({ msg, geradoEm: new Date().getTime() });
 });
 
-const formataInstante = (time) => moment(time).format("kk:mm:s");
+const formataInstante = (time) => moment(time).format("kk:mm:ss");
+
+const exibeInfo = (info) => {
+  const contexto = {
+    msg: info.msg,
+    geradoEm: formataInstante(info.geradoEm),
+  };
+
+  const html = Mustache.render(messageTemplate, contexto);
+  messages.insertAdjacentHTML("beforeend", html);
+};
 
 // ------
 // EVENTO mensagem
 // ------
 socket.on("mensagem", (payload) => {
-  const html = Mustache.render(messageTemplate, {
-    msg: payload.msg,
-    geradoEm: formataInstante(payload.geradoEm),
-  });
-  messages.insertAdjacentHTML("beforeend", html);
+  exibeInfo(payload);
 });
 
 // ------
