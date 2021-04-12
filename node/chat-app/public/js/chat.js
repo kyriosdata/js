@@ -61,6 +61,16 @@ function envioHandler() {
   mensagemEntrada.focus();
 }
 
+const autoscroll = () => {
+  // altura da área que é visível
+  const visibleHeight = mensagens.offsetHeight;
+
+  // toda a altura do contêiner de mensagens (scroll)
+  const conteinerHeight = mensagens.scrollHeight;
+
+  mensagens.scrollTop = conteinerHeight - visibleHeight;
+};
+
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   envioHandler();
@@ -85,12 +95,14 @@ mensagemEntrada.addEventListener("keyup", () => {
 // ------
 socket.on("welcome", (msg) => {
   exibeInfo({ msg, geradoEm: new Date().getTime() });
+  autoscroll();
 });
 
-const formataInstante = (time) => moment(time).format("kk:mm:ss");
+const formataInstante = (time) => moment(time).format("kk:mm");
 
 const exibeInfo = (info) => {
   const contexto = {
+    autor: info.autor ? info.autor : "não identificado",
     msg: info.msg,
     geradoEm: formataInstante(info.geradoEm),
   };
@@ -104,6 +116,7 @@ const exibeInfo = (info) => {
 // ------
 socket.on("mensagem", (payload) => {
   exibeInfo(payload);
+  autoscroll();
 });
 
 // ------

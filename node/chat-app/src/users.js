@@ -31,13 +31,26 @@ const adicionaUsuario = (usuario) => {
   return usuario;
 };
 
-const removeUsuario = (id) => {};
+const obtemUsuario = (id) => {
+  return usuarios.find((u) => u.id === id);
+};
 
-const obtemUsuario = (username) => {
-  return usuarios.find((u) => u.username === username);
+const presentesNaSala = (sala) => {
+  return usuarios.filter((u) => u.room === sala);
+};
+
+const removeUsuario = (id) => {
+  const indexToRemove = usuarios.findIndex((u) => u.id === id);
+  if (indexToRemove < 0) {
+    return undefined;
+  }
+
+  return usuarios.splice(indexToRemove, 1)[0];
 };
 
 module.exports = {
   adiciona: adicionaUsuario,
   obtem: obtemUsuario,
+  presentes: presentesNaSala,
+  remove: removeUsuario,
 };
