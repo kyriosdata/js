@@ -1,4 +1,5 @@
-const payload = (msg) => ({
+const payload = (msg, autor = "Admin") => ({
+  autor,
   msg,
   geradoEm: new Date().getTime(),
 });

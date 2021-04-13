@@ -1,12 +1,29 @@
+/**
+ * O código abaixo pode ser melhor organizado.
+ * AsyncApi.com é uma alternativa. Idealmente,
+ * cada evento deve ser identificado assim como
+ * o payload correspondente.
+ *
+ * A estratégia corrente exige que se tenha acesso
+ * ao código do cliente, presente arquivo e ao
+ * código do servidor. Este acesso é utilizado
+ * para localizar as mensagens e verificar o que
+ * é enviado/recebido, o que seguramente é
+ * indesejável.
+ */
 const socket = io();
 
 const formulario = document.getElementById("message-form");
 const mensagemEntrada = document.getElementById("mensagem");
 const botaoEnvia = document.getElementById("botao-envia");
 const shareLocation = document.getElementById("share-location");
+const mensagens = document.getElementById("messages");
+const sidebar = document.getElementById("sidebar");
+
+// Templates
 const messageTemplate = document.getElementById("message-template").innerHTML;
 const locationTemplate = document.getElementById("location-template").innerHTML;
-const mensagens = document.getElementById("messages");
+const sidebarTemplate = document.getElementById("sidebar-template").innerHTML;
 
 // Alterado apenas quano há informação para ser enviada
 botaoEnvia.disabled = true;
@@ -27,11 +44,12 @@ shareLocation.addEventListener("click", () => {
   navigator.geolocation.getCurrentPosition((posicao) => {
     const { latitude, longitude } = posicao.coords;
     const local = { latitude, longitude };
+    const payload = { autor: username, local };
 
     // ------
     // EVENTO sendLocation
     // ------
-    socket.emit("sendLocation", local, () => {
+    socket.emit("sendLocation", payload, () => {
       shareLocation.disabled = false;
     });
   });
@@ -93,9 +111,15 @@ mensagemEntrada.addEventListener("keyup", () => {
 // ------
 // EVENTO welcome
 // ------
-socket.on("welcome", (msg) => {
-  exibeInfo({ msg, geradoEm: new Date().getTime() });
-  autoscroll();
+socket.on("welcome", (welcome) => {
+  exibeInfo({ ...welcome, geradoEm: new Date().getTime() });
+});
+
+// ------
+// EVENTO existente
+// ------
+socket.on("existente", (welcome) => {
+  exibeInfo({ ...welcome, geradoEm: new Date().getTime() });
 });
 
 const formataInstante = (time) => moment(time).format("kk:mm");
@@ -120,10 +144,11 @@ socket.on("mensagem", (payload) => {
 });
 
 // ------
-// EVENTO amigo
+// EVENTO locationMessage
 // ------
 socket.on("locationMessage", (payload) => {
   const html = Mustache.render(locationTemplate, {
+    autor: payload.autor,
     url: payload.msg,
     geradoEm: formataInstante(payload.geradoEm),
   });
@@ -149,4 +174,14 @@ socket.onAny((event, ...args) => {
 // ------
 // EVENTO join
 // ------
-socket.emit("join", { username, room });
+socket.emit("join", { username, room }, (resultado) => {
+  if (!resultado) {
+    alert("já existe usuário");
+    location.href = "/index.html";
+  }
+});
+
+socket.on("sala-composicao", ({ sala, usuarios }) => {
+  const html = Mustache.render(sidebarTemplate, { sala, usuarios });
+  sidebar.innerHTML = html;
+});
