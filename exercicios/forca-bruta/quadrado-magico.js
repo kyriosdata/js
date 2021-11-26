@@ -101,7 +101,6 @@ console.log(
 //
 
 function filtrarSolucoes(consideradas) {
-  let conta = 0;
   const solucoes = [];
   for (const candidata of consideradas) {
     const linhas1 = geraPermutacoes(candidata[0]);
@@ -113,7 +112,6 @@ function filtrarSolucoes(consideradas) {
       for (const l2 of linhas2) {
         for (const l3 of linhas3) {
           for (const l4 of linhas4) {
-            conta++;
             if (colunas34(l1, l2, l3, l4) && diagonais34(l1, l2, l3, l4)) {
               solucoes.push([l1, l2, l3, l4]);
             }
@@ -215,6 +213,18 @@ function matrizesIguais(m1, m2) {
 
   return true;
 }
+
+function exibir(matrizes) {
+  for (const matriz of matrizes) {
+    console.log();
+    for (const linha of matriz) {
+      const [c1, c2, c3, c4] = linha;
+      console.log(c1, c2, c3, c4);
+    }
+  }
+}
+
+exibir(candidatas);
 
 //
 // Exibir tempo decorrido
