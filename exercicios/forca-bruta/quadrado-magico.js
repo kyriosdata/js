@@ -181,25 +181,28 @@ console.log("Total de matrizes candidatas", candidatas.length);
 
 const totalVerificado = candidatas.length * 24 * 24 * 24 * 24;
 console.log("Total de matrizes verificadas", totalVerificado);
-console.log("Total de solucoes", respostas.length);
+console.log("Total de solucoes (possíveis repetições)", respostas.length);
 
 //
-// Verificar que soluções são únicas (sem duplicidade)
+// Identificar soluções idênticas
 //
 
-verificaSeMatrizesSaoDistintas(candidatas);
+const iguais = localizaMatrizesIdenticas(respostas);
 
-function verificaSeMatrizesSaoDistintas(matrizes) {
+function localizaMatrizesIdenticas(matrizes) {
+  const identicas = [];
   const totalDeSolucoes = matrizes.length;
   for (let s = 0; s < totalDeSolucoes; s++) {
-    for (let c = 0; c < totalDeSolucoes; c++) {
+    for (let c = s + 1; c < totalDeSolucoes; c++) {
       if (s != c) {
         if (matrizesIguais(matrizes[s], matrizes[c])) {
-          console.log("Igualdade detectada", s, c);
+          identicas.push(s);
         }
       }
     }
   }
+
+  return new Set(identicas);
 }
 
 function matrizesIguais(m1, m2) {
@@ -214,17 +217,42 @@ function matrizesIguais(m1, m2) {
   return true;
 }
 
-function exibir(matrizes) {
-  for (const matriz of matrizes) {
-    console.log();
-    for (const linha of matriz) {
-      const [c1, c2, c3, c4] = linha;
-      console.log(c1, c2, c3, c4);
-    }
+//
+// Remover duplicidades
+//
+
+function removeEntradasDuplicadas(duplicidades, matrizes) {
+  const removerEstesIndices = Array.from(duplicidades);
+  for (let i = removerEstesIndices.length - 1; i >= 0; i--) {
+    matrizes.splice(i, 1);
   }
 }
 
-exibir(candidatas);
+removeEntradasDuplicadas(iguais, respostas);
+
+//
+// Verifica que não há duplicidades (após remoção anterior)
+//
+
+const verificacao = localizaMatrizesIdenticas(respostas);
+if (verificacao.length > 0) {
+  throw new Error("ainda iguais???");
+}
+
+//
+// Exibir os resultados obtidos
+//
+
+function exibir(matrizes) {
+  for (const matriz of matrizes) {
+    console.log();
+    console.log(matriz);
+  }
+}
+
+exibir(respostas);
+
+console.log("Total de respostas:", respostas.length);
 
 //
 // Exibir tempo decorrido
