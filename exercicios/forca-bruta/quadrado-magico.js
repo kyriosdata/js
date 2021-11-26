@@ -1,3 +1,6 @@
+const { performance } = require("perf_hooks");
+const startTime = performance.now();
+
 //
 // PASSO 1
 //
@@ -20,21 +23,52 @@ const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 const resposta = [0, 0, 0, 0];
 combinacoes(numeros, 4, 0, resposta);
 
-console.log("Passo 1 (total)", passo1.length);
+console.log("Passo 1 (combinações distintas, sem permutações)", passo1.length);
 
 //
 // PASSO 2
 //
 
 const passo2 = passo1.filter((c) => c[0] + c[1] + c[2] + c[3] == 34);
-console.log("Passo 2 (total)", passo2.length);
+console.log("Passo 2 (combinações que somam 34)", passo2.length);
 
 //
 // PASSO 3
 //
 
-const candidatas = matrizesComLinhasSatisfeitas(passo2);
-console.log("Passo 3 (total)", candidatas.length);
+function elementosDistintos(entrada, a, b, c, d) {
+  const ocorrencias = new Array(17).fill(0);
+
+  if (encontradaSimilaridade(ocorrencias, entrada[a])) {
+    return false;
+  }
+
+  if (encontradaSimilaridade(ocorrencias, entrada[b])) {
+    return false;
+  }
+
+  if (encontradaSimilaridade(ocorrencias, entrada[c])) {
+    return false;
+  }
+
+  if (encontradaSimilaridade(ocorrencias, entrada[d])) {
+    return false;
+  }
+
+  return true;
+}
+
+function encontradaSimilaridade(contadores, vetor) {
+  for (const elemento of vetor) {
+    if (contadores[elemento] > 0) {
+      return true;
+    }
+
+    contadores[elemento] = 1;
+  }
+
+  return false;
+}
 
 function matrizesComLinhasSatisfeitas(somas34) {
   const relevantes = [];
@@ -56,15 +90,19 @@ function matrizesComLinhasSatisfeitas(somas34) {
   return relevantes;
 }
 
+const candidatas = matrizesComLinhasSatisfeitas(passo2);
+console.log(
+  "Passo 3 (matrizes cujas linhas somam 34, sem permutações)",
+  candidatas.length
+);
+
 //
 // PASSO 4
 //
 
-verificarDerivadas(candidatas);
-
-function verificarDerivadas(consideradas) {
+function filtrarSolucoes(consideradas) {
   let conta = 0;
-  let solucoes = 0;
+  const solucoes = [];
   for (const candidata of consideradas) {
     const linhas1 = geraPermutacoes(candidata[0]);
     const linhas2 = geraPermutacoes(candidata[1]);
@@ -77,20 +115,15 @@ function verificarDerivadas(consideradas) {
           for (const l4 of linhas4) {
             conta++;
             if (colunas34(l1, l2, l3, l4) && diagonais34(l1, l2, l3, l4)) {
-              console.log("\n\n");
-              console.log(l1);
-              console.log(l2);
-              console.log(l3);
-              console.log(l4);
-              solucoes++;
+              solucoes.push([l1, l2, l3, l4]);
             }
           }
         }
       }
     }
   }
-  console.log("Total de matrizes verificadas", conta);
-  console.log("Total de soluções encontradas", solucoes);
+
+  return solucoes;
 }
 
 function colunas34(l1, l2, l3, l4) {
@@ -145,36 +178,47 @@ function swap(vetor, a, b) {
   vetor[b] = tmp;
 }
 
-function elementosDistintos(entrada, a, b, c, d) {
-  const ocorrencias = new Array(17).fill(0);
+const respostas = filtrarSolucoes(candidatas);
+console.log("Total de matrizes candidatas", candidatas.length);
 
-  if (encontradaSimilaridade(ocorrencias, entrada[a])) {
-    return false;
+const totalVerificado = candidatas.length * 24 * 24 * 24 * 24;
+console.log("Total de matrizes verificadas", totalVerificado);
+console.log("Total de solucoes", respostas.length);
+
+//
+// Verificar que soluções são únicas (sem duplicidade)
+//
+
+verificaSeMatrizesSaoDistintas(candidatas);
+
+function verificaSeMatrizesSaoDistintas(matrizes) {
+  const totalDeSolucoes = matrizes.length;
+  for (let s = 0; s < totalDeSolucoes; s++) {
+    for (let c = 0; c < totalDeSolucoes; c++) {
+      if (s != c) {
+        if (matrizesIguais(matrizes[s], matrizes[c])) {
+          console.log("Igualdade detectada", s, c);
+        }
+      }
+    }
   }
+}
 
-  if (encontradaSimilaridade(ocorrencias, entrada[b])) {
-    return false;
-  }
-
-  if (encontradaSimilaridade(ocorrencias, entrada[c])) {
-    return false;
-  }
-
-  if (encontradaSimilaridade(ocorrencias, entrada[d])) {
-    return false;
+function matrizesIguais(m1, m2) {
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+      if (m1[i][j] != m2[i][j]) {
+        return false;
+      }
+    }
   }
 
   return true;
 }
 
-function encontradaSimilaridade(contadores, vetor) {
-  for (const elemento of vetor) {
-    if (contadores[elemento] > 0) {
-      return true;
-    }
+//
+// Exibir tempo decorrido
+//
 
-    contadores[elemento] = 1;
-  }
-
-  return false;
-}
+const endTime = performance.now();
+console.log("Tempo gasto:", Math.trunc(endTime - startTime), "milissegundos");
