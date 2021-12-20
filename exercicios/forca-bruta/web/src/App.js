@@ -1,28 +1,36 @@
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import logo from "./d44.png";
 import "./App.css";
+import d44 from "./d44"
+import Matriz from "./Matriz";
 
 function App() {
-  useEffect(() => {
-    console.log("Só uma vez...");
-  }, []);
+    let todasAsSolucoes;
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Executar uma única vez</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Projetando soluções...
-        </a>
-      </header>
-    </div>
-  );
+    const [solucoes, setSolucoes] = useState([]);
+
+    function exibe(matrizes) {
+        console.log(matrizes);
+        if (!matrizes) {
+            return;
+        }
+
+        return matrizes.map((m, i) => <Matriz key={i} valor={m}/>);
+    }
+
+    useEffect(() => {
+        const resposta = d44();
+        todasAsSolucoes = resposta.solucoes;
+        setSolucoes(todasAsSolucoes);
+        console.log("Executado em (ms):", resposta.tempo);
+    }, []);
+
+    return (
+        <div className="container">
+            <img src={logo} className="App-logo" alt="logo"/>
+            {exibe(solucoes)}
+        </div>
+    );
 }
 
 export default App;
