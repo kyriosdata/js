@@ -1,9 +1,3 @@
-// Refatoração: exportar uma única função que
-// retorna objeto contendo detalhes dos resultados.
-
-const { performance } = require("perf_hooks");
-const startTime = performance.now();
-
 //
 // PASSO 1
 //
@@ -12,7 +6,7 @@ function passo1() {
   const todas = [];
 
   function todasAsCombinacoes(vetor, tamanho, inicio, resultado) {
-    if (tamanho == 0) {
+    if (tamanho === 0) {
       todas.push(resultado.slice());
       return;
     }
@@ -35,7 +29,7 @@ function passo1() {
 //
 
 function passo2(vetores) {
-  return vetores.filter((c) => c[0] + c[1] + c[2] + c[3] == 34)
+  return vetores.filter((c) => c[0] + c[1] + c[2] + c[3] === 34)
 }
 
 //
@@ -57,11 +51,7 @@ function elementosDistintos(entrada, a, b, c, d) {
     return false;
   }
 
-  if (encontradaSimilaridade(ocorrencias, entrada[d])) {
-    return false;
-  }
-
-  return true;
+  return !encontradaSimilaridade(ocorrencias, entrada[d]);
 }
 
 function encontradaSimilaridade(contadores, vetor) {
@@ -96,7 +86,6 @@ function passo3(somas34) {
   return relevantes;
 }
 
-
 //
 // PASSO 4
 //
@@ -104,7 +93,7 @@ function passo3(somas34) {
 function colunas34(l1, l2, l3, l4) {
   for (let c = 0; c < 4; c++) {
     const soma = l1[c] + l2[c] + l3[c] + l4[c];
-    if (soma != 34) {
+    if (soma !== 34) {
       return false;
     }
   }
@@ -114,18 +103,21 @@ function colunas34(l1, l2, l3, l4) {
 
 function diagonais34(l1, l2, l3, l4) {
   const d1 = l1[0] + l2[1] + l3[2] + l4[3];
-  if (d1 != 34) {
+  if (d1 !== 34) {
     return false;
   }
 
   const d2 = l1[3] + l2[2] + l3[1] + l4[0];
-  if (d2 != 34) {
-    return false;
-  }
-
-  return true;
+  return d2 === 34;
 }
 
+/**
+ * Troca as posições de dois elementos do vetor cujos índices são fornecidos.
+ *
+ * @param vetor O vetor cujos elementos serão trocados.
+ * @param a O índice de um elemento que receberá o outro elemento.
+ * @param b O índice do outro elemento.
+ */
 function swap(vetor, a, b) {
   const tmp = vetor[a];
   vetor[a] = vetor[b];
@@ -140,7 +132,7 @@ function geraPermutacoes(elementos) {
   let i = 0;
   while (i < n) {
     if (indexes[i] < i) {
-      swap(elementos, i % 2 == 0 ? 0 : indexes[i], i);
+      swap(elementos, i % 2 === 0 ? 0 : indexes[i], i);
       permutacoes.push(elementos.slice());
       indexes[i]++;
       i = 0;
@@ -177,30 +169,8 @@ function passo4(consideradas) {
   return solucoes;
 }
 
-
-const combinacoes = passo1();
-console.log("Passo 1 (combinações distintas, sem permutações)", combinacoes.length);
-
-const combinacoes34 = passo2(combinacoes);
-console.log("Passo 2 (combinações que somam 34)", combinacoes34.length);
-
-const candidatas = passo3(combinacoes34);
-console.log(
-    "Passo 3 (matrizes cujas linhas somam 34, sem permutações)",
-    candidatas.length
-);
-
-const respostas = passo4(candidatas);
-console.log("Total de matrizes candidatas", candidatas.length);
-
-const totalVerificado = candidatas.length * 24 * 24 * 24 * 24;
-console.log("Total de matrizes verificadas", totalVerificado);
-console.log("Total de solucoes (possíveis repetições)", respostas.length);
-
 //
-// Passo 5
-// Identificar soluções idênticas
-// Remover duplicatas
+// PASSO 5
 //
 
 function localizaMatrizesIdenticas(matrizes) {
@@ -208,7 +178,7 @@ function localizaMatrizesIdenticas(matrizes) {
   const totalDeSolucoes = matrizes.length;
   for (let s = 0; s < totalDeSolucoes; s++) {
     for (let c = s + 1; c < totalDeSolucoes; c++) {
-      if (s != c) {
+      if (s !== c) {
         if (matrizesIguais(matrizes[s], matrizes[c])) {
           identicas.push(s);
         }
@@ -223,7 +193,7 @@ function localizaMatrizesIdenticas(matrizes) {
 function matrizesIguais(m1, m2) {
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
-      if (m1[i][j] != m2[i][j]) {
+      if (m1[i][j] !== m2[i][j]) {
         return false;
       }
     }
@@ -244,41 +214,44 @@ function removeEntradasDuplicadas(duplicidades, matrizes) {
   return naoDuplicadas;
 }
 
-const iguais = localizaMatrizesIdenticas(respostas);
-console.log(iguais);
-//iguais.forEach(console.log);
-//Array.from(iguais).forEach(console.log);
+function passo5(respostasParciais) {
+  const iguais = localizaMatrizesIdenticas(respostasParciais);
+  const solucoes = removeEntradasDuplicadas(iguais, respostasParciais);
 
-const respostasSemDuplicidade = removeEntradasDuplicadas(iguais, respostas);
-
-//
-// Verifica ausência de duplicidades (após remoção anterior)
-//
-
-const verificacao = localizaMatrizesIdenticas(respostasSemDuplicidade);
-if (verificacao.length > 0) {
-  throw new Error("ainda iguais???");
-}
-
-//
-// Exibir os resultados obtidos
-//
-
-function exibir(matrizes) {
-  for (const matriz of matrizes) {
-    console.log();
-    console.log(matriz);
+  const verificacao = localizaMatrizesIdenticas(solucoes);
+  if (verificacao.length > 0) {
+    throw new Error("ainda iguais???");
   }
+
+  return solucoes;
 }
 
-// exibir(respostas);
+/**
+ * Identifica todas as soluções do desafio 4x4.
+ * @returns {{tempo: number, solucoes: *[]}} Objeto contendo vetor de soluções
+ * e tempo transcorrido durante o cômputo.
+ */
+function d44() {
+  const inicio = new Date();
 
+  const combinacoes = passo1();
+  const combinacoes34 = passo2(combinacoes);
+  const candidatas = passo3(combinacoes34);
+  const parcial = passo4(candidatas);
+  const solucoes = passo5(parcial);
 
-console.log("Total de respostas:", respostas.length);
+  const tempo = new Date() - inicio;
 
-//
-// Exibir tempo decorrido
-//
+  return {
+    solucoes,
+    tempo
+  };
+}
 
-const endTime = performance.now();
-console.log("Tempo gasto:", Math.trunc(endTime - startTime), "milissegundos");
+function main() {
+  const resposta = d44();
+  console.log("Tempo para execução (ms)", resposta.tempo);
+  console.log("Total de soluções:", resposta.solucoes.length);
+}
+
+main();
