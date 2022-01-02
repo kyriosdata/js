@@ -2,42 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/node/basico/callback.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ambientacao/pacote/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ambientacao/pacote/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ambientacao/pacote/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/node/hello.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ambientacao/pacote/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="652">
-                <caret line="49" selection-start-line="49" selection-end-line="49" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ambientacao/pacote/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,7 +61,7 @@
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
-    <bower-package value="$USER_HOME$/AppData/Roaming/npm/node_modules/bower" />
+    <bower-package value="$PROJECT_DIR$/../AppData/Roaming/npm/node_modules/bower" />
     <bower.json value="" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -105,6 +77,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/ambientacao/modulos/node_modules" />
@@ -122,16 +97,13 @@
       <path value="$PROJECT_DIR$/sons/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/ambientacao/classe/package.json" />
-    <dismissed value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="78" />
     <option name="y" value="23" />
     <option name="width" value="1842" />
     <option name="height" value="1127" />
   </component>
+  <component name="ProjectId" id="239dON9O5HlKlwkzwjtCRynJfKW" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -205,14 +177,21 @@
       <pane id="AndroidView" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="9.5.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.16.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.18.4" />
     <property name="js.introduce.parameter.add.jsdoc" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -227,78 +206,48 @@
       <recent name="$PROJECT_DIR$/filesystem" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="npm.test (1)">
+  <component name="RunManager" selected="Node.js.callback.js">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="matematica-test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="matematica-test.js" working-dir="$PROJECT_DIR$/ambientacao/classe/test" />
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration name="callback.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/node/basico/callback.js" working-dir="$PROJECT_DIR$/node/basico">
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration name="hello.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/node/hello.js" working-dir="$PROJECT_DIR$/node">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="doc" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration name="doc" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/ambientacao/classe/package.json" />
       <command value="run" />
       <scripts>
@@ -306,8 +255,9 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
     </configuration>
-    <configuration name="run" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration name="run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
       <command value="run" />
       <scripts>
@@ -315,8 +265,9 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/ambientacao/classe/package.json" />
       <command value="run" />
       <scripts>
@@ -324,33 +275,26 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
-    </configuration>
-    <configuration name="test" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/ambientacao/pacote/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.matematica-test.js" />
-      <item itemvalue="npm.test" />
       <item itemvalue="npm.test (1)" />
       <item itemvalue="npm.run" />
       <item itemvalue="npm.doc" />
+      <item itemvalue="Node.js.hello.js" />
+      <item itemvalue="Node.js.callback.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.callback.js" />
+        <item itemvalue="Node.js.hello.js" />
         <item itemvalue="npm.doc" />
         <item itemvalue="npm.test (1)" />
         <item itemvalue="npm.run" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="Node.js.matematica-test.js" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -373,6 +317,7 @@
       <workItem from="1525284683166" duration="4491000" />
       <workItem from="1525298657939" duration="723000" />
       <workItem from="1525303264462" duration="4178000" />
+      <workItem from="1641150207131" duration="3176000" />
     </task>
     <servers />
   </component>
@@ -424,15 +369,18 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="2" />
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

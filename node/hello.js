@@ -1,1 +1,1 @@
-console.log("Seja bem-vindo!");
+console.log("Olá, tudo bem?");
