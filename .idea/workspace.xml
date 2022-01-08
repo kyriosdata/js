@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="eventos">
-      <change afterPath="$PROJECT_DIR$/node/basico/calculo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/basico/worker-exemplo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/basico/calculo.js" beforeDir="false" afterPath="$PROJECT_DIR$/node/basico/calculo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/basico/worker-exemplo.js" beforeDir="false" afterPath="$PROJECT_DIR$/node/basico/worker-exemplo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,6 +308,7 @@
       <workItem from="1641313041471" duration="496000" />
       <workItem from="1641504390484" duration="2840000" />
       <workItem from="1641596719602" duration="3000" />
+      <workItem from="1641676839503" duration="2575000" />
     </task>
     <task id="LOCAL-00001" summary="callback">
       <created>1641165185073</created>
