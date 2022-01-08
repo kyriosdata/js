@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="callback">
-      <change afterPath="$PROJECT_DIR$/node/basico/observer.js" afterDir="false" />
+    <list default="true" id="a1983782-b706-416d-bb6d-2e5062cc5a80" name="Default" comment="eventos">
+      <change afterPath="$PROJECT_DIR$/node/basico/calculo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/basico/worker-exemplo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +206,7 @@
       <recent name="$PROJECT_DIR$/filesystem" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.eventos.js">
+  <component name="RunManager" selected="Node.js.worker-exemplo.js">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -229,6 +230,9 @@
       <method v="2" />
     </configuration>
     <configuration name="hello.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/node/hello.js" working-dir="$PROJECT_DIR$/node">
+      <method v="2" />
+    </configuration>
+    <configuration name="worker-exemplo.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/node/basico/worker-exemplo.js" working-dir="$PROJECT_DIR$/node/basico">
       <method v="2" />
     </configuration>
     <configuration default="true" type="TestNG">
@@ -259,30 +263,20 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/ambientacao/classe/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Node.js.hello.js" />
       <item itemvalue="Node.js.callback.js" />
-      <item itemvalue="npm.test (1)" />
-      <item itemvalue="npm.doc" />
       <item itemvalue="Node.js.eventos.js" />
+      <item itemvalue="Node.js.worker-exemplo.js" />
+      <item itemvalue="npm.doc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.worker-exemplo.js" />
         <item itemvalue="Node.js.eventos.js" />
         <item itemvalue="Node.js.callback.js" />
         <item itemvalue="Node.js.hello.js" />
         <item itemvalue="npm.doc" />
-        <item itemvalue="npm.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +304,10 @@
       <workItem from="1525298657939" duration="723000" />
       <workItem from="1525303264462" duration="4178000" />
       <workItem from="1641150207131" duration="3197000" />
-      <workItem from="1641243640809" duration="3776000" />
+      <workItem from="1641243640809" duration="4631000" />
+      <workItem from="1641313041471" duration="496000" />
+      <workItem from="1641504390484" duration="2840000" />
+      <workItem from="1641596719602" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="callback">
       <created>1641165185073</created>
@@ -319,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641165185073</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="eventos">
+      <created>1641256036967</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641256036967</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -385,7 +389,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="callback" />
-    <option name="LAST_COMMIT_MESSAGE" value="callback" />
+    <MESSAGE value="eventos" />
+    <option name="LAST_COMMIT_MESSAGE" value="eventos" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
